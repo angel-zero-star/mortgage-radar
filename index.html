@@ -7,7 +7,7 @@
     --mono:"JetBrains Mono",ui-monospace,monospace;
     --bg:#F7F7F8; --surface:#FFFFFF; --surface-2:#F2F2F4; --ink:#16171A; --muted:#6B6F76;
     --faint:#A0A4AB; --line:#E6E6E9; --line-strong:#D4D5D9;
-    --accent:#5E6AD2; --accent-soft:#EEEFFC; --accent-ink:#FFFFFF;
+    --accent:#5E6AD2; --accent-soft:#EEEFFC; --track:#EBEBED; --accent-ink:#FFFFFF;
     --good:#2F8A55; --good-bg:#E7F4EC;
     --wait:#6B6F76; --wait-bg:#F0F0F2;
     --alert:#C5453F; --alert-bg:#FBEBEA;
@@ -20,7 +20,7 @@
       color-scheme:dark;
       --bg:#1B1C1F; --surface:#232428; --surface-2:#2A2B30; --ink:#EDEEF0; --muted:#9A9EA6;
       --faint:#6B6F77; --line:#323338; --line-strong:#3E4046;
-      --accent:#8B94F0; --accent-soft:#2D3050; --accent-ink:#16171A;
+      --accent:#8B94F0; --accent-soft:#2D3050; --track:#3A3B41; --accent-ink:#16171A;
       --good:#5FC08D; --good-bg:#1D3326;
       --wait:#9A9EA6; --wait-bg:#2A2B30;
       --alert:#E5847F; --alert-bg:#3A2422;
@@ -33,7 +33,7 @@
       color-scheme:dark;
       --bg:#1B1C1F; --surface:#232428; --surface-2:#2A2B30; --ink:#EDEEF0; --muted:#9A9EA6;
       --faint:#6B6F77; --line:#323338; --line-strong:#3E4046;
-      --accent:#8B94F0; --accent-soft:#2D3050; --accent-ink:#16171A;
+      --accent:#8B94F0; --accent-soft:#2D3050; --track:#3A3B41; --accent-ink:#16171A;
       --good:#5FC08D; --good-bg:#1D3326;
       --wait:#9A9EA6; --wait-bg:#2A2B30;
       --alert:#E5847F; --alert-bg:#3A2422;
@@ -231,7 +231,15 @@
   .sliderrow .lab .t{font-weight:500}
   .sliderrow .lab .v{font-size:17px; font-weight:600; letter-spacing:-.01em;
     font-variant-numeric:tabular-nums; color:var(--ink)}
-  input[type=range]{width:100%; accent-color:var(--accent); height:28px; margin:0}
+  /* sliders: one look in every browser (Chrome's filled track + solid thumb); --v = value 0–1, set by fillRanges() */
+  input[type=range]{width:100%; height:28px; margin:0; -webkit-appearance:none; appearance:none; background:none; cursor:pointer; --v:.5;
+    --fill:linear-gradient(to right, var(--accent) calc(8px + (100% - 16px)*var(--v)), var(--track) 0)}
+  input[type=range]::-webkit-slider-runnable-track{height:8px; border-radius:4px; background:var(--fill); box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none; width:16px; height:16px; margin-top:-4px; border:0; border-radius:50%; background:var(--accent)}
+  input[type=range]::-moz-range-track{height:8px; border-radius:4px; background:var(--fill)}
+  input[type=range]::-moz-range-thumb{width:16px; height:16px; border:0; border-radius:50%; background:var(--accent)}
+  input[type=range]:active::-webkit-slider-thumb{box-shadow:0 0 0 4px var(--accent-soft)}
+  input[type=range]:active::-moz-range-thumb{box-shadow:0 0 0 4px var(--accent-soft)}
   .minmax{display:flex; justify-content:space-between; font-size:11.5px; color:var(--faint);
     font-variant-numeric:tabular-nums}
   .jump{font:inherit; font-size:12px; font-weight:500; color:var(--muted);
@@ -622,7 +630,7 @@
 <section class="view" data-view="offers" aria-labelledby="h-offers" hidden>
   <div class="vhead"><h2 id="h-offers">Offers</h2></div>
   <p class="stamp lede">Updated <b>25.09.2026</b> · applicant Angelo Wellens · goal: a 400 000 € loan on a 585 000 € home (68 % of price), ~227 000 € own funds for the down payment and costs · 7 banks, 15 offers via a broker</p>
-    <figure class="chart" id="chOffers"><figcaption><span class="ct">Cheapest per month isn’t cheapest overall</span><span class="cs" id="chOffersSum"></span><span class="lg"><span><i class="b1 ln"></i>Your pick</span><span><i class="b2 ln"></i>Drops 4+ places</span><span><i class="b0 ln"></i>Other offers</span></span><button class="ghost" id="chOffersBtn" type="button" aria-pressed="false">Hide chart</button></figcaption><div class="plot"></div></figure>
+    <figure class="chart" id="chOffers"><figcaption><span class="ct">Cheapest per month isn’t cheapest overall</span><span class="cs" id="chOffersSum"></span><span class="lg"><span><i class="b1 ln"></i>Your pick</span><span title="At least 4 places worse on total cost than on monthly payment"><i class="b2 ln"></i>Cheap monthly, costly overall</span><span><i class="b0 ln"></i>Other offers</span></span><button class="ghost" id="chOffersBtn" type="button" aria-pressed="false">Hide chart</button></figcaption><div class="plot"></div></figure>
 <div class="cuebar"><button type="button" id="cueBtn" class="switch" role="switch" aria-checked="true"><span class="track"><span class="knob"></span></span>Colour cues</button><span><span class="sw top">green</span> the best</span><span><span class="sw near">yellow-green</span> close to the best</span><span>On spread, fixed rate, total cost and monthly payment · hover for the gap to the best</span></div>
 <div class="tablebox offers cues" id="offersBox"><table id="offersTable"></table></div>
     <p class="legend" id="offersSum"></p>
@@ -1444,6 +1452,12 @@ function rvbSaveYears(c, rent0, gH, gI, gR){
   return {months: Infinity, house, contrib0};
 }
 
+// slider fill up to the thumb (WebKit has no progress pseudo-element)
+function fillRanges(){
+  for (const el of document.querySelectorAll('input[type=range]')) el.style.setProperty('--v', (el.value - el.min)/((el.max - el.min) || 1));
+}
+document.addEventListener('input', e => { if (e.target.type === 'range') fillRanges(); });
+
 function updateRvb(){
   if (!ctx) return;
   const c = ctx;
@@ -1502,6 +1516,7 @@ function updateRvb(){
     (prem > 0
       ? ' — owning costs ' + eur0(prem) + '/month more. Only house-price growth pays for that: at ' + pct(gH) + '/yr it brings in ' + eur0(appr) + '/month; break-even is price growth of ' + pct(prem*12/c.price) + '/yr.'
       : ' — owning is cheaper than renting even without house-price growth.');
+  fillRanges();
 }
 for (const id of ['rvbRent','rvbYears','rvbGH','rvbGI','rvbGR']) $(id).addEventListener('input', updateRvb);
 
