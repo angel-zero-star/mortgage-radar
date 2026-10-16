@@ -2,7 +2,7 @@
 
 A single-page tool for comparing Portuguese mortgage offers — built to replace a broker's Excel sheet with something you can actually play with.
 
-**Live:** https://YOUR-USERNAME.github.io/mortgage-radar/
+**Live:** https://angel-zero-star.github.io/mortgage-radar/
 
 ![Mortgage Radar — offers table](screenshot.png)
 
