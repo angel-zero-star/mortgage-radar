@@ -1,0 +1,1375 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Porto Mortgage (EN)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;800&family=Literata:opsz,wght@7..72,600;7..72,700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+  :root{
+    --bg:#F7F9FB;
+    --surface:#FFFFFF;
+    --ink:#1B2733;
+    --muted:#5C6B7A;
+    --faint:#9AA7B4;
+    --line:#DCE4EC;
+    --accent:#2456A6;
+    --accent-soft:#E8EFF9;
+    --good:#1E7F4F;      --good-bg:#E4F3EB;
+    --wait:#5C6B7A;      --wait-bg:#ECF0F4;
+    --alert:#B3403A;     --alert-bg:#F9E9E8;
+    --warn:#8A6414;      --warn-bg:#F7EEDA;
+    --accent-ink:#FFFFFF;
+    --shadow:0 1px 2px rgba(27,39,51,.06),0 4px 16px rgba(27,39,51,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#141A21; --surface:#1C242E; --ink:#E7EDF3; --muted:#93A2B1;
+      --faint:#5E6C7A;
+      --line:#2C3742; --accent:#7FA8E0; --accent-soft:#233247;
+      --good:#5FC08D; --good-bg:#1E3229;
+      --wait:#93A2B1; --wait-bg:#242E38;
+      --alert:#E08984; --alert-bg:#3A2523;
+      --warn:#D9B25F; --warn-bg:#37301C;
+      --accent-ink:#141A21;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#141A21; --surface:#1C242E; --ink:#E7EDF3; --muted:#93A2B1;
+    --faint:#5E6C7A;
+    --line:#2C3742; --accent:#7FA8E0; --accent-soft:#233247;
+    --good:#5FC08D; --good-bg:#1E3229;
+    --wait:#93A2B1; --wait-bg:#242E38;
+    --alert:#E08984; --alert-bg:#3A2523;
+      --warn:#D9B25F; --warn-bg:#37301C;
+      --accent-ink:#141A21;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.3);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Golos Text",-apple-system,"Segoe UI",sans-serif;
+    font-size:16px; line-height:1.55;
+  }
+  .wrap{max-width:1060px; margin:0 auto; padding:40px 24px 72px}
+  .eyebrow a{color:var(--accent)}
+  .eyebrow{
+    font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 10px;
+  }
+  h1{
+    font-family:Literata,Georgia,serif; font-weight:700; font-size:clamp(30px,5vw,42px);
+    line-height:1.12; margin:0 0 6px; text-wrap:balance;
+  }
+  .stamp{color:var(--muted); font-size:14px; margin:0 0 28px}
+  .stamp b{color:var(--ink); font-weight:600}
+
+  .strip{display:flex; flex-wrap:wrap; gap:12px; margin:0 0 32px}
+  .stat{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:12px 18px; box-shadow:var(--shadow); min-width:130px;
+  }
+  .stat .n{
+    font-family:"JetBrains Mono",monospace; font-size:24px; font-weight:600;
+    font-variant-numeric:tabular-nums; display:block; line-height:1.2;
+  }
+  .stat .l{font-size:13px; color:var(--muted)}
+  .stat.gd .n{color:var(--good)} .stat.wt .n{color:var(--wait)} .stat.al .n{color:var(--alert)}
+
+  h2{
+    font-family:Literata,Georgia,serif; font-weight:600; font-size:23px;
+    margin:44px 0 14px; text-wrap:balance;
+  }
+  p.lede{max-width:none; color:var(--muted); margin:0 0 20px}
+
+  .tablebox{overflow-x:auto; background:var(--surface); border:1px solid var(--line);
+    border-radius:12px; box-shadow:var(--shadow)}
+  table{border-collapse:collapse; width:100%; min-width:1100px; font-size:14.5px}
+  th{
+    font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.07em;
+    text-transform:uppercase; color:var(--muted); text-align:left;
+    padding:12px 14px; border-bottom:1px solid var(--line); white-space:nowrap;
+  }
+  td{padding:13px 14px; border-bottom:1px solid var(--line); vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.bank{font-weight:600; white-space:nowrap}
+  .num{font-family:"JetBrains Mono",monospace; font-variant-numeric:tabular-nums; white-space:nowrap}
+  .dim{color:var(--muted)}
+  tr.expect td:not(.bank):not(.st){color:var(--faint)}
+  tr.dead td:not(.bank):not(.st){color:var(--faint)}
+  .pill{
+    display:inline-block; padding:3px 10px; border-radius:999px;
+    font-size:12.5px; font-weight:600; white-space:nowrap;
+  }
+  .pill.gd{background:var(--good-bg); color:var(--good)}
+  .pill.wt{background:var(--wait-bg); color:var(--wait)}
+  .pill.al{background:var(--alert-bg); color:var(--alert)}
+  .pill.wn{background:var(--warn-bg); color:var(--warn)}
+  .pill.ac{background:var(--accent-soft); color:var(--accent)}
+  .stat.ac .n{color:var(--accent)}
+  td.st{min-width:200px}
+  /* bank status table: fixed column widths, figures stay on one line, notes wrap underneath in the body font */
+  .banks-table table{min-width:960px; table-layout:fixed}
+  .banks-table th{white-space:normal; padding:10px; line-height:1.3}
+  .banks-table td{padding:11px 10px}
+  .banks-table td.st{min-width:0}
+  .banks-table td.bank{white-space:normal}
+  .banks-table td.bank .dim{display:block; font-weight:400; font-size:12.5px; line-height:1.35}
+  .banks-table td.num .dim{display:block; white-space:normal; margin-top:3px; font-family:"Golos Text",-apple-system,"Segoe UI",sans-serif; font-size:12.5px; line-height:1.4}
+  .banks-table td.st .pill{white-space:normal; display:inline-block; text-align:left; line-height:1.3; padding:4px 8px; font-size:12px}
+  .banks-table td{padding:11px 8px}
+  .banks-table td.num{font-size:13.5px}
+  .banks-table td.num .dim{font-size:12px}
+  .banks-table td.next{font-size:12.5px; line-height:1.4; white-space:normal}
+  .banks-table .ok{color:var(--good); font-weight:600}
+  /* status history lives in .stnote; hidden in the table, shown as a floating tooltip on hover / focus (see the script) */
+  .stnote{display:none}
+  td.st .pill.has-tip{cursor:help}
+  td.st .pill.has-tip::after{content:" \24D8"; font-weight:400; opacity:.75}
+  .sttip{position:fixed; z-index:50; display:none; width:400px; max-width:calc(100vw - 24px); max-height:70vh; overflow:auto;
+    background:var(--ink); color:var(--bg); padding:12px 14px; border-radius:8px; box-shadow:var(--shadow);
+    font-size:12.5px; line-height:1.45; white-space:normal}
+  .sttip b{color:inherit}
+  .sttip table{min-width:0; width:100%; border-collapse:collapse; font-size:12px; margin:8px 0}
+  .sttip th, .sttip td{padding:4px 6px; border-bottom:1px solid rgba(255,255,255,.18); vertical-align:top; text-align:left; white-space:normal; color:inherit; font:inherit; text-transform:none; letter-spacing:0}
+  .sttip th{font-weight:600}
+  .info.html::after{content:none}
+  .pill.cta{background:var(--accent); color:var(--accent-ink)}
+  .crown{cursor:help}
+  .stat.cta .n{color:var(--accent)}
+  .q{cursor:help; margin-right:4px}
+  .legend{font-size:13px; color:var(--muted); margin:10px 2px 0; max-width:none}
+
+  .callout{
+    background:var(--accent-soft); border:1px solid var(--line); border-left:4px solid var(--accent);
+    border-radius:10px; padding:16px 20px; margin:28px 0; max-width:none;
+  }
+  .callout b{font-weight:600}
+  .callout p{margin:6px 0}
+
+  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(310px,1fr)); gap:16px}
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    padding:20px 22px; box-shadow:var(--shadow);
+  }
+  .card h3{margin:0 0 10px; font-size:17px; font-weight:800}
+  .card ul{margin:10px 0 0; padding-left:18px}
+  .card li{margin:5px 0; font-size:14.5px}
+  .card .note{
+    margin-top:14px; padding-top:12px; border-top:1px dashed var(--line);
+    font-size:13.5px;
+  }
+  .card .note b{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.07em;
+    text-transform:uppercase; color:var(--accent); display:block; margin-bottom:3px}
+
+  .duel{overflow-x:auto; background:var(--surface); border:1px solid var(--line);
+    border-radius:12px; box-shadow:var(--shadow); margin-bottom:16px}
+  .duel table{min-width:560px}
+  .duel td.win{color:var(--good); font-weight:600}
+
+  .gloss{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin-top:16px}
+  .term{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 16px}
+  .term b{font-family:"JetBrains Mono",monospace; font-size:13px; color:var(--accent)}
+  .term p{margin:5px 0 0; font-size:13.5px; color:var(--muted)}
+
+  /* --- roadmap --- */
+  .road{position:relative; margin:8px 0 4px; padding-left:36px; max-width:none}
+  .road::before{content:""; position:absolute; left:12px; top:12px; bottom:12px; width:2px; background:var(--line)}
+  .mile{position:relative; background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    padding:16px 20px; box-shadow:var(--shadow); margin:0 0 12px}
+  .mile::before{content:attr(data-n); position:absolute; left:-36px; top:16px; width:26px; height:26px;
+    border-radius:50%; background:var(--accent); color:var(--accent-ink);
+    font-family:"JetBrains Mono",monospace; font-size:12px; font-weight:600; line-height:26px; text-align:center}
+  .mile h3{margin:0; font-size:16.5px; font-weight:800; display:flex; flex-wrap:wrap; align-items:baseline; gap:8px}
+  .mdur{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.05em;
+    font-weight:600; color:var(--accent); background:var(--accent-soft); border-radius:999px;
+    padding:2px 10px; white-space:nowrap}
+  .mile p{margin:8px 0 0; font-size:14.5px; color:var(--muted)}
+  .mile p b{color:var(--ink)}
+  .mgap{position:relative; margin:0 0 12px; padding:2px 0 2px 8px; font-size:13.5px; color:var(--muted); max-width:none}
+  .mgap::before{content:""; position:absolute; left:-27px; top:10px; width:8px; height:8px; border-radius:50%;
+    background:var(--faint)}
+  .gdur{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.05em; font-weight:600;
+    color:var(--muted); background:var(--wait-bg); border-radius:999px; padding:2px 10px;
+    white-space:nowrap; margin-right:6px}
+
+  /* --- payment timeline --- */
+  .tl-scroll{overflow-x:auto}
+  .tl{position:relative; min-width:640px; height:345px; margin-top:4px}
+  .tl-track{position:absolute; left:0; right:0; top:156px; height:10px; border-radius:5px;
+    background:var(--bg); border:1px solid var(--line)}
+  .tl-tick{position:absolute; top:170px; transform:translateX(-50%); white-space:nowrap;
+    font-family:"JetBrains Mono",monospace; font-size:10px; color:var(--faint)}
+  .tl-tick.end{transform:translateX(-85%)}
+  .tl-tick.end::before{left:85%}
+  .tl-tick::before{content:""; position:absolute; left:50%; top:-9px; width:1px; height:6px; background:var(--faint)}
+  .tl-ev{position:absolute; top:0; bottom:0; width:0; transform:translateX(-50%)}
+  .tl-dot{position:absolute; left:50%; top:161px; transform:translate(-50%,-50%); width:14px; height:14px;
+    border-radius:50%; background:var(--accent); border:2px solid var(--surface); box-shadow:var(--shadow); z-index:2}
+  .tl-stem{position:absolute; left:50%; width:1px; background:var(--line)}
+  .tl-ev.up .tl-stem{top:88px; height:72px}
+  .tl-ev.dn .tl-stem{top:162px; height:72px}
+  .tl-card{position:absolute; left:50%; transform:translateX(-50%); width:180px; text-align:center}
+  .tl-ev.up .tl-card{bottom:236px}
+  .tl-ev.dn .tl-card{top:238px}
+  .tl-ev.first .tl-card{left:-6px; transform:none; text-align:left}
+  .tl-card b{display:block; font-size:13px; line-height:1.25; margin-bottom:2px}
+  .tl-sum{display:block; font-family:"JetBrains Mono",monospace; font-size:15px; font-weight:600;
+    color:var(--accent); font-variant-numeric:tabular-nums}
+  .tl-pct{display:block; font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--muted)}
+  .tl-when{display:block; font-size:11px; color:var(--muted); margin-top:2px}
+
+  footer{margin-top:48px; font-size:13px; color:var(--muted); max-width:none}
+
+  /* --- calculator --- */
+  .panel{background:var(--surface); border:1px solid var(--line); border-radius:14px;
+    padding:24px 26px; box-shadow:var(--shadow); margin-bottom:22px}
+  .banks{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:22px}
+  .banks button{font:inherit; font-size:14.5px; font-weight:600; color:var(--ink);
+    background:var(--bg); border:1px solid var(--line); border-radius:999px;
+    padding:8px 18px; cursor:pointer}
+  .banks button.on{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
+  .banks button.hypo{border-style:dashed}
+  .banks button.on.hypo{background:var(--accent-soft); color:var(--accent); border:1px dashed var(--accent)}
+  .banks button:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  .sliderrow{margin:18px 0 6px}
+  .sliderrow .lab{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px}
+  .sliderrow .lab .t{font-weight:600}
+  .sliderrow .lab .v{font-family:"JetBrains Mono",monospace; font-size:20px; font-weight:600;
+    font-variant-numeric:tabular-nums; color:var(--accent)}
+  input[type=range]{width:100%; accent-color:var(--accent); height:28px; margin:0}
+  .minmax{display:flex; justify-content:space-between; font-size:12px; color:var(--faint);
+    font-family:"JetBrains Mono",monospace}
+  .jump{font:inherit; font-size:12px; font-weight:600; color:var(--accent);
+    background:none; border:1px solid var(--line); border-radius:999px;
+    padding:2px 12px; cursor:pointer}
+  .jumprow{margin:0 0 6px}
+  .jump:hover{border-color:var(--accent)}
+  .sliderwrap{position:relative}
+  .mintick{position:absolute; top:2px; width:5px; height:24px; background:var(--alert);
+    border-radius:3px; pointer-events:none; transform:translateX(-50%); box-shadow:0 0 0 2px var(--surface); z-index:1}
+  .mintick::after{content:attr(data-label); position:absolute; top:27px; left:50%; transform:translateX(-50%);
+    font-family:"JetBrains Mono",monospace; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--alert); background:var(--alert-bg); border-radius:4px; padding:1px 6px; white-space:nowrap}
+  .sliderwrap + .minmax{margin-top:2px}
+  .jumps{display:inline-flex; gap:6px; margin-left:10px; vertical-align:middle}
+  .jumps .jump{padding:1px 10px; font-size:11.5px}
+  .panel > .sliderrow{margin:12px 0 4px}
+  .income{padding:12px 16px; margin-bottom:14px}
+  .income .capinfo{margin-top:6px; font-size:13.5px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-bottom:22px}
+  .res{background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    padding:16px 18px; box-shadow:var(--shadow)}
+  .res .l{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.07em;
+    text-transform:uppercase; color:var(--muted); display:block; margin-bottom:6px}
+  .res .v{display:block; font-family:"JetBrains Mono",monospace; font-size:23px; font-weight:600;
+    font-variant-numeric:tabular-nums; line-height:1.25}
+  .res .s{display:block; font-size:13px; color:var(--muted); margin-top:6px}
+  .res .s + .s{margin-top:2px}
+  .res.hero{border-left:4px solid var(--accent)}
+  .res.hero .v{color:var(--accent)}
+  .taxgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(360px,1fr)); gap:14px; margin-bottom:22px}
+  .taxgrid .panel{margin-bottom:0}
+  .taxcap{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.07em;
+    text-transform:uppercase; color:var(--muted); margin:0 0 6px}
+  .tax table{border-collapse:collapse; width:100%; min-width:0; font-size:14.5px}
+  .tax td{padding:8px 4px; border-bottom:1px solid var(--line)}
+  .tax tr:last-child td{border-bottom:none; font-weight:600}
+  .tax td.n{font-family:"JetBrains Mono",monospace; font-variant-numeric:tabular-nums;
+    text-align:right; white-space:nowrap}
+  .info{display:inline-flex; align-items:center; justify-content:center; width:16px; height:16px;
+    border-radius:50%; background:var(--accent-soft); color:var(--accent); font-size:11px; font-weight:700;
+    margin-left:6px; cursor:help; position:relative; font-family:Literata,Georgia,serif; font-style:italic}
+  .info::after{content:attr(data-tip); position:absolute; left:-8px; bottom:calc(100% + 8px);
+    width:360px; max-width:72vw; background:var(--ink); color:var(--bg);
+    padding:10px 12px; border-radius:8px; font-size:12.5px; font-style:normal;
+    font-family:"Golos Text",-apple-system,sans-serif; font-weight:400;
+    line-height:1.45; text-align:left; opacity:0; pointer-events:none; transition:opacity .05s; z-index:5;
+    white-space:normal}
+  .info:hover::after, .info:focus::after{opacity:1}
+  .income{background:var(--accent-soft); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin:0 0 22px}
+  .income .sliderrow{margin:0 0 6px}
+  .income .lab{gap:12px; flex-wrap:wrap}
+  .income .lab .t{font-size:17px}
+  .incin{display:inline-flex; align-items:baseline; gap:6px}
+  .incin input{font:inherit; font-family:"JetBrains Mono",monospace; font-size:20px; font-weight:600; color:var(--accent);
+    width:8.5ch; text-align:right; background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:2px 8px}
+  .incin input:focus{outline:2px solid var(--accent); outline-offset:1px}
+  .incin span{font-family:"JetBrains Mono",monospace; font-size:14px; color:var(--muted)}
+  .capinfo{font-size:14px; margin:10px 0 0}
+  .capinfo b{color:var(--accent)}
+  .capinfo .dim{display:block; font-size:12.5px; margin-top:4px}
+  .hm{display:inline-block; border-radius:4px; padding:0 5px; margin:0 -5px 2px}
+  :root{--rowhl:#C9DAF2; --best-bg:#CFEBD9; --best-ink:#11643A; --near-bg:#EEF2C6; --near-ink:#687610}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){--rowhl:#0E1726; --best-bg:#1E4D34; --best-ink:#7FE3AC; --near-bg:#3A4120; --near-ink:#CFDB6E} }
+  :root[data-theme="dark"]{--rowhl:#0E1726; --best-bg:#1E4D34; --best-ink:#7FE3AC; --near-bg:#3A4120; --near-ink:#CFDB6E}
+  .cues .hm.top{background:var(--best-bg); color:var(--best-ink); font-weight:700}
+  .cues .hm.near{background:var(--near-bg); color:var(--near-ink); font-weight:600}
+  .cues .hm.mid{background:var(--warn-bg); color:var(--warn)}
+  .cues .hm.worst{background:var(--alert-bg); color:var(--alert)}
+  .cuebar{display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; margin:0 0 12px; font-size:13px; color:var(--muted)}
+  .cuebar .sw{display:inline-block; border-radius:4px; padding:1px 8px; font-weight:600}
+  .cuebar .sw.top{background:var(--best-bg); color:var(--best-ink)}
+  .cuebar .sw.near{background:var(--near-bg); color:var(--near-ink)}
+  .cuebar .sw.mid{background:var(--warn-bg); color:var(--warn)}
+  .cuebar .sw.worst{background:var(--alert-bg); color:var(--alert)}
+  .switch{display:inline-flex; align-items:center; gap:8px; font:inherit; font-size:13.5px; font-weight:600; color:var(--ink); background:none; border:0; padding:2px 0; cursor:pointer}
+  .switch .track{position:relative; width:36px; height:20px; border-radius:999px; background:var(--line); transition:background .15s}
+  .switch .knob{position:absolute; top:2px; left:2px; width:16px; height:16px; border-radius:50%; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,.3); transition:transform .15s}
+  .switch[aria-checked="true"] .track{background:var(--accent)}
+  .switch[aria-checked="true"] .knob{transform:translateX(16px)}
+  .switch:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:6px}
+  .offers{margin-bottom:16px}
+  .offers table{min-width:1500px; font-size:13.5px}
+  .offers th, .offers td{padding:7px 8px; text-align:right; white-space:nowrap; border-bottom:1px solid var(--line)}
+  .offers th.rowh{text-align:left; position:sticky; left:0; z-index:2; background:var(--surface); font-family:"Golos Text",-apple-system,sans-serif; font-size:13px; letter-spacing:0; text-transform:none; color:var(--ink); font-weight:600; min-width:190px; box-shadow:1px 0 0 var(--line)}
+  .offers th.rowh .dim{font-weight:400; font-size:11.5px}
+  .offers th.bankh{text-align:center; color:var(--ink); font-size:11.5px; border-left:1px solid var(--line)}
+  .offers th.offh{text-align:right; padding:4px 6px}
+  .offers th.offh button{font:inherit; font-family:"Golos Text",-apple-system,sans-serif; font-size:12px; font-weight:600; letter-spacing:0; text-transform:none; color:var(--muted); background:none; border:1px solid transparent; border-radius:999px; padding:3px 9px; cursor:pointer; white-space:nowrap}
+  .offers th.offh button:hover{border-color:var(--line); color:var(--ink)}
+  .offers th.offh.sel button{background:var(--accent); color:var(--accent-ink)}
+  .offers td{font-family:"JetBrains Mono",monospace; font-variant-numeric:tabular-nums}
+  .offers td.sel{background:var(--accent-soft)}
+  .offers td .dim{display:block; font-family:"Golos Text",-apple-system,sans-serif; font-size:11px; margin-top:1px}
+  .offers td.capd .hm{color:var(--faint)}
+  .offers td.capd .dim{color:var(--warn); font-weight:600}
+  .offers tr.strong td, .offers tr.strong th.rowh{font-weight:700; background-image:linear-gradient(var(--rowhl),var(--rowhl)); background-size:100% 100%}
+  .offers tr.strong td.sel{background-image:none}
+  .offers tbody tr:last-child td, .offers tbody tr:last-child th{border-bottom:none}
+  .calcnote{background:var(--warn-bg); color:var(--warn); border-radius:10px; padding:12px 16px;
+    font-size:13.5px; margin-top:16px; display:none}
+  .calcnote.show{display:block}
+  .rvb{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:0 32px}
+  .rvb .sliderrow{margin:10px 0 8px}
+  .res .v.ok{color:var(--good)}
+  .res .v.neg{color:var(--alert)}
+</style>
+
+
+<div class="wrap">
+  <p class="eyebrow">the-house · mortgage application</p>
+  <h1>Mortgage radar</h1>
+  <p class="stamp">Updated <b>25.09.2026</b> · applicant Angelo Wellens · goal: a 400 000 € loan on a 585 000 € home (68 % of price), ~227 000 € own funds for the down payment and costs · 7 banks, 15 offers via a broker</p>
+
+  <h2 style="margin-top:8px">Offers</h2>
+  <p class="lede">The broker’s comparison of 18.09.2026 — 7 banks, 15 offers — quoted on a 585 000 € home with a 400 000 € loan. Set the house price and down payment in the calculator below and every offer is re-run for your price and down payment: payments from each bank’s rates, taxes re-calculated, insurance scaled, and any bank that won’t lend that much is marked “capped”. At 585 000 € and 185 000 € down the table matches the broker’s sheet to the cent. Click an offer to open it in the calculator below.</p>
+  <div class="cuebar"><button type="button" id="cueBtn" class="switch" role="switch" aria-checked="true"><span class="track"><span class="knob"></span></span>Colour cues</button><span><span class="sw top">green</span> the best</span><span><span class="sw near">yellow-green</span> close to the best</span><span>On spread, fixed rate, total cost and monthly payment · hover for the gap to the best</span></div>
+  <div class="tablebox offers cues" id="offersBox"><table id="offersTable"></table></div>
+
+  <h2>Calculator</h2>
+  <p class="lede">One offer in detail: what you pay upfront, every month, and over the whole term. Pick the offer here or click it in the table. Your income, house price and down payment below drive the offers table above too.</p>
+  <div class="panel">
+    <div class="banks" id="banks" role="group" aria-label="Bank"></div>
+    <div class="income">
+      <div class="sliderrow">
+        <div class="lab"><span class="t">Your net income per year <span class="dim" style="font-weight:400; font-size:14px">· household, after tax and social security</span></span>
+          <label class="incin"><input type="text" inputmode="numeric" id="incomeN" aria-label="Net income per year in euros"><span>€ / yr</span></label></div>
+        <input type="range" id="income" min="60000" max="150000" step="500" value="90000" aria-label="Net income per year">
+        <div class="minmax"><span>60 000 €</span><span>150 000 €</span></div>
+      </div>
+      <p class="capinfo" id="capInfo"></p>
+    </div>
+    <div class="sliderrow">
+      <div class="lab"><span class="t">House price <span class="jumps"><button class="jump" id="priceMaxBtn" type="button">to max</button> <button class="jump" id="optBtn" type="button" title="Highest house price at the bank’s minimum down payment: income ceiling ÷ % of price. Above it the loan stays at the ceiling and every extra euro of price is ours.">optimum</button></span></span><span class="v" id="priceV"></span></div>
+      <div class="sliderwrap">
+        <input type="range" id="price" min="300000" max="800000" step="1000" value="585000" aria-label="House price">
+        <div class="mintick" id="maxTick" data-label="max" title="maximum price at the current down payment"></div>
+      </div>
+      <div class="minmax"><span>300 000 €</span><span>800 000 €</span></div>
+    </div>
+
+    <div class="sliderrow">
+      <div class="lab"><span class="t">Down payment <span class="dim" style="font-weight:400">· your own money towards the price</span> <span class="jumps"><button class="jump" id="downMinBtn" type="button">to selected bank’s minimum</button></span></span><span class="v" id="downV"></span></div>
+      <div class="sliderwrap">
+        <input type="range" id="down" min="30000" max="480000" step="100" value="185000" aria-label="Down payment">
+        <div class="mintick" id="minTick" data-label="min" title="minimum down payment for this price"></div>
+      </div>
+      <div class="minmax"><span id="downMinL"></span><span id="downMaxL"></span></div>
+    </div>
+    <p class="legend" id="offersSum" style="margin:14px 0 0"></p>
+
+    <div class="calcnote" id="note"></div>
+  </div>
+
+  <div class="grid">
+    <div class="res hero"><span class="l">Total cash needed for the deal</span><span class="v" id="cashV"></span><span class="s" id="cashS"></span></div>
+    <div class="res hero"><span class="l" id="pay1L">Monthly payment, first 24 months</span><span class="v" id="pay1"></span><span class="s" id="pay1S"></span><span class="s" id="pay2S"></span></div>
+    <div class="res"><span class="l">Loan term</span><span class="v" id="termV"></span><span class="s" id="termS1"></span><span class="s" id="termS2"></span></div>
+    <div class="res"><span class="l" id="totL">Total over the term</span><span class="v" id="totV"></span><span class="s" id="totS1"></span><span class="s" id="totS2"></span></div>
+  </div>
+  <p class="legend" id="loanLine" style="margin-bottom:16px"></p>
+
+  <div class="taxgrid">
+    <div class="panel tax">
+      <p class="taxcap">One-off · cash for the deal</p>
+      <table>
+        <tbody>
+          <tr><td>Down payment <span class="info" id="iDown" tabindex="0">i</span></td><td class="n" id="tDown"></td></tr>
+          <tr><td>Property transfer tax (IMT) <span class="info" id="iImt" tabindex="0">i</span></td><td class="n" id="tImt"></td></tr>
+          <tr><td>Stamp duty on the purchase (IS 0,8 % of price) <span class="info" id="iIsBuy" tabindex="0">i</span></td><td class="n" id="tIsBuy"></td></tr>
+          <tr><td>Stamp duty on the loan (IS 0,6 % of loan) <span class="info" id="iIsLoan" tabindex="0">i</span></td><td class="n" id="tIsLoan"></td></tr>
+          <tr><td>Bank valuation <span class="info" id="iAppr" tabindex="0">i</span></td><td class="n" id="tAppr"></td></tr>
+          <tr><td><span id="tFeeL">Bank fees and registrations</span> <span class="info" id="iFee" tabindex="0">i</span></td><td class="n" id="tFee"></td></tr>
+          <tr><td>Notary for the escritura <span class="info" id="iNot" tabindex="0">i</span></td><td class="n" id="tNot"></td></tr>
+          <tr><td>Survey and lawyer — optional <span class="info" id="iSpec" tabindex="0">i</span></td><td class="n" id="tSpec"></td></tr>
+          <tr><td>Total cash for the deal <span class="info" id="iTotal" tabindex="0">i</span></td><td class="n" id="tTotal"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="panel tax">
+      <p class="taxcap" id="mCap">Every month · first 24 months</p>
+      <table>
+        <tbody>
+          <tr><td>Loan: principal + interest <span class="info" id="iAnn" tabindex="0">i</span></td><td class="n" id="mAnn"></td></tr>
+          <tr><td>Life insurance <span class="info" id="iLife" tabindex="0">i</span></td><td class="n" id="mLife"></td></tr>
+          <tr><td>Home insurance <span class="info" id="iHome" tabindex="0">i</span></td><td class="n" id="mHome"></td></tr>
+          <tr><td>Total per month <span class="info" id="iMTot" tabindex="0">i</span></td><td class="n" id="mTot"></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel tax" style="margin-bottom:22px">
+    <p class="taxcap">When the money goes out · scale in days from the offer, dot size = share of the total</p>
+    <div class="tl-scroll">
+      <div class="tl">
+        <div class="tl-track"></div>
+        <div class="tl-tick" style="left:3%">0</div>
+        <div class="tl-tick" style="left:34.3%">30</div>
+        <div class="tl-tick" style="left:65.6%">60</div>
+        <div class="tl-tick end" style="left:97%">90 days</div>
+
+        <div class="tl-ev up first" style="left:3%">
+          <div class="tl-card"><b>Reservation at the offer</b><span class="tl-sum" id="schRes"></span><span class="tl-pct" id="schResP"></span><span class="tl-when">day 0 · counts towards the price</span></div>
+          <div class="tl-stem"></div>
+          <div class="tl-dot" id="schResD"></div>
+        </div>
+        <div class="tl-ev dn" style="left:17.6%">
+          <div class="tl-card"><b>Valuation + survey and lawyer</b><span class="tl-sum" id="schChk"></span><span class="tl-pct" id="schChkP"></span><span class="tl-when">weeks 1–3</span></div>
+          <div class="tl-stem"></div>
+          <div class="tl-dot" id="schChkD"></div>
+        </div>
+        <div class="tl-ev up" style="left:36.4%">
+          <div class="tl-card"><b>Deposit at the CPCV</b><span class="tl-sum" id="schSin"></span><span class="tl-pct" id="schSinP"></span><span class="tl-when">day ~20–45 · 10 % of price − reservation</span></div>
+          <div class="tl-stem"></div>
+          <div class="tl-dot" id="schSinD"></div>
+        </div>
+        <div class="tl-ev dn" style="left:70.9%">
+          <div class="tl-card"><b>Escritura and keys</b><span class="tl-sum" id="schEsc"></span><span class="tl-pct" id="schEscP"></span><span class="tl-when">day ~45–90 · rest of down payment + taxes + fees</span></div>
+          <div class="tl-stem"></div>
+          <div class="tl-dot" id="schEscD"></div>
+        </div>
+      </div>
+    </div>
+    <p class="legend" style="margin-top:10px">Whole cash pool for the deal: <b id="schTot"></b> (100 %). Each payment counts towards the next: the reservation towards the deposit, the deposit towards the price. <b>Without a CPCV no deposit is paid</b> — the whole amount moves to the escritura (almost the entire pool on one day). The deposit is negotiable: 10 % is customary, 5 % can be agreed. IMT and stamp duty are paid by payment slip (guia) right before signing, so by escritura day the whole remainder must be liquid. The reservation is assumed at 1 500 €, survey and lawyer at roughly 550 €.</p>
+  </div>
+  <p class="legend" id="bankFoot"></p>
+  <p class="legend">The “optimum” button sets price = your income ceiling ÷ the bank’s % of price: the last price at which the down payment is still the bank’s minimum. Above it the loan stays at the ceiling and every extra euro of price is ours. Formulas: loan = min(price − down payment, bank % × price, income ceiling); annuity payment at the bank’s rate (fixed period per offer: 24, 36 or 60 months, or the whole term; then Euribor 6M 2,46 % + spread); IMT = base × rate − abatimento. Checked against the broker’s comparison at 585 000 € and 400 000 €: Eurobic mixed 1 473,22 €, Santander 1 462,34 €, CGD 1 611,86 €, Bankinter fixed 1 832,98 € — all match; IMT 33 036,65 € + stamp duties 7 080,00 € + each bank’s fees reproduce its “total costs including taxes” to the cent.</p>
+
+  <h2>Rent vs buy</h2>
+  <p class="lede">Same house, bank and down payment as in the calculator above. The renter keeps the same money that would have gone into the deal and each month sets aside the difference between the owner’s costs and the rent. The answer depends more on the horizon, house-price growth and the return on savings than on the bank’s terms — move them.</p>
+  <div class="panel">
+    <div class="rvb">
+      <div class="sliderrow">
+        <div class="lab"><span class="t">Current rent</span><span class="v" id="rvbRentLab"></span></div>
+        <input type="range" id="rvbRent" min="600" max="3500" step="10" value="1600" aria-label="Rent per month">
+        <div class="minmax"><span>600 €</span><span>3 500 €</span></div>
+      </div>
+      <div class="sliderrow">
+        <div class="lab"><span class="t">Horizon</span><span class="v" id="rvbYearsLab"></span></div>
+        <input type="range" id="rvbYears" min="1" max="30" step="1" value="10" aria-label="Horizon in years">
+        <div class="minmax"><span>1 year</span><span>30 years</span></div>
+      </div>
+      <div class="sliderrow">
+        <div class="lab"><span class="t">House-price growth</span><span class="v" id="rvbGHLab"></span></div>
+        <input type="range" id="rvbGH" min="0" max="8" step="0.5" value="3" aria-label="House-price growth per year">
+        <div class="minmax"><span>0 %</span><span>8 %/yr</span></div>
+      </div>
+      <div class="sliderrow">
+        <div class="lab"><span class="t">Return on savings</span><span class="v" id="rvbGILab"></span></div>
+        <input type="range" id="rvbGI" min="0" max="8" step="0.5" value="3" aria-label="Return on savings per year">
+        <div class="minmax"><span>0 %</span><span>8 %/yr</span></div>
+      </div>
+      <div class="sliderrow">
+        <div class="lab"><span class="t">Rent growth</span><span class="v" id="rvbGRLab"></span></div>
+        <input type="range" id="rvbGR" min="0" max="6" step="0.5" value="2" aria-label="Rent growth per year">
+        <div class="minmax"><span>0 %</span><span>6 %/yr</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="res hero"><span class="l" id="rvbBuyL"></span><span class="v" id="rvbBuyV"></span><span class="s" id="rvbBuyS1"></span><span class="s" id="rvbBuyS2"></span></div>
+    <div class="res hero"><span class="l" id="rvbRentL"></span><span class="v" id="rvbRentV"></span><span class="s" id="rvbRentS1"></span><span class="s" id="rvbRentS2"></span></div>
+    <div class="res"><span class="l" id="rvbWhoL"></span><span class="v" id="rvbWhoV"></span><span class="s" id="rvbWhoS1"></span><span class="s" id="rvbWhoS2"></span></div>
+    <div class="res"><span class="l">Saving for this house without a loan</span><span class="v" id="rvbSaveV"></span><span class="s" id="rvbSaveS1"></span><span class="s" id="rvbSaveS2"></span></div>
+  </div>
+  <p class="legend" id="rvbCost"></p>
+  <p class="legend">Assumptions: both scenarios spend the same — the renter keeps the same cash that would have gone into the deal and each month sets aside (or draws down) the difference between the owner’s costs (payment + insurance + upkeep) and the rent. Loan principal is not a cost but savings held in the walls; the owner’s costs are interest, insurance, upkeep and the forgone return on the cash. Upkeep is 1,2 % of the house’s current value per year (repairs ~1 % + IMI ~0,2 %). At the end of the horizon the buyer sells: minus agent 5 % + IVA (6,15 % of price) and a 0,5 % early-repayment fee on the balance. Not included: tax on investment income (IRS 28 %) and capital-gains tax on the sale (mais-valias) — none if the money goes into another primary home, otherwise half the gain is taxed under IRS. Rate after the fixed period = current Euribor; everything in nominal terms. Default rent: 1 600 €/month, roughly what a comparable home rents for.</p>
+
+  <h2>Status by bank</h2>
+  <p class="lede">Status is the stage the file has reached (1 file → 2 preliminary analysis → 3 decision pending, no property → 4 approved, no property → 5 property-specific); the glossary is behind the ⓘ in the column header. “Next step” is what we are waiting for from the bank or doing ourselves. Hover over a status pill (tap on a phone) to see the bank’s history: what it replied, when, and what we’re waiting for.</p>
+
+  <div class="strip">
+    <div class="stat"><span class="n">10</span><span class="l">banks approached</span></div>
+    <div class="stat ac"><span class="n">4</span><span class="l">2 · preliminary analysis</span></div>
+    <div class="stat wt"><span class="n">2</span><span class="l">3 · decision pending, no property</span></div>
+    <div class="stat gd"><span class="n">1</span><span class="l">4 · approved, no property</span></div>
+    <div class="stat al"><span class="n">3</span><span class="l">✖ refused or dropped</span></div>
+  </div>
+
+  <div class="tablebox banks-table">
+    <table>
+      <colgroup><col style="width:13%"><col style="width:20%"><col style="width:37%"><col style="width:8%"><col style="width:13%"><col style="width:9%"></colgroup>
+      <thead>
+        <tr>
+          <th>Bank</th>
+          <th>Status <span class="info html" tabindex="0">i</span><span class="stnote" data-w="680"><b>Status = the stage the file is physically at.</b> Percentage, amount and compliance are properties, not status. A stage changes only on an event with a date and a source (shown in the bank’s popup); we never move forward without a document, but can move back (refusal).<table><tr><th>#</th><th>Status</th><th>Meaning</th><th>Confirmed by</th>
+        </tr><tr><td>1</td><td>file</td><td>application sent, bank is requesting documents, no figures named</td><td>document requests, signed forms</td>
+        </tr><tr><td>2</td><td>preliminary analysis (viabilidade)</td><td>bank has named an amount, rate and term; non-binding</td><td>offer / simulação</td>
+        </tr><tr><td>3</td><td>decision pending, no property (aprovação)</td><td>file is with the credit committee: approving the borrower and amount; the property is checked later by valuation</td><td>our request + the broker’s confirmation that it was submitted</td>
+        </tr><tr><td>4</td><td>approved, no property (carta de aprovação)</td><td>bank letter: amount, final terms, validity</td><td>bank letter</td>
+        </tr><tr><td>5</td><td>property-specific (avaliação → aprovação final → contrato)</td><td>property valuation, final approval, contract offer, escritura</td><td>valuation report, contract offer, contract</td>
+        </tr><tr><td>✖</td><td>refused / dropped (at N)</td><td>bank declined, or we dropped it; N = the stage at which</td><td>letter / message</td>
+        </tr><tr><td>!</td><td>apply!</td><td>not applied yet — our move</td><td>—</td>
+        </tr></table>A separate flag, not a stage: <b>compliance ✓</b> — account opened, KYC/AML passed (done when opening the account, at any stage; so far only Eurobic).</span></th>
+          <th>Next step</th>
+          <th>Offer</th>
+          <th>Loan offered</th>
+          <th>Term</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="bank">Eurobic <span class="crown" data-crown="taeg">👑</span></td>
+          <td class="st"><span class="pill gd">4 · approved, no property</span><span class="stnote">Stage 4 since 22.09 — approval letter (carta de aprovação) for 400 000 € / 35 years, valid 90 days. 18.09 — offer via the broker, two options: mixed with a 2-year fix at 2,70 %, then Euribor 6M + 0,65 %; or variable, Euribor 6M + 0,65 % = 3,11 %. Lowest TAEG of every offer (3,70 %) and the lowest total cost on 400 000 € (MTIC 709 936,02 €). 19.09 — formal decision requested; 22.09 — letter received. Conditions: salary paid into a Eurobic account + the bank’s life and home insurance. 23.09 — account opened, compliance ✓.</span></td>
+          <td class="next">Choose mixed 2 yrs or variable. Send the property documents once the house is chosen — the letter expires 21.12.</td>
+          <td class="num"><span class="ok">yes</span></td>
+          <td class="num">400 000 €<span class="dim">68 % of price</span></td>
+          <td class="num">35 yrs</td>
+        </tr>
+        <tr>
+          <td class="bank">Santander <span class="crown" data-crown="pay">👑</span></td>
+          <td class="st"><span class="pill wn">3 · decision pending, no property</span><span class="stnote">Stage 3 since 19.09 — formal decision requested via the broker. 18.09 — offer: mixed with a 2-year fix at 2,65 %, then Euribor 6M + 0,65 %, 35 years. The lowest monthly payment on 400 000 € with insurance (1 590,14 €) thanks to cheap life cover (68,95 €/month), but TAEG 4,50 % and MTIC 801 333,08 € — ~91 000 € more than Eurobic over the term. The broker says the difference sits in the insurance and linked products; we asked for the breakdown.</span></td>
+          <td class="next">Waiting for the decision (1–2 weeks). Ask for the product breakdown behind the 4,50 % TAEG.</td>
+          <td class="num"><span class="ok">yes</span></td>
+          <td class="num">400 000 €</td>
+          <td class="num">35 yrs</td>
+        </tr>
+        <tr>
+          <td class="bank">CGD</td>
+          <td class="st"><span class="pill wn">3 · decision pending, no property</span><span class="stnote">Stage 3 since 17.09 — the bank asked for IRS 2025 and three months of statements “to proceed with the analysis”; sent the same day. 18.09 — offer in the broker’s comparison: mixed with a 2-year fix at 2,65 %, then Euribor 6M + 0,70 %, 30 years. The shorter 30-year term makes the payment higher (1 755,85 € with insurance) but the MTIC is the second lowest (714 914,60 €).</span></td>
+          <td class="next">Documents sent 17.09 — waiting for the decision. Ask whether 35 years is possible.</td>
+          <td class="num"><span class="ok">yes</span></td>
+          <td class="num">400 000 €</td>
+          <td class="num">30 yrs</td>
+        </tr>
+        <tr>
+          <td class="bank">Banco BPI</td>
+          <td class="st"><span class="pill ac">2 · preliminary analysis</span><span class="stnote">Stage 2 since 18.09 — three options on 400 000 € / 34 years: mixed with a 3-year fix at 2,80 %; variable at Euribor 6M + 0,75 % = 3,21 %; fixed for the whole term at 3,45 %. The highest spread of all offers (0,75 %) and the highest TAEGs (4,50–4,80 %). The only bank besides Bankinter offering a rate fixed for the whole term.</span></td>
+          <td class="next">Backup. Keep the fixed-for-life option in mind if Euribor starts rising.</td>
+          <td class="num"><span class="ok">yes</span></td>
+          <td class="num">400 000 €</td>
+          <td class="num">34 yrs</td>
+        </tr>
+        <tr>
+          <td class="bank">Bankinter</td>
+          <td class="st"><span class="pill ac">2 · preliminary analysis</span><span class="stnote">Stage 2 since 18.09 — three options, but only on a 25-year term: mixed 1-year fix at 2,25 %, mixed 5-year fix at 2,59 %, or fixed for the whole term at 2,69 %. The short term pushes the payment above 1 950 € with insurance, but the fixed option has one of the lowest total costs (MTIC 636 154,75 €). Life insurance is expensive: 166,81 €/month.</span></td>
+          <td class="next">Ask for a 35-year version and a quote with external life insurance.</td>
+          <td class="num"><span class="ok">yes</span></td>
+          <td class="num">400 000 €</td>
+          <td class="num">25 yrs</td>
+        </tr>
+        <tr>
+          <td class="bank">Crédito Agrícola</td>
+          <td class="st"><span class="pill ac">2 · preliminary analysis</span><span class="stnote">Stage 2 since 18.09 — mixed with a 3-year fix at 2,45 %, then Euribor 6M + 0,65 %, 35 years. The lowest payment without insurance (1 419,28 €), but its life insurance costs 330,70 €/month — two to five times the others — which takes the payment to 1 762,13 € and the MTIC to 792 940,34 €. The broker thinks external life cover is allowed.</span></td>
+          <td class="next">Ask for a quote with external life insurance; without it, not competitive.</td>
+          <td class="num"><span class="ok">yes</span></td>
+          <td class="num">400 000 €</td>
+          <td class="num">35 yrs</td>
+        </tr>
+        <tr>
+          <td class="bank">Abanca</td>
+          <td class="st"><span class="pill ac">2 · preliminary analysis</span><span class="stnote">Stage 2 since 18.09 — but only 351 000 €: the bank caps the loan at 60 % of the price (351 000 / 585 000). Four mixed options (1, 2, 3 or 5-year fix at 2,25–2,50 %, then Euribor 6M + 0,60 %), 35 years, TAEG 3,70–3,80 % — the lowest spread of all. At 60 % we would need ~234 000 € down plus ~42 800 € in costs.</span></td>
+          <td class="next">Ask if 400 000 € is possible; otherwise out — the down payment doesn’t fit.</td>
+          <td class="num"><span class="ok">yes</span></td>
+          <td class="num">351 000 €<span class="dim">60 % of price</span></td>
+          <td class="num">35 yrs</td>
+        </tr>
+        <tr class="dead">
+          <td class="bank">Novo Banco</td>
+          <td class="st"><span class="pill al">✖ refused · at 1–2</span><span class="stnote">Refused at stage 1–2: the broker’s message of 12.09 — declined, no reason given.</span></td>
+          <td class="next">Nothing.</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr class="dead">
+          <td class="bank">Millennium BCP</td>
+          <td class="st"><span class="pill al">✖ refused · at 2</span><span class="stnote">Refused at stage 2, 15.09: debt-to-income over the bank’s limit when counting self-employed income at 75 %.</span></td>
+          <td class="next">Nothing.</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr class="dead">
+          <td class="bank">UCI</td>
+          <td class="st"><span class="pill al">✖ dropped · at 2</span><span class="stnote">Dropped by us at stage 2, 16.09: a specialist mortgage lender offering 70 % of price for the self-employed and a 5-year fix at 4,25 % — the most expensive rate we were quoted.</span></td>
+          <td class="next">Nothing.</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="legend">All figures come from the broker’s comparison of 18.09.2026 (acquisition value 585 000 €, loan 400 000 €, 6-month Euribor at 2,46 %), except Eurobic’s approval letter of 22.09. The terms run from 25 to 35 years, so don’t compare offers on the monthly payment alone: compare TAEG and total cost (MTIC). Bankinter looks expensive per month, but its 25-year term gives one of the lowest total costs; Santander has the lowest payment but one of the highest total costs. Abanca’s figures are on 351 000 € because it lends only 60 % of the price. “With insurance” includes life insurance on the borrower and home insurance at the starting premium; life premiums rise with age. Two crowns — hover to see which is which: 👑 lowest TAEG and total cost (Eurobic, 3,70 %) and 👑 lowest monthly payment on 400 000 € (Santander, 1 590,14 € with insurance). No bank has given property-specific final approval yet; that needs a chosen house and a valuation.</p>
+
+  <h2>Deal roadmap</h2>
+  <p class="lede">The path from a house we like to the keys. The order fits our situation: we already have an approval letter without a property (Eurobic), so the bank steps are short, and the promissory contract (CPCV) moves to the end or drops out. Timings are typical for the market.</p>
+
+  <div class="road">
+    <div class="mile" data-n="1">
+      <h3>Offer and reservation <span class="dim" style="font-weight:400">(proposta / ficha de reserva)</span> <span class="mdur">seller replies in 1–5 days</span></h3>
+      <p>A written price offer through the agency. Often this is a reservation form: we pay 1 000–5 000 € as a deposit to the <b>agency</b> (not the seller); once the seller accepts, the property comes off the market. The amount counts towards the price. The key clause: if the bank doesn’t lend, the money is returned. Before signing, write in a realistic deadline to the CPCV/escritura — 30–45 days, with room for the bank’s cycle.</p>
+      <p><b>The reservation form isn’t mandatory.</b> It’s agency practice, not a legal requirement: an offer can be made by a simple letter (proposta de compra) with no money. The amount and terms are negotiable — you can offer 500–1 000 € and add your own conditions (bank valuation not below X, survey). But the reservation also works for us: once accepted, the seller is locked in and can’t sell to someone else during the bank’s cycle.</p>
+    </div>
+
+    <div class="mgap"><span class="gdur">~1–2 weeks</span>Collecting the property documents: tax record (caderneta predial), land-registry extract (certidão predial), occupancy licence (licença de utilização), energy certificate. The package goes via the broker to the bank, and the bank orders the valuation (usually 0–350 €, often waived in campaigns).</div>
+
+    <div class="mgap"><span class="gdur">in parallel · 7–10 days</span>Our own due diligence, as the property requires: structural engineer (damp, roof, cracks, electrics, ~150–400 €), lawyer for the paperwork (charges on the certidão, licença, condominium debts), architect if a rebuild is planned. Add the right to withdraw based on the inspections as a separate condition in the reservation (step 1). All of this strictly before the CPCV: after it, hidden defects are our problem.</div>
+
+    <div class="mile" data-n="2">
+      <h3>Property valuation <span class="dim" style="font-weight:400">(avaliação)</span> <span class="mdur">visit + report 3–7 days</span></h3>
+      <p>The bank’s valuer inspects the house and writes a report. The loan is limited to a share of the lower of price and valuation — at 400 000 € on 585 000 € we are at 68 %, well under the usual 80–90 % limits, so a valuation up to ~15 % below the price still works.</p>
+      <p><b>Low valuation = exit without loss.</b> A valuation below the threshold cuts the loan, and an insufficient loan should be covered by the reservation’s financing clause. To be safe, spell it out when signing: “if the bank valuation is below X € or the approved loan is below Y € — withdrawal with a full refund of the reservation”.</p>
+    </div>
+
+    <div class="mgap"><span class="gdur">3–10 working days</span>The bank checks the valuation and property documents and issues the final decision for the specific property + a contract offer.</div>
+
+    <div class="mile" data-n="3">
+      <h3>Final approval for the property <span class="mdur">reflection period 7–30 days</span></h3>
+      <p>The bank confirms the loan for this house and sends the contract offer. By law there’s a minimum of 7 days to consider it and a maximum of 30. From this point the money is guaranteed.</p>
+    </div>
+
+    <div class="mile" data-n="4">
+      <h3>CPCV <span class="dim" style="font-weight:400">(promissory contract with deposit)</span> <span class="mdur">floating step</span></h3>
+      <p>The deposit (sinal) of ~10 % now goes to the <b>seller</b>. The market classic is to sign right after the offer, before the bank: then a financing condition (condição suspensiva) is essential, otherwise the deposit is lost if the bank refuses. Our route: after final approval (almost no risk), or skip it entirely and go straight to the escritura. Cost of backing out: the buyer loses the deposit, the seller repays double, and for housing a court can enforce the sale (execução específica).</p>
+    </div>
+
+    <div class="mgap"><span class="gdur">2–6 weeks</span>Preparing the escritura: a date with the notary, the bank prepares the mortgage deed, the seller pays off their own mortgage (distrate). We gather the cash for the deal: down payment + taxes and fees (~42 000 € in costs on a 400 000 € loan) — IMT and stamp duty are paid before signing.</div>
+
+    <div class="mile" data-n="5">
+      <h3>Escritura <span class="dim" style="font-weight:400">(escritura + mortgage deed)</span> <span class="mdur">1 day</span></h3>
+      <p>At the notary: signatures, the bank releases the loan, the seller gets paid, we get the keys. Ownership transfers only here. The bank registers the purchase and the mortgage (already in its costs).</p>
+    </div>
+  </div>
+  <p class="legend">In total, from offer acceptance to keys is usually 1,5–3 months (minimum ~1 month with documents ready and no CPCV, maximum ~4 with a seller chain and a slow bank). The payment schedule by stage is in “When the money goes out” under the calculator.</p>
+
+  <h2>Eurobic vs Santander</h2>
+  <p class="lede">The two front-runners, on the same amount and term (400 000 €, 35 years) — so unlike the table above, every row compares directly.</p>
+  <div class="duel">
+    <table>
+      <thead>
+        <tr><th></th><th>Eurobic <span class="dim">(mixed 2 yrs)</span></th><th>Santander <span class="dim">(mixed 2 yrs)</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Term</td><td class="num">35 years</td><td class="num">35 years</td></tr>
+        <tr><td>Fixed rate, first 2 years (TAN)</td><td class="num">2,70 %</td><td class="num win">2,65 %</td></tr>
+        <tr><td>Spread after the fixed period</td><td class="num">0,65 %</td><td class="num">0,65 %</td></tr>
+        <tr><td>Effective rate (TAEG)</td><td class="num win">3,70 %</td><td class="num">4,50 %</td></tr>
+        <tr><td>Payment without insurance</td><td class="num">1 473,22 €</td><td class="num win">1 462,34 €</td></tr>
+        <tr><td>Insurance: life + home</td><td class="num">85,37 € + 39,33 €</td><td class="num win">68,95 € + 58,85 €</td></tr>
+        <tr><td>Payment with insurance</td><td class="num">1 597,92 €</td><td class="num win">1 590,14 €</td></tr>
+        <tr><td>Total cost of the loan (MTIC)</td><td class="num win">709 936,02 €</td><td class="num">801 333,08 €</td></tr>
+        <tr><td>Upfront costs incl. taxes</td><td class="num">42 339,00 €</td><td class="num win">41 892,75 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="legend">Santander wins five small rows — 7,78 € a month, 446 € upfront — and loses the one that matters: TAEG 4,50 % against 3,70 %, and ~91 400 € more in total cost over 35 years. The monthly payment hides costs that the TAEG and MTIC include: linked products, fees, and insurance premiums that rise with age. Upfront costs are mostly tax: IMT 33 036,65 € + purchase stamp duty 4 680,00 € + loan stamp duty 2 400,00 € = 40 116,65 € for both banks; the rest is bank fees and registrations (Eurobic 2 222,35 €, Santander 1 776,10 €).</p>
+
+  <h2>What we know about each bank</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Eurobic</h3>
+      <ul>
+        <li><b>22.09.2026 — approval letter</b> for 400 000 € / 35 years, valid 90 days (until 21.12). Final approval still needs a property and a valuation.</li>
+        <li>Mixed: fixed 2,70 % for 24 months, then Euribor 6M + 0,65 % (3,11 % today). Variable: Euribor 6M + 0,65 % from day one.</li>
+        <li>TAEG 3,70 % on both — the lowest of every offer. MTIC 709 936,02 € (mixed) / 713 938,97 € (variable).</li>
+        <li>Payment 1 473,22 € (mixed) / 1 564,06 € (variable); with insurance 1 597,92 € / 1 689,00 €. Life 85,37 € + home 39,33 €/month.</li>
+        <li>Upfront costs incl. taxes 42 339,00 € — the bank’s part is 2 222,35 €.</li>
+        <li>Conditions: salary into a Eurobic account + the bank’s life and home insurance. Account opened 23.09, compliance passed.</li>
+      </ul>
+      <div class="note"><b>Front-runner</b>Cheapest loan overall and the only one with a letter in hand. Mixed vs variable is the open question: the fix costs 0,41 pp less today (2,70 vs 3,11 %) and protects the first two years.</div>
+    </div>
+
+    <div class="card">
+      <h3>Santander</h3>
+      <ul>
+        <li>Offer 18.09: mixed 2-year fix at 2,65 %, then Euribor 6M + 0,65 %; 35 years; TAEG 4,50 %; MTIC 801 333,08 €.</li>
+        <li>Payment 1 462,34 € without insurance, 1 590,14 € with — the lowest monthly figure on 400 000 €. Life 68,95 € + home 58,85 €/month.</li>
+        <li>Upfront costs incl. taxes 41 892,75 €.</li>
+        <li>Formal decision requested 19.09 via the broker.</li>
+      </ul>
+      <div class="note"><b>Watch the TAEG</b>Same spread as Eurobic and a lower fixed rate, yet the TAEG is 0,8 pp higher. Until we see what’s behind it, the low monthly payment is not the real price.</div>
+    </div>
+
+    <div class="card">
+      <h3>CGD</h3>
+      <ul>
+        <li>Offer 18.09: mixed 2-year fix at 2,65 %, then Euribor 6M + 0,70 %; 30 years; TAEG 4,40 %; MTIC 714 914,60 €.</li>
+        <li>Payment 1 611,86 € without insurance, 1 755,85 € with. Life 107,13 € + home 36,86 €/month.</li>
+        <li>Upfront costs incl. taxes 41 301,50 € — the lowest overall.</li>
+        <li>17.09 — asked for IRS 2025 and three months of bank statements; sent the same day. Decision pending.</li>
+      </ul>
+      <div class="note"><b>Solid second</b>The shorter 30-year term costs ~160 € a month more than Eurobic but keeps total cost close (714 915 € vs 709 936 €). A 35-year version would make it a real contender.</div>
+    </div>
+
+    <div class="card">
+      <h3>Banco BPI</h3>
+      <ul>
+        <li>Three options on 400 000 € / 34 years, all with a 0,75 % spread — the highest quoted.</li>
+        <li>Mixed 3-year fix 2,80 %: TAEG 4,50 %, 1 670,55 € with insurance, MTIC 780 716,26 €.</li>
+        <li>Variable 3,21 %: TAEG 4,60 %, 1 761,50 €, MTIC 787 674,28 €.</li>
+        <li>Fixed for the whole term 3,45 %: TAEG 4,80 %, 1 816,05 €, MTIC 811 048,61 € — no Euribor risk at all.</li>
+        <li>Life 102,12 € + home 47,36 €/month; upfront 41 410,05 € (42 148,45 € on the variable).</li>
+      </ul>
+      <div class="note"><b>Backup</b>Worth keeping only for the fixed-for-life option.</div>
+    </div>
+
+    <div class="card">
+      <h3>Bankinter</h3>
+      <ul>
+        <li>Only a 25-year term. Mixed 1-year 2,25 % (TAEG 4,50 %), mixed 5-year 2,59 % (4,30 %), fixed for the whole term 2,69 % (4,20 %).</li>
+        <li>Payments with insurance 1 951,30 € / 2 019,43 € / 2 039,76 € — the highest, because of the short term.</li>
+        <li>MTIC 656 236,76 € / 649 607,75 € / 636 154,75 € — among the lowest, for the same reason: fewer years of interest.</li>
+        <li>Life insurance 166,81 €/month, home 39,97 €/month; upfront 41 941,68 €.</li>
+      </ul>
+      <div class="note"><b>Cheapest if we can carry it</b>The fixed 2,69 % for 25 years is the lowest-risk, lowest-total option — at ~440 € a month more than Eurobic. Ask for 35 years and external life cover.</div>
+    </div>
+
+    <div class="card">
+      <h3>Crédito Agrícola · Abanca</h3>
+      <ul>
+        <li><b>Crédito Agrícola:</b> mixed 3-year fix at 2,45 %, 35 years, TAEG 4,40 %. The lowest payment without insurance (1 419,28 €), but life insurance at 330,70 €/month takes it to 1 762,13 € and the MTIC to 792 940,34 €. Upfront 43 086,30 €, the highest.</li>
+        <li><b>Abanca:</b> the lowest spread (0,60 %) and TAEG 3,70–3,80 % on four mixed options (1/2/3/5-year fix, 2,25–2,50 %), 35 years — but only 351 000 €, 60 % of the price. Payments 1 373,63–1 420,08 € with insurance on that amount; upfront 42 778,03 €.</li>
+      </ul>
+      <div class="note"><b>Fixable?</b>CA with external life insurance, or Abanca at 400 000 €, would both move up the ranking. Both questions are with the broker.</div>
+    </div>
+
+    <div class="card">
+      <h3>Refused or dropped</h3>
+      <ul>
+        <li>Novo Banco declined on 12.09, no reason given.</li>
+        <li>Millennium BCP declined on 15.09: debt-to-income over its limit, counting self-employed income at 75 %.</li>
+        <li>UCI dropped by us on 16.09: 70 % of price and a 4,25 % five-year fix.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><b>The cheapest payment isn’t the cheapest loan.</b> On the same 400 000 € and 35 years, Santander’s payment is 7,78 € a month lower than Eurobic’s, yet its total cost is ~91 400 € higher. Across terms it’s starker: Bankinter’s 25-year fixed has the highest payment of all (2 039,76 €) and one of the lowest total costs (636 154,75 €). Pick on TAEG and MTIC; use the payment only to check what we can carry.</p>
+  </div>
+
+  <h2>How to compare offers</h2>
+  <p class="lede">The headline rate is misleading: a bank can offer a low rate and make it back through insurance and fees. Compare loans at the same amount and term, using these four figures — all of them are in the bank’s standard offer.</p>
+  <div class="gloss">
+    <div class="term"><b>Offer</b><p>FINE in Portuguese (ESIS in English): the standard EU mortgage offer every bank must give you, with rate, TAEG, payment, fees and total cost in the same format.</p></div>
+    <div class="term"><b>TAN</b><p>Nominal annual rate — the loan’s interest rate on its own, without costs.</p></div>
+    <div class="term"><b>TAEG</b><p>Effective annual rate: TAN + mandatory insurance, fees and taxes. The main figure for comparing banks.</p></div>
+    <div class="term"><b>Prestação</b><p>Monthly payment. Handy for “can we afford it?”, but banks can only be compared on it at equal amount and term.</p></div>
+    <div class="term"><b>MTIC</b><p>Everything you pay the bank over the whole term: principal + interest + costs. The loan’s total price in one number.</p></div>
+  </div>
+
+  <footer>
+    Sources: the broker’s comparison of 18.09.2026 (seven banks, fifteen offers, acquisition value 585 000 €, 6-month Euribor 2,46 %) and Eurobic’s approval letter of 22.09.2026. The rate after each fixed period is variable: if Euribor rises, payments rise with it — the calculator uses today’s Euribor.<br>Portfolio case study · names, dates and statuses adapted.
+  </footer>
+</div>
+<script>
+'use strict';
+// Bank conditions captured 25.08.2026 (FINE Santander 25.08 + summary table 24.08); 03.09.2026: CGD from its offer of 02.09 (255k), Novo Banco 80 % and UCI 70 % per broker/bank statements; 07.09.2026: CGD dispute closed (bank counts only the 12-month portal listing), cgdPlus1/2/3/4 projections added.
+// Offers from the broker's comparison of 18.09.2026: acquisition value 585 000 €, loan 400 000 € (Abanca 351 000 €), 6-month Euribor 2,46 %.
+// r2 = Euribor 6M 2,46 % + the bank's spread. fees = the broker's "total costs including taxes" minus IMT, both stamp duties (so bank fees, registrations and deed).
+// ltv = the share of the price the bank lends at most (Abanca capped at 60 %: 351 000 / 585 000).
+const SRC = 'the broker’s comparison of 18.09.2026';
+function bank(o){
+  return Object.assign({appraisal:0, notary:0, estimated:false,
+    insNote:'Starting premiums per ' + SRC + '. Life premiums rise with age.',
+    feesNote:o.name.split(' · ')[0] + ': bank fees, registrations and the deed per ' + SRC + ' — its “total costs including taxes” of ' + o.total + ' minus IMT and both stamp duties. The valuation and notary are included.'}, o);
+}
+const BANKS = {
+  bpiMix: bank({name:'BPI · 3-yr fixed', ltv:0.90, months:408, fixm:36,
+    r1:0.0280, r2:0.0321, life:102.12, home:47.36, fees:1293.40, total:'41 410,05 €',
+    foot:'Banco BPI, mixed rate (offer 18.09.2026): 400 000 € / 34 years; fixed 2,80 % for 36 months, then Euribor 6M + 0,75 %; TAEG 4,50 %; MTIC 780 716,26 €; payment 1 521,07 €, 1 670,55 € with insurance (life 102,12 + home 47,36).', bank:'Banco BPI', type:'Mixed 3 yrs', kind:'mixed', spread:0.0075, taeg:0.045, mtic:780716.26, base:400000}),
+  bpiVar: bank({name:'BPI · variable', bank:'Banco BPI', type:'Variable', kind:'variable', spread:0.0075, taeg:0.046, mtic:787674.28, base:400000, ltv:0.90, months:408, fixm:0,
+    r1:0.0321, r2:0.0321, life:102.12, home:47.36, fees:2031.80, total:'42 148,45 €',
+    foot:'Banco BPI, variable rate (offer 18.09.2026): 400 000 € / 34 years; Euribor 6M + 0,75 % = 3,21 %; TAEG 4,60 %; MTIC 787 674,28 €; payment 1 612,02 €, 1 761,50 € with insurance.'}),
+  bpiFix: bank({name:'BPI · fixed whole term', ltv:0.90, months:408, fixm:408,
+    r1:0.0345, r2:0.0345, life:102.12, home:47.36, fees:1293.40, total:'41 410,05 €',
+    foot:'Banco BPI, fixed for the whole term (offer 18.09.2026): 400 000 € / 34 years at 3,45 % — Euribor doesn’t apply; TAEG 4,80 %; MTIC 811 048,61 €; payment 1 666,57 €, 1 816,05 € with insurance.', bank:'Banco BPI', type:'Fixed', kind:'fixed', spread:0.0075, taeg:0.048, mtic:811048.61, base:400000}),
+  cgd: bank({name:'CGD · 2-yr fixed', ltv:0.80, months:360, fixm:24,
+    r1:0.0265, r2:0.0316, life:107.13, home:36.86, fees:1184.85, total:'41 301,50 €',
+    foot:'CGD, mixed rate (offer 18.09.2026): 400 000 € / 30 years; fixed 2,65 % for 24 months, then Euribor 6M + 0,70 %; TAEG 4,40 %; MTIC 714 914,60 €; payment 1 611,86 €, 1 755,85 € with insurance (life 107,13 + home 36,86). Lowest upfront costs (41 301,50 €).', bank:'CGD', type:'Mixed 2 yrs', kind:'mixed', spread:0.0070, taeg:0.044, mtic:714914.60, base:400000}),
+  eurobicMix: bank({name:'Eurobic · 2-yr fixed', crown:'taeg', ltv:0.80, months:420, fixm:24,
+    r1:0.0270, r2:0.0311, life:85.37, home:39.33, fees:2222.35, total:'42 339,00 €',
+    foot:'Eurobic, mixed rate (approval letter 22.09.2026, offer 18.09): 400 000 € / 35 years; fixed 2,70 % for 24 months, then Euribor 6M + 0,65 % (3,11 % today); TAEG 3,70 %; MTIC 709 936,02 €; payment 1 473,22 €, 1 597,92 € with insurance (life 85,37 + home 39,33). The lowest TAEG and total cost of every offer.', bank:'Eurobic', type:'Mixed 2 yrs', kind:'mixed', spread:0.0065, taeg:0.037, mtic:709936.02, base:400000}),
+  eurobicVar: bank({name:'Eurobic · variable', ltv:0.80, months:420, fixm:24,
+    r1:0.0311, r2:0.0311, life:85.37, home:39.33, fees:2222.35, total:'42 339,00 €',
+    foot:'Eurobic, variable rate (offer 18.09.2026): 400 000 € / 35 years; Euribor 6M + 0,65 % = 3,11 %, reset every 6 months; TAEG 3,70 %; MTIC 713 938,97 €; payment 1 564,06 €, 1 689,00 € with insurance.', bank:'Eurobic', type:'Variable', kind:'variable', spread:0.0065, taeg:0.037, mtic:713938.97, base:400000}),
+  bankinter1: bank({name:'Bankinter · 1-yr fixed', bank:'Bankinter', type:'Mixed 1 yr', kind:'mixed', spread:0.0065, taeg:0.045, mtic:656236.76, base:400000, ltv:0.80, months:300, fixm:12,
+    r1:0.0225, r2:0.0311, life:166.81, home:39.97, fees:1825.03, total:'41 941,68 €',
+    foot:'Bankinter, mixed rate (offer 18.09.2026): 400 000 € / 25 years; fixed 2,25 % for 12 months, then Euribor 6M + 0,65 %; TAEG 4,50 %; MTIC 656 236,76 €; payment 1 744,52 €, 1 951,30 € with insurance.'}),
+  bankinterMix: bank({name:'Bankinter · 5-yr fixed', ltv:0.80, months:300, fixm:60,
+    r1:0.0259, r2:0.0311, life:166.81, home:39.97, fees:1825.03, total:'41 941,68 €',
+    foot:'Bankinter, mixed rate (offer 18.09.2026): 400 000 € / 25 years; fixed 2,59 % for 60 months, then Euribor 6M + 0,65 %; TAEG 4,30 %; MTIC 649 607,75 €; payment 1 812,65 €, 2 019,43 € with insurance (life 166,81 + home 39,97).', bank:'Bankinter', type:'Mixed 5 yrs', kind:'mixed', spread:0.0065, taeg:0.043, mtic:649607.75, base:400000}),
+  bankinterFix: bank({name:'Bankinter · fixed whole term', ltv:0.80, months:300, fixm:300,
+    r1:0.0269, r2:0.0269, life:166.81, home:39.97, fees:1825.03, total:'41 941,68 €',
+    foot:'Bankinter, fixed for the whole term (offer 18.09.2026): 400 000 € / 25 years at 2,69 %; TAEG 4,20 %; MTIC 636 154,75 € — one of the lowest totals; payment 1 832,98 €, 2 039,76 € with insurance.', bank:'Bankinter', type:'Fixed', kind:'fixed', spread:0.0065, taeg:0.042, mtic:636154.75, base:400000}),
+  ca: bank({name:'Crédito Agrícola · 3-yr fixed', ltv:0.80, months:420, fixm:36,
+    r1:0.0245, r2:0.0311, life:330.70, home:12.15, fees:2969.65, total:'43 086,30 €',
+    foot:'Crédito Agrícola, mixed rate (offer 18.09.2026): 400 000 € / 35 years; fixed 2,45 % for 36 months, then Euribor 6M + 0,65 %; TAEG 4,40 %; MTIC 792 940,34 €; payment 1 419,28 € — the lowest without insurance — but 1 762,13 € with it: life insurance 330,70 €/month.', bank:'C. Agrícola', type:'Mixed 3 yrs', kind:'mixed', spread:0.0065, taeg:0.044, mtic:792940.34, base:400000}),
+  abanca1: bank({name:'Abanca · 1-yr fixed', bank:'Abanca', type:'Mixed 1 yr', kind:'mixed', spread:0.0060, taeg:0.038, mtic:634522.67, base:351000, ltv:0.60, months:420, fixm:12,
+    r1:0.0225, r2:0.0306, life:149.53, home:15.83, fees:2955.38, total:'42 778,03 €',
+    foot:'Abanca, mixed rate (offer 18.09.2026): at most 60 % of the price — 351 000 € on 585 000 €; 35 years; fixed 2,25 % for 12 months, then Euribor 6M + 0,60 %; TAEG 3,80 %; MTIC 634 522,67 €; payment 1 208,27 €, 1 373,63 € with insurance.'}),
+  abanca: bank({name:'Abanca · 2-yr fixed', ltv:0.60, months:420, fixm:24,
+    r1:0.0250, r2:0.0306, life:149.44, home:15.83, fees:2955.38, total:'42 778,03 €',
+    foot:'Abanca, mixed rate (offer 18.09.2026): lends at most 60 % of the price — 351 000 € on 585 000 €; 35 years; fixed 2,50 % for 24 months, then Euribor 6M + 0,60 %; TAEG 3,80 %; MTIC 633 448,57 €; payment 1 254,81 €, 1 420,08 € with insurance. Also offered: 1, 3 and 5-year fixes (TAEG 3,70–3,80 %).', bank:'Abanca', type:'Mixed 2 yrs', kind:'mixed', spread:0.0060, taeg:0.038, mtic:633448.57, base:351000}),
+  abanca3: bank({name:'Abanca · 3-yr fixed', bank:'Abanca', type:'Mixed 3 yrs', kind:'mixed', spread:0.0060, taeg:0.037, mtic:631307.45, base:351000, ltv:0.60, months:420, fixm:36,
+    r1:0.0250, r2:0.0306, life:149.22, home:15.83, fees:2955.38, total:'42 778,03 €',
+    foot:'Abanca, mixed rate (offer 18.09.2026): 351 000 € (60 % of price), 35 years; fixed 2,50 % for 36 months, then Euribor 6M + 0,60 %; TAEG 3,70 %; MTIC 631 307,45 €; payment 1 254,81 €, 1 419,86 € with insurance.'}),
+  abanca5: bank({name:'Abanca · 5-yr fixed', bank:'Abanca', type:'Mixed 5 yrs', kind:'mixed', spread:0.0060, taeg:0.037, mtic:627174.13, base:351000, ltv:0.60, months:420, fixm:60,
+    r1:0.0250, r2:0.0306, life:148.76, home:15.83, fees:2955.38, total:'42 778,03 €',
+    foot:'Abanca, mixed rate (offer 18.09.2026): 351 000 € (60 % of price), 35 years; fixed 2,50 % for 60 months, then Euribor 6M + 0,60 %; TAEG 3,70 %; MTIC 627 174,13 €; payment 1 254,81 €, 1 419,40 € with insurance.'}),
+  santander: bank({name:'Santander · 2-yr fixed', crown:'pay', ltv:0.80, months:420, fixm:24,
+    r1:0.0265, r2:0.0311, life:68.95, home:58.85, fees:1776.10, total:'41 892,75 €',
+    foot:'Santander, mixed rate (offer 18.09.2026): 400 000 € / 35 years; fixed 2,65 % for 24 months, then Euribor 6M + 0,65 %; TAEG 4,50 %; MTIC 801 333,08 €; payment 1 462,34 €, 1 590,14 € with insurance (life 68,95 + home 58,85) — the lowest monthly payment on 400 000 €, but ~91 400 € more than Eurobic in total cost.', bank:'Santander', type:'Mixed 2 yrs', kind:'mixed', spread:0.0065, taeg:0.045, mtic:801333.08, base:400000})
+};
+
+// IMT Tabela I — HPP, Continente, 2026 (Ofício Circulado AT 40129/2026).
+function imt(base){
+  if (base <= 106346) return 0;
+  if (base <= 145470) return base*0.02 - 2126.92;
+  if (base <= 198347) return base*0.05 - 6491.02;
+  if (base <= 330539) return base*0.07 - 10457.96;
+  if (base <= 660982) return base*0.08 - 13763.35;
+  if (base <= 1150853) return base*0.06;
+  return base*0.075;
+}
+
+function imtNote(base){
+  let s;
+  if (base <= 106346) s = '0 % band (up to 106 346 €) — no tax';
+  else if (base <= 145470) s = '2 % − deduction 2 126,92 €';
+  else if (base <= 198347) s = '5 % − deduction 6 491,02 €';
+  else if (base <= 330539) s = '7 % − deduction 10 457,96 €';
+  else if (base <= 660982) s = '8 % − deduction 13 763,35 €';
+  else if (base <= 1150853) s = '6 % (no deduction)';
+  else s = '7,5 % (no deduction)';
+  return 'IMT — property transfer tax. Scale for a primary home (Tabela I, mainland, 2026 — Ofício Circulado AT n.º 40129/2026 of 06.01.2026, PDF in knowledge/sources): ' +
+    fmt0.format(base) + ' € × ' + s + ' = ' + fmt2.format(imt(base)) + ' €. The band rate applies to the whole amount, not in slices. Check: 585 000 € gives 33 036,65 €, consistent with the broker’s cost totals.';
+}
+
+function annuity(P, annualRate, n){
+  const r = annualRate/12;
+  return P * r / (1 - Math.pow(1+r, -n));
+}
+// Balance after k payments of pmt at monthly rate r.
+function balance(P, annualRate, pmt, k){
+  const r = annualRate/12;
+  return P*Math.pow(1+r,k) - pmt*((Math.pow(1+r,k)-1)/r);
+}
+
+function yearsLabel(months){
+  const y = months/12;
+  if (Number.isInteger(y)) return y + (y === 1 ? ' year' : ' years');
+  return fmt2.format(y).replace(/,?0+$/,'') + ' years';
+}
+
+const fmt0 = new Intl.NumberFormat('ru-RU',{maximumFractionDigits:0});
+const fmt2 = new Intl.NumberFormat('ru-RU',{minimumFractionDigits:2, maximumFractionDigits:2});
+const eur0 = v => fmt0.format(Math.round(v)) + ' €';
+const eur2 = v => fmt2.format(v) + ' €';
+const pct = v => (v*100).toFixed(1).replace('.',',') + ' %';
+
+let bankKey = 'eurobicMix';
+// Income ceiling, Banco de Portugal style: loan payment ≤ 50 % of net monthly income (DSTI),
+// checked at the variable rate + 3 pp; a rate fixed for the whole term isn't stress-tested.
+// Calibrated against CGD: 37 060 € net → ~245 000 € by this rule vs 255 000 € quoted by the bank.
+const DSTI = 0.50, STRESS = 0.03;
+const incomeEl = document.getElementById('income'), incomeN = document.getElementById('incomeN');
+function incomeCap(b){
+  const pmt = (+incomeEl.value)/12*DSTI;
+  const allFixed = (b.fixm || 24) >= b.months;
+  const r = (allFixed ? b.r1 : Math.max(b.r1, b.r2) + STRESS)/12;
+  return Math.floor(pmt*(1 - Math.pow(1+r, -b.months))/r/1000)*1000;
+}
+const eff = b => Object.assign({}, b, {cap: incomeCap(b)});
+const $ = id => document.getElementById(id);
+const priceEl = $('price'), downEl = $('down');
+
+function minDownFor(price, b){
+  const maxLoan = Math.min(b.ltv*price, b.cap);
+  return Math.max(price - maxLoan, price*0.10); // banks here require ≥10% own funds
+}
+function maxPriceFor(down, b){
+  // largest price with price − min(ltv·price, cap) ≤ down and down ≥ 10% price
+  const byLtv = down / (1 - b.ltv);
+  const byCap = b.cap + down;
+  const byTen = down / 0.10;
+  return Math.min(Math.max(byLtv, 0) <= b.cap/b.ltv ? byLtv : byCap, byTen);
+}
+
+function renderBanks(){
+  const box = $('banks'); box.innerHTML='';
+  for (const [k,b] of Object.entries(BANKS)){
+    const btn = document.createElement('button');
+    if (b.crown){
+      const c = document.createElement('span'); c.className = 'crown'; c.dataset.crown = b.crown; c.textContent = '\u{1F451}';
+      btn.append(c, document.createTextNode(' '));
+    }
+    btn.append(document.createTextNode(b.name));
+    btn.className = [k===bankKey ? 'on' : '', b.hypo ? 'hypo' : ''].filter(Boolean).join(' ');
+    btn.setAttribute('aria-pressed', String(k===bankKey));
+    btn.onclick = () => { bankKey=k; renderBanks(); update('bank'); };
+    box.appendChild(btn);
+  }
+  bindTips(box);
+}
+
+function update(source){
+  const b = eff(BANKS[bankKey]);
+  const BASE_PRICE = 585000;
+  let price = +priceEl.value, down = +downEl.value;
+
+  // sliders are independent: the table above re-runs every offer; this bank may lend less than asked
+  const md = Math.ceil(minDownFor(price,b)/100)*100;
+  downEl.max = Math.floor(price*0.6/100)*100;
+  if (down > +downEl.max){ down = +downEl.max; downEl.value = down; }
+  const dv = down;                                   // what the slider asks for
+  const loan = Math.min(price - down, b.ltv*price, b.cap);
+  const short = Math.max(price - loan - down, 0);   // extra own money this bank needs
+  down = price - loan;
+  const fixm = Math.min(b.fixm || 24, b.months);
+  const allFixed = fixm >= b.months;   // rate fixed for the whole term (BPI · fixed whole term)
+  const p1 = annuity(loan, b.r1, b.months);
+  const p2 = allFixed ? p1 : annuity(balance(loan, b.r1, p1, fixm), b.r2, b.months - fixm);
+
+  const isBuy = price*0.008, isLoan = loan*0.006, tax = imt(price);
+  const apprFee = b.appraisal || 0;
+  const notary = b.notary || 0;      // ≈, only when not already inside bank fees
+  const SPECIALISTS = 550;           // ≈ inspector ~250 + lawyer ~300, optional
+  const cash = down + tax + isBuy + isLoan + b.fees + notary + SPECIALISTS;
+
+  $('priceV').textContent = eur0(price);
+  $('downV').textContent = eur0(dv) + ' (' + pct(dv/price) + ')';
+  const mpT = Math.min(Math.max(maxPriceFor(down, b), +priceEl.min), +priceEl.max);
+  const tickQ = (mpT - +priceEl.min) / (+priceEl.max - +priceEl.min);
+  $('maxTick').style.left = 'calc(' + (tickQ*100).toFixed(2) + '% + ' + ((0.5 - tickQ)*16).toFixed(1) + 'px)';
+  const mpRaw = maxPriceFor(+downEl.value, b);
+  $('maxTick').style.display = (mpRaw >= +priceEl.max || mpRaw <= +priceEl.min) ? 'none' : '';   // only show the limit when it falls on the slider
+  $('maxTick').title = 'Most house ' + b.name + ' can finance with your down payment: ' + eur0(mpRaw);
+  const tickP = Math.min(Math.max((md - +downEl.min) / (+downEl.max - +downEl.min), 0), 1);
+  $('minTick').title = 'Minimum down payment ' + b.name + ' needs at this price: ' + eur0(md);
+  $('minTick').style.left = 'calc(' + (tickP*100).toFixed(2) + '% + ' + ((0.5 - tickP)*16).toFixed(1) + 'px)';
+  $('downMinL').textContent = 'scale from ' + eur0(+downEl.min);
+  $('downMaxL').textContent = 'to ' + eur0(+downEl.max) + ' (60 % of price)';
+
+  $('cashV').textContent = '≈ ' + eur0(cash);
+  $('cashS').textContent = 'down payment ' + eur0(down) + ' + taxes, fees and services ' + eur0(cash - down) + ' · breakdown below';
+  const lifeS = b.life*loan/b.base, homeS = b.home*price/BASE_PRICE;   // premiums scaled from the quoted offer
+  const ins = lifeS + homeS;
+  const end = new Date(); end.setMonth(end.getMonth() + b.months);
+  $('termV').textContent = yearsLabel(b.months);
+  $('termS1').textContent = 'last payment ≈ ' + end.getFullYear() + ' (if starting now)';
+  $('termS2').textContent = allFixed ? 'rate fixed for the whole term' : 'fixed for ' + fixm + ' months, then Euribor 6M + the bank’s spread';
+  $('loanLine').textContent = 'Loan: ' + eur0(loan) + ' — ' + pct(loan/price) + ' of price · ' + b.name +
+    (b.cap!==Infinity && loan >= b.cap-0.5 ? ' — capped by your income at ' + eur0(b.cap) : '');
+  const inc = +incomeEl.value;
+  $('capInfo').innerHTML = 'With ' + eur0(inc) + ' a year, <b>' + b.name + ' lends you up to ' + eur0(b.cap) + '</b>. Its minimum down payment of ' + Math.round((1-b.ltv)*100) + ' % holds up to a house of <b>' + eur0(Math.floor(b.cap/b.ltv/1000)*1000) + '</b>; above that, the extra comes from your own money.' +
+    '<span class="dim">Estimate: loan payment ≤ 50 % of net monthly income (' + eur0(inc/12*DSTI) + '/month), tested at the rate + 3 pp' + ((b.fixm||24) >= b.months ? ' — not applied here, the rate is fixed for the whole term' : '') + '. The bank’s own figure can differ; self-employed income is often counted at 75 %.</span>';
+  const ap = b.estimated ? '≈ ' : '';
+  $('pay1').textContent = ap + eur2(p1 + ins);
+  $('pay1S').textContent = eur2(p1) + ' without insurance · breakdown below';
+  $('pay1L').textContent = allFixed ? 'Monthly payment, whole term' : 'Monthly payment, first ' + fixm + ' months';
+  $('pay2S').textContent = allFixed ? 'rate fixed for the whole term — Euribor has no effect' : 'after ' + fixm + ' months: ' + ap + eur2(p2 + ins) + ' at current Euribor';
+
+  // total outlay over the whole term: one-offs + all annuity payments + insurances at the starting premium
+  const totAnn = p1*fixm + p2*(b.months - fixm);
+  const totIns = ins*b.months;
+  const oneOff = cash - down;
+  const total = cash + totAnn + totIns;
+  const over = total - price;
+  $('totL').textContent = 'Total over ' + yearsLabel(b.months);
+  $('totV').textContent = ap + '≈ ' + eur0(total);
+  $('totS1').textContent = 'paid on top of the price ' + eur0(over) + ' (' + pct(over/price) + ' of price): interest ' + eur0(totAnn - loan) + ' + insurance ' + eur0(totIns) + ' + taxes, fees, services ' + eur0(oneOff);
+  $('totS2').textContent = 'at current Euribor and starting insurance premiums — a lower-bound estimate. Not directly comparable with the offer’s MTIC: the bank counts only the loan (no down payment or purchase taxes), but includes life insurance rising with age';
+
+  $('iDown').dataset.tip = 'Our own money: price ' + eur0(price) + ' minus loan ' + eur0(loan) + '.';
+  $('iImt').dataset.tip = imtNote(price);
+  $('iIsBuy').dataset.tip = 'Stamp duty on the purchase (Imposto do Selo, verba 1.1): 0,8 % of the higher of price and tax value (VPT); here, of the price. ' + eur0(price) + ' × 0,8 % = ' + eur2(isBuy) + '. Check: 4 680,00 € at 585 000 €.';
+  $('iIsLoan').dataset.tip = 'Stamp duty on using the loan (Imposto do Selo, verba 17.1.4, term ≥ 5 years): 0,6 % × loan. ' + eur0(loan) + ' × 0,6 % = ' + eur2(isLoan) + '. Check: 2 400,00 € on 400 000 €.';
+  $('iAppr').dataset.tip = 'Property valuation (avaliação) — ordered by the bank once there’s a house. In the broker’s comparison it’s included in each bank’s costs.';
+  $('iFee').dataset.tip = b.feesNote;
+  $('iNot').dataset.tip = 'The deed (escritura at a notary, Casa Pronta or a Documento Particular Autenticado) — included in each bank’s costs in the broker’s comparison.';
+  $('iSpec').dataset.tip = 'Our own specialists before the CPCV, as the property requires: structural engineer (damp, roof, cracks, electrics) ~150–400 € + lawyer/solicitador to check the paperwork ~200–500 €. Approximate and optional — but cheaper than any hidden defect.';
+  $('iTotal').dataset.tip = 'All the cash needed for the deal: down payment + IMT + both stamp duties + valuation + bank fees + notary + survey and lawyer. Lines with ≈ are approximate. Monthly payments and insurance are separate, in the table alongside.';
+  $('tDown').textContent = eur2(down);
+  $('tImt').textContent = eur2(tax);
+  $('tIsBuy').textContent = eur2(isBuy);
+  $('tIsLoan').textContent = eur2(isLoan);
+  $('tAppr').textContent = apprFee ? eur2(apprFee) : '—';
+  $('tFee').textContent = ap + eur2(b.fees - apprFee);
+  $('tNot').textContent = notary ? '≈ ' + eur2(notary) : 'in bank fees';
+  $('tSpec').textContent = '≈ ' + eur2(SPECIALISTS);
+  $('tFeeL').textContent = b.estimated ? 'Bank fees (estimated)' : 'Bank fees and registrations';
+  $('tTotal').textContent = '≈ ' + eur2(cash);
+
+  // payment schedule: offer → checks → CPCV sinal → escritura
+  const resv = 1500; // conventional reservation deposit
+  const chk = apprFee + SPECIALISTS;
+  const sinal = Math.max(price*0.10 - resv, 0);
+  const escr = cash - resv - chk - sinal;
+  const pc = v => { const p = Math.round(v/cash*100); return p < 1 ? '<1 %' : '~' + p + ' %'; };
+  $('schRes').textContent = '≈ ' + eur0(resv);
+  $('schResP').textContent = pc(resv);
+  $('schChk').textContent = '≈ ' + eur0(chk);
+  $('schChkP').textContent = pc(chk);
+  $('schSin').textContent = eur0(sinal);
+  $('schSinP').textContent = pc(sinal);
+  $('schEsc').textContent = '≈ ' + eur0(escr);
+  $('schEscP').textContent = pc(escr);
+  $('schTot').textContent = '≈ ' + eur0(cash);
+  const dotFor = (id, v) => {
+    const d = 10 + Math.round(Math.sqrt(v/cash)*26);
+    const el = $(id); el.style.width = d+'px'; el.style.height = d+'px';
+  };
+  dotFor('schResD', resv); dotFor('schChkD', chk); dotFor('schSinD', sinal); dotFor('schEscD', escr);
+
+  $('mCap').textContent = allFixed ? 'Every month · whole term' : 'Every month · first ' + fixm + ' months';
+  $('mAnn').textContent = ap + eur2(p1);
+  $('mLife').textContent = eur2(lifeS);
+  $('mHome').textContent = eur2(homeS);
+  $('mTot').textContent = ap + eur2(p1 + ins);
+  $('iAnn').dataset.tip = 'Annuity payment: loan ' + eur0(loan) + ' over ' + b.months + ' months (' + yearsLabel(b.months) + ') at a fixed rate of ' + fmt2.format(b.r1*100) + ' %.' + (allFixed ? ' The rate is fixed for the whole term.' : ' After ' + fixm + ' months the rate becomes variable (Euribor + the bank’s spread) — the payment is recalculated, see the note in the box above.');
+  $('iLife').dataset.tip = 'Life insurance on both borrowers — a mandatory condition of the loan. The premium isn’t fixed: it rises with age; this is the starting figure.' + (b.insNote ? ' ' + b.insNote : '');
+  $('iHome').dataset.tip = 'Home insurance (multirriscos) — mandatory with a mortgage, covers the property against fire, flooding and the like.' + (b.insNote ? ' ' + b.insNote : '');
+  $('iMTot').dataset.tip = 'Principal + interest + both mandatory insurances. Bank fees aren’t included — they’re one-off, in the left-hand table.';
+
+  const note = $('note');
+  if (b.estimated){
+    note.textContent = b.estNote || (b.name + ' rates are unknown — the payment is an estimate (Novo Banco rates, 30 years, no insurance).');
+    note.className = 'calcnote show';
+  } else if (b.hypo){
+    note.textContent = b.note;
+    note.className = 'calcnote show';
+  } else note.className = 'calcnote';
+
+  if (short > 0){
+    note.textContent = b.name + ' lends at most ' + eur0(loan) + ' here (' + (loan >= b.cap - 0.5 && b.cap < b.ltv*price ? 'your income limit' : Math.round(b.ltv*100) + ' % of the price') + '), so it needs ' + eur0(short) + ' more down payment than you set. The figures below include it.';
+    note.className = 'calcnote show';
+  }
+  $('bankFoot').textContent = b.foot;
+
+  ctx = {price, down, cash, loan, b, p1, p2, fixm, ins};
+  updateRvb();
+  renderOffers(price, dv);
+}
+
+priceEl.addEventListener('input', () => update('price'));
+$('downMinBtn').addEventListener('click', () => {
+  downEl.value = Math.ceil(minDownFor(+priceEl.value, eff(BANKS[bankKey]))/100)*100;
+  update('price');
+});
+$('priceMaxBtn').addEventListener('click', () => {
+  const mp = Math.floor(maxPriceFor(+downEl.value, eff(BANKS[bankKey]))/1000)*1000;
+  priceEl.value = Math.max(Math.min(mp, +priceEl.max), +priceEl.min);
+  update('price');
+});
+// optimum: the last price at which the down payment is still the bank's minimum — cap ÷ LTV; above it the cap binds and every extra euro is ours
+$('optBtn').addEventListener('click', () => {
+  const b = eff(BANKS[bankKey]);
+  const p = Math.floor(b.cap / b.ltv / 1000) * 1000;
+  priceEl.value = Math.max(Math.min(p, +priceEl.max), +priceEl.min);
+  downEl.value = Math.ceil(minDownFor(+priceEl.value, b)/100)*100;
+  update('price');
+});
+downEl.addEventListener('input', () => update('down'));
+const numFmt = new Intl.NumberFormat('ru-RU',{maximumFractionDigits:0});
+incomeN.value = numFmt.format(+incomeEl.value);
+incomeEl.addEventListener('input', () => { incomeN.value = numFmt.format(+incomeEl.value); update('price'); });
+incomeN.addEventListener('change', () => {
+  const v = Math.round(+incomeN.value.replace(/[^0-9]/g,'') || 0);
+  incomeEl.value = Math.min(Math.max(v, +incomeEl.min), +incomeEl.max);
+  incomeN.value = numFmt.format(+incomeEl.value); update('price');
+});
+// ---- rent vs buy ----
+const UPKEEP = 0.012; // maintenance ~1 % + IMI ~0.2 % of current house value per year
+const SELL_COST = 0.0615; // agent 5 % + IVA 23 % on the sale price
+const PREPAY_FEE = 0.005; // legal cap on early repayment of a variable-rate mortgage, on the balance
+let ctx = null;
+
+// Monthly simulation over `years`; returns yearly snapshots (index = year, 0..years).
+// Buyer: pays the deal cash up front, then annuity + insurances + upkeep; net worth = house value − loan balance.
+// Renter: keeps the same cash invested at gI, each month adds (buyer outlay − rent); net worth = savings.
+function rvbSim(c, rent0, gH, gI, gR, years){
+  const mH = Math.pow(1+gH, 1/12) - 1, mI = Math.pow(1+gI, 1/12) - 1;
+  let bal = c.loan, house = c.price, sav = c.cash, rent = rent0;
+  let spentB = c.cash, spentR = 0, contribSum = 0;
+  const netOf = (h, b) => h*(1 - SELL_COST) - b*(1 + PREPAY_FEE);
+  const snap = [{buy: c.price - c.loan, buyNet: netOf(c.price, c.loan), rentNW: c.cash, spentB, spentR, contribAvg: 0}];
+  for (let m = 1; m <= years*12; m++){
+    const inLoan = m <= c.b.months;
+    const rate = m <= c.fixm ? c.b.r1 : c.b.r2;
+    const pmt = inLoan ? (m <= c.fixm ? c.p1 : c.p2) : 0;
+    if (inLoan){ bal = bal*(1 + rate/12) - pmt; if (bal < 0) bal = 0; }
+    const outB = pmt + c.ins + house*UPKEEP/12;
+    spentB += outB;
+    sav = sav*(1+mI) + (outB - rent);
+    spentR += rent; contribSum += (outB - rent);
+    house *= (1+mH);
+    if (m % 12 === 0){
+      rent *= (1+gR);
+      snap.push({buy: house - bal, buyNet: netOf(house, bal), rentNW: sav, spentB, spentR, contribAvg: contribSum/m});
+    }
+  }
+  return snap;
+}
+
+// Save (hypothetical mortgage payment + insurances − rent) on top of the deal cash until it covers the house price.
+function rvbSaveYears(c, rent0, gH, gI, gR){
+  const mH = Math.pow(1+gH, 1/12) - 1, mI = Math.pow(1+gI, 1/12) - 1;
+  let sav = c.cash, house = c.price, rent = rent0;
+  const contrib0 = c.p1 + c.ins - rent0;
+  for (let m = 1; m <= 600; m++){
+    const pmt = m <= c.fixm ? c.p1 : c.p2;
+    sav = sav*(1+mI) + (pmt + c.ins - rent);
+    house *= (1+mH);
+    if (m % 12 === 0) rent *= (1+gR);
+    if (sav >= house) return {months: m, house, contrib0};
+  }
+  return {months: Infinity, house, contrib0};
+}
+
+function updateRvb(){
+  if (!ctx) return;
+  const c = ctx;
+  const rent0 = +$('rvbRent').value, years = +$('rvbYears').value;
+  const gH = +$('rvbGH').value/100, gI = +$('rvbGI').value/100, gR = +$('rvbGR').value/100;
+  const yl = yearsLabel(years*12);
+  $('rvbRentLab').textContent = eur0(rent0) + '/month';
+  $('rvbYearsLab').textContent = yl;
+  $('rvbGHLab').textContent = pct(gH) + '/yr';
+  $('rvbGILab').textContent = pct(gI) + '/yr';
+  $('rvbGRLab').textContent = pct(gR) + '/yr';
+
+  const snap = rvbSim(c, rent0, gH, gI, gR, 30);
+  const h = snap[years];
+  const houseAt = c.price*Math.pow(1+gH, years);
+  const balAt = houseAt - h.buy;
+  $('rvbBuyL').textContent = 'After ' + yl + ' · buyer, if selling';
+  $('rvbBuyV').textContent = eur0(h.buyNet);
+  $('rvbBuyS1').textContent = 'in hand: house ' + eur0(houseAt) + ' − remaining debt ' + eur0(balAt) + ' − agent 5 % + IVA ' + eur0(houseAt*SELL_COST) + ' − early repayment 0,5 % ' + eur0(balAt*PREPAY_FEE);
+  $('rvbBuyS2').textContent = 'without selling (house − debt): ' + eur0(h.buy) + ' · spent: deal ' + eur0(c.cash) + ' + payments, insurance and upkeep ' + eur0(h.spentB - c.cash);
+  $('rvbRentL').textContent = 'After ' + yl + ' · renter';
+  $('rvbRentV').textContent = eur0(h.rentNW);
+  $('rvbRentS1').textContent = 'money in the account: the same ' + eur0(c.cash) + ' at ' + pct(gI) + ' + on average ' + eur0(h.contribAvg) + '/month of difference vs the owner’s costs';
+  $('rvbRentS2').textContent = 'spent on rent ' + eur0(h.spentR);
+
+  const diff = h.buyNet - h.rentNW;
+  let be = null;
+  for (let y = 1; y <= 30; y++){ if (snap[y].buyNet >= snap[y].rentNW){ be = y; break; } }
+  $('rvbWhoL').textContent = 'Who’s ahead after ' + yl;
+  $('rvbWhoV').textContent = (diff >= 0 ? 'buyer · +' : 'renter · +') + eur0(Math.abs(diff));
+  $('rvbWhoV').className = 'v ' + (diff >= 0 ? 'ok' : 'neg');
+  $('rvbWhoS1').textContent = be === null ? 'buying doesn’t overtake renting within 30 years' : (be === 1 ? 'buying is ahead from the first year' : 'buying overtakes renting from year ' + be);
+  $('rvbWhoS2').textContent = 'money vs money: for the buyer, cash in hand after selling the house; for the renter, the account balance. The renter leads in the early years because the buyer pays the one-off costs of buying and selling';
+
+  const sv = rvbSaveYears(c, rent0, gH, gI, gR);
+  if (sv.contrib0 <= 0){
+    $('rvbSaveV').textContent = 'never';
+    $('rvbSaveS1').textContent = 'rent of ' + eur0(rent0) + ' is not below the payment with insurance of ' + eur2(c.p1 + c.ins) + ' — nothing to set aside';
+    $('rvbSaveS2').textContent = '';
+  } else if (sv.months === Infinity){
+    $('rvbSaveV').textContent = 'never';
+    $('rvbSaveS1').textContent = 'setting aside ' + eur0(sv.contrib0) + '/month (payment with insurance − rent) on top of ' + eur0(c.cash) + ' at ' + pct(gI);
+    $('rvbSaveS2').textContent = 'can’t catch up in 50 years: the house price pulls ahead while the saved difference shrinks — rent grows, the imaginary loan payment doesn’t';
+  } else {
+    $('rvbSaveV').textContent = '≈ ' + yearsLabel(Math.round(sv.months/6)*6);
+    $('rvbSaveS1').textContent = 'setting aside ' + eur0(sv.contrib0) + '/month (payment with insurance − rent) on top of ' + eur0(c.cash) + ' at ' + pct(gI);
+    $('rvbSaveS2').textContent = 'by then the house will cost ' + eur0(sv.house) + ' (excluding purchase taxes)';
+  }
+
+  // first-year cost of owning vs renting: interest + insurances + upkeep + forgone return on the deal cash
+  const int1 = c.loan*c.b.r1/12, upk = c.price*UPKEEP/12, opp = c.cash*gI/12;
+  const own = int1 + c.ins + upk + opp;
+  const prem = own - rent0;
+  const appr = c.price*gH/12;
+  $('rvbCost').textContent = 'Cost of owning in the first year: interest ' + eur0(int1) + '/month + insurance ' + eur0(c.ins) + ' + upkeep ' + eur0(upk) + ' + forgone return on ' + eur0(c.cash) + ' cash ' + eur0(opp) + ' = ' + eur0(own) + '/month vs rent of ' + eur0(rent0) +
+    (prem > 0
+      ? ' — owning costs ' + eur0(prem) + '/month more. Only house-price growth pays for that: at ' + pct(gH) + '/yr it brings in ' + eur0(appr) + '/month; break-even is price growth of ' + pct(prem*12/c.price) + '/yr.'
+      : ' — owning is cheaper than renting even without house-price growth.');
+}
+for (const id of ['rvbRent','rvbYears','rvbGH','rvbGI','rvbGR']) $(id).addEventListener('input', updateRvb);
+
+// ---- tooltips: .stnote histories in the bank table, the status vocabulary and the two crowns share one fixed-position tooltip ----
+// The two crowns: "ceiling" — largest loan ceiling; "house" — largest house our own funds can buy. Keep in sync with the legend under the table.
+const CROWNS = {
+  taeg: 'Crown “lowest TAEG”: Eurobic — 3,70 % and the lowest total cost of every offer (MTIC 709 936,02 € on 400 000 € / 35 years). The only bank with an approval letter so far.',
+  pay:  'Crown “lowest payment”: Santander — 1 590,14 €/month with insurance on 400 000 € / 35 years. But its TAEG is 4,50 % and its total cost ~91 400 € higher than Eurobic’s.'
+};
+const tipEl = document.createElement('div'); tipEl.className = 'sttip'; document.body.appendChild(tipEl);
+let tipHideTimer = null, tipCurrent = null;
+function tipSource(el){
+  if (el.dataset.crown) return {html: CROWNS[el.dataset.crown], w: ''};
+  const src = el.nextElementSibling;
+  if (!src || !src.classList.contains('stnote')) return null;
+  return {html: src.innerHTML, w: src.dataset.w ? src.dataset.w + 'px' : ''};
+}
+function showTip(el){
+  const s = tipSource(el); if (!s) return;
+  clearTimeout(tipHideTimer);
+  tipCurrent = el;
+  tipEl.innerHTML = s.html;
+  tipEl.style.width = s.w;
+  tipEl.style.display = 'block';
+  const r = el.getBoundingClientRect(), w = tipEl.offsetWidth, h = tipEl.offsetHeight;
+  tipEl.style.left = Math.max(12, Math.min(r.left, window.innerWidth - w - 12)) + 'px';
+  let top = r.bottom + 8;
+  if (top + h > window.innerHeight - 8) top = Math.max(8, r.top - h - 8);   // not enough room below: open upwards
+  tipEl.style.top = top + 'px';
+}
+function hideTip(){ tipHideTimer = setTimeout(() => { tipEl.style.display = 'none'; tipCurrent = null; }, 150); }
+function hideTipNow(){ clearTimeout(tipHideTimer); tipEl.style.display = 'none'; tipCurrent = null; }
+tipEl.addEventListener('mouseenter', () => clearTimeout(tipHideTimer));   // moving the cursor onto the tooltip keeps it open (long notes scroll)
+tipEl.addEventListener('mouseleave', hideTip);
+// Bind every trigger under root (idempotent) — called once for the document and again whenever the bank buttons are re-rendered.
+function bindTips(root){
+  for (const el of root.querySelectorAll('td.st .pill, .info.html, .crown')){
+    if (el.dataset.tipBound || !tipSource(el)) continue;
+    el.dataset.tipBound = '1';
+    if (el.classList.contains('pill')) el.classList.add('has-tip');
+    el.tabIndex = 0;
+    el.addEventListener('mouseenter', () => showTip(el));
+    el.addEventListener('mouseleave', hideTip);
+    el.addEventListener('focus', () => showTip(el));
+    el.addEventListener('blur', hideTip);
+    el.addEventListener('click', () => { if (tipCurrent === el && tipEl.style.display === 'block') { hideTipNow(); el.blur(); } else showTip(el); });   // tap toggles on touch screens
+  }
+}
+window.addEventListener('scroll', () => { if (tipCurrent) hideTipNow(); }, {passive:true});
+document.querySelectorAll('.tablebox').forEach(t => t.addEventListener('scroll', () => { if (tipCurrent) hideTipNow(); }, {passive:true}));
+// ---- offers table: the broker's sheet, re-run for any price / down payment ----
+// Base = what the broker quoted: price 585 000 €, loan o.base (400 000 €, Abanca 351 000 €). At the base every figure reproduces the sheet;
+// elsewhere: payments re-computed from the rates, life insurance scaled with the loan, home insurance with the price,
+// taxes re-computed, bank fees fixed, MTIC scaled by the same model, TAEG shown as quoted (it barely moves with the amount).
+const BASE_PRICE = 585000;
+function offerCalc(o, price, down){
+  const b = eff(o);
+  const want = Math.max(price - down, 0);
+  const loan = Math.min(want, b.ltv*price, b.cap);
+  const capped = loan < want - 0.5;
+  const why = !capped ? '' : (loan >= b.cap - 0.5 && b.cap < b.ltv*price ? 'income limit' : 'max ' + Math.round(b.ltv*100) + ' % of price');
+  const n = o.months, fm = o.kind === 'variable' ? 0 : Math.min(o.fixm, n);
+  const pay = (L) => {
+    const p1 = annuity(L, o.r1, n);
+    const p2 = fm >= n || fm === 0 ? p1 : annuity(balance(L, o.r1, p1, fm), o.r2, n - fm);
+    return {p1, p2, total: fm === 0 || fm >= n ? p1*n : p1*fm + p2*(n - fm)};
+  };
+  const life = o.life*loan/o.base, home = o.home*price/BASE_PRICE;
+  const model = (L, P, lf, hm) => pay(L).total + (lf + hm)*n + o.fees + 0.006*L;
+  const mtic = o.mtic * model(loan, price, life, home) / model(o.base, BASE_PRICE, o.life, o.home);
+  const pp = pay(loan);
+  const costs = imt(price) + price*0.008 + loan*0.006 + o.fees;
+  return {loan, capped, why, p1: pp.p1, p2: pp.p2, life, home, withIns: pp.p1 + life + home, mtic, costs, own: price - loan + costs};
+}
+
+const OFFER_ROWS = [
+  {k:'loan',   label:'Loan'},
+  {k:'term',   label:'Term'},
+  {k:'spread', label:'Spread', rank:true},
+  {k:'fix',    label:'Fixed TAN', rank:true},
+  {k:'var',    label:'Variable TAN'},
+  {k:'taeg',   label:'TAEG <span class="dim">as quoted</span>'},
+  {k:'mtic',   label:'Total cost (MTIC)', rank:true, loanDep:true},
+  {k:'p1',     label:'Payment without insurance', loanDep:true, strong:true},
+  {k:'life',   label:'Life insurance', loanDep:true},
+  {k:'home',   label:'Home insurance'},
+  {k:'withIns',label:'Payment with insurance', rank:true, loanDep:true, strong:true},
+  {k:'costs',  label:'Upfront costs incl. taxes'},
+  {k:'own',    label:'Own money needed', strong:true}
+];
+
+function renderOffers(price, down){
+  const keys = Object.keys(BANKS);
+  const res = {}; keys.forEach(k => res[k] = offerCalc(BANKS[k], price, down));
+  const pctS = v => (v*100).toFixed(2).replace('.',',') + ' %';
+  const val = (k, row) => {
+    const o = BANKS[k], r = res[k];
+    switch (row){
+      case 'spread': return o.kind === 'fixed' ? null : o.spread;
+      case 'fix':    return o.kind === 'variable' ? null : o.r1;
+      case 'taeg':   return o.taeg;
+      default:       return r[row];
+    }
+  };
+  const show = (k, row) => {
+    const o = BANKS[k], r = res[k];
+    switch (row){
+      case 'loan':  return eur0(r.loan) + '<span class="dim">' + (r.capped ? 'capped · ' + r.why : Math.round(r.loan/price*100) + ' % of price') + '</span>';
+      case 'term':  return Math.round(o.months/12) + ' yrs';
+      case 'spread':return o.kind === 'fixed' ? '—' : pctS(o.spread);
+      case 'fix':   return o.kind === 'variable' ? '—' : pctS(o.r1);
+      case 'var':   return o.kind === 'variable' ? pctS(o.r2) : o.kind === 'fixed' ? '—' : '<span class="dim">then ' + pctS(o.r2) + '</span>';
+      case 'taeg':  return pctS(o.taeg);
+      case 'p1':    return eur2(r.p1) + (o.kind === 'mixed' ? '<span class="dim">then ' + eur2(r.p2) + '</span>' : '');
+      case 'mtic': case 'life': case 'home': case 'withIns': case 'costs': case 'own': return eur2(r[row]);
+    }
+  };
+  // tiers per row: best / middle / worst third, lower is better; loan-dependent rows skip capped offers
+  const tiers = {};
+  for (const row of OFFER_ROWS.filter(r => r.rank)){
+    const elig = keys.filter(k => val(k, row.k) !== null && !(row.loanDep && res[k].capped));
+    // colour by where the value sits in the row's range (not by rank), so near-equal values get the same colour
+    const vals = elig.map(k => Math.round(val(k, row.k)*1e6)/1e6).sort((a,b) => a-b), n = vals.length;
+    const lo = vals[0], span = vals[n-1] - lo;
+    tiers[row.k] = {};
+    elig.forEach(k => {
+      const v = Math.round(val(k, row.k)*1e6)/1e6, i = vals.indexOf(v), q = span > 0 ? (v - lo)/span : 0;
+      tiers[row.k][k] = {t: v === lo ? 'top' : q < 1/3 ? 'near' : '', rank: i + 1, n, diff: v - lo, isRate: row.k === 'spread' || row.k === 'fix' || row.k === 'taeg'};
+    });
+  }
+  // header: bank groups, then offer types (clickable)
+  const groups = [];
+  keys.forEach(k => { const g = BANKS[k].bank; if (!groups.length || groups[groups.length-1].g !== g) groups.push({g, n:0}); groups[groups.length-1].n++; });
+  let h = '<thead><tr><th class="rowh"></th>' + groups.map(g => '<th class="bankh" colspan="' + g.n + '">' + g.g + '</th>').join('') + '</tr>';
+  h += '<tr><th class="rowh">Type</th>' + keys.map(k => '<th class="offh' + (k === bankKey ? ' sel' : '') + '"><button type="button" data-k="' + k + '" title="Open in the calculator">' + BANKS[k].type + '</button></th>').join('') + '</tr></thead><tbody>';
+  for (const row of OFFER_ROWS){
+    h += '<tr' + (row.strong ? ' class="strong"' : '') + '><th class="rowh">' + row.label + '</th>';
+    for (const k of keys){
+      const t = row.rank && tiers[row.k][k];
+      const cls = (k === bankKey ? 'sel ' : '') + (res[k].capped && (row.loanDep || row.k === 'loan') ? 'capd' : '');
+      const inner = show(k, row.k);
+      const tip = t ? ' title="' + row.label.replace(/<[^>]+>/g,'') + ': ' + (t.rank === 1 ? 'the best' : 'no. ' + t.rank + ' of ' + t.n + ', ' + (t.isRate ? '+' + (t.diff*100).toFixed(2).replace('.',',') + ' pp' : '+' + eur0(t.diff)) + ' vs the best') + '"' : (res[k].capped && row.loanDep ? ' title="Not ranked: this bank lends less than you asked for"' : '');
+      const main = inner.split('<span class="dim">');
+      h += '<td class="' + cls + '"' + tip + '><span class="hm' + (t && t.t ? ' ' + t.t : '') + '">' + main[0] + '</span>' + (main[1] ? '<span class="dim">' + main.slice(1).join('<span class="dim">') : '') + '</td>';
+    }
+    h += '</tr>';
+  }
+  h += '</tbody>';
+  $('offersTable').innerHTML = h;
+  const capN = keys.filter(k => res[k].capped).length;
+  $('offersSum').innerHTML = 'Asking for <b>' + eur0(Math.max(price - down, 0)) + '</b> on a <b>' + eur0(price) + '</b> home (' + Math.round((price-down)/price*100) + ' % of price)' +
+    (capN ? ' · ' + capN + ' of ' + keys.length + ' offers lend less — marked “capped”, not ranked on payment or total cost' : ' · every offer can lend that much') +
+    (price === BASE_PRICE && price - down === 400000 ? ' · <b>this is the broker’s own scenario</b>: the figures match the sheet' : '');
+  $('offersTable').querySelectorAll('.offh button').forEach(btn => btn.onclick = () => { bankKey = btn.dataset.k; renderBanks(); update('bank'); });
+}
+
+const cueBtn = $('cueBtn');
+cueBtn.addEventListener('click', () => { const on = $('offersBox').classList.toggle('cues'); cueBtn.setAttribute('aria-checked', String(on)); });
+
+bindTips(document);
+
+
+renderBanks();
+update('init');
+
+
+</script>
