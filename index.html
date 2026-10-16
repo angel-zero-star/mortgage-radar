@@ -1,103 +1,99 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Porto Mortgage (EN)</title>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><title>Mortgage Radar</title><script>try{var t=localStorage.getItem("mr-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;800&family=Literata:opsz,wght@7..72,600;7..72,700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
   :root{
-    --bg:#F7F9FB;
-    --surface:#FFFFFF;
-    --ink:#1B2733;
-    --muted:#5C6B7A;
-    --faint:#9AA7B4;
-    --line:#DCE4EC;
-    --accent:#2456A6;
-    --accent-soft:#E8EFF9;
-    --good:#1E7F4F;      --good-bg:#E4F3EB;
-    --wait:#5C6B7A;      --wait-bg:#ECF0F4;
-    --alert:#B3403A;     --alert-bg:#F9E9E8;
-    --warn:#8A6414;      --warn-bg:#F7EEDA;
-    --accent-ink:#FFFFFF;
-    --shadow:0 1px 2px rgba(27,39,51,.06),0 4px 16px rgba(27,39,51,.05);
+    --sans:Inter,-apple-system,"Segoe UI",sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+    --bg:#F7F7F8; --surface:#FFFFFF; --surface-2:#F2F2F4; --ink:#16171A; --muted:#6B6F76;
+    --faint:#A0A4AB; --line:#E6E6E9; --line-strong:#D4D5D9;
+    --accent:#5E6AD2; --accent-soft:#EEEFFC; --accent-ink:#FFFFFF;
+    --good:#2F8A55; --good-bg:#E7F4EC;
+    --wait:#6B6F76; --wait-bg:#F0F0F2;
+    --alert:#C5453F; --alert-bg:#FBEBEA;
+    --warn:#9A6B0F; --warn-bg:#FAF1DE;
+    --shadow:none;
+    --shadow-pop:0 0 0 1px rgba(0,0,0,.06),0 4px 12px rgba(0,0,0,.08),0 12px 32px rgba(0,0,0,.08);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --bg:#141A21; --surface:#1C242E; --ink:#E7EDF3; --muted:#93A2B1;
-      --faint:#5E6C7A;
-      --line:#2C3742; --accent:#7FA8E0; --accent-soft:#233247;
-      --good:#5FC08D; --good-bg:#1E3229;
-      --wait:#93A2B1; --wait-bg:#242E38;
-      --alert:#E08984; --alert-bg:#3A2523;
-      --warn:#D9B25F; --warn-bg:#37301C;
-      --accent-ink:#141A21;
-      --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.3);
+      color-scheme:dark;
+      --bg:#1B1C1F; --surface:#232428; --surface-2:#2A2B30; --ink:#EDEEF0; --muted:#9A9EA6;
+      --faint:#6B6F77; --line:#323338; --line-strong:#3E4046;
+      --accent:#8B94F0; --accent-soft:#2D3050; --accent-ink:#16171A;
+      --good:#5FC08D; --good-bg:#1D3326;
+      --wait:#9A9EA6; --wait-bg:#2A2B30;
+      --alert:#E5847F; --alert-bg:#3A2422;
+      --warn:#D9B25F; --warn-bg:#352D1B;
+      --shadow:none;
+      --shadow-pop:0 0 0 1px rgba(255,255,255,.06),0 8px 24px rgba(0,0,0,.5);
     }
   }
   :root[data-theme="dark"]{
-    --bg:#141A21; --surface:#1C242E; --ink:#E7EDF3; --muted:#93A2B1;
-    --faint:#5E6C7A;
-    --line:#2C3742; --accent:#7FA8E0; --accent-soft:#233247;
-    --good:#5FC08D; --good-bg:#1E3229;
-    --wait:#93A2B1; --wait-bg:#242E38;
-    --alert:#E08984; --alert-bg:#3A2523;
-      --warn:#D9B25F; --warn-bg:#37301C;
-      --accent-ink:#141A21;
-    --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 16px rgba(0,0,0,.3);
+      color-scheme:dark;
+      --bg:#1B1C1F; --surface:#232428; --surface-2:#2A2B30; --ink:#EDEEF0; --muted:#9A9EA6;
+      --faint:#6B6F77; --line:#323338; --line-strong:#3E4046;
+      --accent:#8B94F0; --accent-soft:#2D3050; --accent-ink:#16171A;
+      --good:#5FC08D; --good-bg:#1D3326;
+      --wait:#9A9EA6; --wait-bg:#2A2B30;
+      --alert:#E5847F; --alert-bg:#3A2422;
+      --warn:#D9B25F; --warn-bg:#352D1B;
+      --shadow:none;
+      --shadow-pop:0 0 0 1px rgba(255,255,255,.06),0 8px 24px rgba(0,0,0,.5);
   }
   *{box-sizing:border-box}
   body{
     margin:0; background:var(--bg); color:var(--ink);
-    font-family:"Golos Text",-apple-system,"Segoe UI",sans-serif;
-    font-size:16px; line-height:1.55;
+    font-family:var(--sans); font-feature-settings:"cv11","ss01";
+    font-size:14px; line-height:1.5; -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:1060px; margin:0 auto; padding:40px 24px 72px}
+  .wrap{max-width:1120px; margin:0 auto; padding:32px 24px 72px}
   .eyebrow a{color:var(--accent)}
   .eyebrow{
-    font-family:"JetBrains Mono",monospace; font-size:12px; letter-spacing:.08em;
-    text-transform:uppercase; color:var(--accent); margin:0 0 10px;
+    font-size:13px; font-weight:500; color:var(--muted); margin:0 0 8px;
   }
   h1{
-    font-family:Literata,Georgia,serif; font-weight:700; font-size:clamp(30px,5vw,42px);
-    line-height:1.12; margin:0 0 6px; text-wrap:balance;
+    font-weight:600; font-size:clamp(24px,4vw,30px); letter-spacing:-.02em;
+    line-height:1.2; margin:0 0 6px; text-wrap:balance;
   }
-  .stamp{color:var(--muted); font-size:14px; margin:0 0 28px}
-  .stamp b{color:var(--ink); font-weight:600}
+  .stamp{color:var(--muted); font-size:13px; margin:0 0 28px; max-width:820px}
+  .stamp b{color:var(--ink); font-weight:500}
 
   .strip{display:flex; flex-wrap:wrap; gap:12px; margin:0 0 32px}
   .stat{
-    background:var(--surface); border:1px solid var(--line); border-radius:10px;
-    padding:12px 18px; box-shadow:var(--shadow); min-width:130px;
+    background:var(--surface); border:1px solid var(--line); border-radius:8px;
+    padding:10px 14px; min-width:130px;
   }
   .stat .n{
-    font-family:"JetBrains Mono",monospace; font-size:24px; font-weight:600;
+    font-size:20px; font-weight:600; letter-spacing:-.01em;
     font-variant-numeric:tabular-nums; display:block; line-height:1.2;
   }
-  .stat .l{font-size:13px; color:var(--muted)}
+  .stat .l{font-size:12px; color:var(--muted)}
   .stat.gd .n{color:var(--good)} .stat.wt .n{color:var(--wait)} .stat.al .n{color:var(--alert)}
 
   h2{
-    font-family:Literata,Georgia,serif; font-weight:600; font-size:23px;
-    margin:44px 0 14px; text-wrap:balance;
+    font-weight:600; font-size:17px; letter-spacing:-.01em;
+    margin:56px 0 8px; padding-top:20px; border-top:1px solid var(--line); text-wrap:balance; scroll-margin-top:64px;
   }
-  p.lede{max-width:none; color:var(--muted); margin:0 0 20px}
+  p.lede{max-width:760px; color:var(--muted); margin:0 0 20px; font-size:13.5px}
 
   .tablebox{overflow-x:auto; background:var(--surface); border:1px solid var(--line);
-    border-radius:12px; box-shadow:var(--shadow)}
-  table{border-collapse:collapse; width:100%; min-width:1100px; font-size:14.5px}
+    border-radius:8px}
+  table{border-collapse:collapse; width:100%; min-width:1100px; font-size:13px}
   th{
-    font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.07em;
-    text-transform:uppercase; color:var(--muted); text-align:left;
-    padding:12px 14px; border-bottom:1px solid var(--line); white-space:nowrap;
+    font-size:12px; font-weight:500; color:var(--muted); text-align:left;
+    padding:9px 12px; background:var(--surface-2); border-bottom:1px solid var(--line); white-space:nowrap;
   }
-  td{padding:13px 14px; border-bottom:1px solid var(--line); vertical-align:top}
+  td{padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top}
   tr:last-child td{border-bottom:none}
-  td.bank{font-weight:600; white-space:nowrap}
-  .num{font-family:"JetBrains Mono",monospace; font-variant-numeric:tabular-nums; white-space:nowrap}
+  td.bank{font-weight:500; white-space:nowrap}
+  .num{font-variant-numeric:tabular-nums; white-space:nowrap}
   .dim{color:var(--muted)}
   tr.expect td:not(.bank):not(.st){color:var(--faint)}
   tr.dead td:not(.bank):not(.st){color:var(--faint)}
   .pill{
-    display:inline-block; padding:3px 10px; border-radius:999px;
-    font-size:12.5px; font-weight:600; white-space:nowrap;
+    display:inline-block; padding:2px 8px; border-radius:5px;
+    font-size:12px; font-weight:500; white-space:nowrap;
   }
   .pill.gd{background:var(--good-bg); color:var(--good)}
   .pill.wt{background:var(--wait-bg); color:var(--wait)}
@@ -113,7 +109,7 @@
   .banks-table td.st{min-width:0}
   .banks-table td.bank{white-space:normal}
   .banks-table td.bank .dim{display:block; font-weight:400; font-size:12.5px; line-height:1.35}
-  .banks-table td.num .dim{display:block; white-space:normal; margin-top:3px; font-family:"Golos Text",-apple-system,"Segoe UI",sans-serif; font-size:12.5px; line-height:1.4}
+  .banks-table td.num .dim{display:block; white-space:normal; margin-top:3px; font-family:var(--sans); font-size:12.5px; line-height:1.4}
   .banks-table td.st .pill{white-space:normal; display:inline-block; text-align:left; line-height:1.3; padding:4px 8px; font-size:12px}
   .banks-table td{padding:11px 8px}
   .banks-table td.num{font-size:13.5px}
@@ -123,87 +119,85 @@
   /* status history lives in .stnote; hidden in the table, shown as a floating tooltip on hover / focus (see the script) */
   .stnote{display:none}
   td.st .pill.has-tip{cursor:help}
-  td.st .pill.has-tip::after{content:" \24D8"; font-weight:400; opacity:.75}
+  td.st .pill.has-tip::after{content:""; display:inline-block; width:4px; height:4px; border-radius:50%; background:currentColor; opacity:.5; margin-left:6px; vertical-align:middle}
   .sttip{position:fixed; z-index:50; display:none; width:400px; max-width:calc(100vw - 24px); max-height:70vh; overflow:auto;
-    background:var(--ink); color:var(--bg); padding:12px 14px; border-radius:8px; box-shadow:var(--shadow);
+    background:var(--surface); color:var(--ink); border:1px solid var(--line); padding:12px 14px; border-radius:8px; box-shadow:var(--shadow-pop);
     font-size:12.5px; line-height:1.45; white-space:normal}
   .sttip b{color:inherit}
   .sttip table{min-width:0; width:100%; border-collapse:collapse; font-size:12px; margin:8px 0}
-  .sttip th, .sttip td{padding:4px 6px; border-bottom:1px solid rgba(255,255,255,.18); vertical-align:top; text-align:left; white-space:normal; color:inherit; font:inherit; text-transform:none; letter-spacing:0}
+  .sttip th, .sttip td{padding:4px 6px; border-bottom:1px solid var(--line); vertical-align:top; text-align:left; white-space:normal; color:inherit; font:inherit; text-transform:none; letter-spacing:0}
   .sttip th{font-weight:600}
   .info.html::after{content:none}
   .pill.cta{background:var(--accent); color:var(--accent-ink)}
   .crown{cursor:help}
   .stat.cta .n{color:var(--accent)}
   .q{cursor:help; margin-right:4px}
-  .legend{font-size:13px; color:var(--muted); margin:10px 2px 0; max-width:none}
+  .legend{font-size:12.5px; color:var(--muted); margin:10px 2px 0; max-width:820px}
 
   .callout{
-    background:var(--accent-soft); border:1px solid var(--line); border-left:4px solid var(--accent);
-    border-radius:10px; padding:16px 20px; margin:28px 0; max-width:none;
+    background:var(--surface); border:1px solid var(--line); border-left:2px solid var(--accent);
+    border-radius:8px; padding:14px 18px; margin:28px 0; max-width:none;
   }
   .callout b{font-weight:600}
   .callout p{margin:6px 0}
 
   .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(310px,1fr)); gap:16px}
   .card{
-    background:var(--surface); border:1px solid var(--line); border-radius:12px;
-    padding:20px 22px; box-shadow:var(--shadow);
+    background:var(--surface); border:1px solid var(--line); border-radius:8px;
+    padding:16px 18px;
   }
-  .card h3{margin:0 0 10px; font-size:17px; font-weight:800}
+  .card h3{margin:0 0 8px; font-size:14px; font-weight:600}
   .card ul{margin:10px 0 0; padding-left:18px}
-  .card li{margin:5px 0; font-size:14.5px}
+  .card li{margin:5px 0; font-size:13px; color:var(--muted)} .card li b{color:var(--ink); font-weight:500}
   .card .note{
-    margin-top:14px; padding-top:12px; border-top:1px dashed var(--line);
-    font-size:13.5px;
+    margin-top:14px; padding-top:12px; border-top:1px solid var(--line);
+    font-size:13px;
   }
-  .card .note b{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.07em;
-    text-transform:uppercase; color:var(--accent); display:block; margin-bottom:3px}
+  .card .note b{font-size:12px; font-weight:600; color:var(--accent); display:block; margin-bottom:2px}
 
   .duel{overflow-x:auto; background:var(--surface); border:1px solid var(--line);
-    border-radius:12px; box-shadow:var(--shadow); margin-bottom:16px}
+    border-radius:8px; margin-bottom:16px}
   .duel table{min-width:560px}
-  .duel td.win{color:var(--good); font-weight:600}
+  .duel td.win{color:var(--good); font-weight:600} .duel td.num{text-align:right} .duel th:not(:first-child){text-align:right}
 
   .gloss{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin-top:16px}
-  .term{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 16px}
-  .term b{font-family:"JetBrains Mono",monospace; font-size:13px; color:var(--accent)}
-  .term p{margin:5px 0 0; font-size:13.5px; color:var(--muted)}
+  .term{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:12px 14px}
+  .term b{font-size:13px; font-weight:600; color:var(--ink)}
+  .term p{margin:4px 0 0; font-size:13px; color:var(--muted)}
 
   /* --- roadmap --- */
   .road{position:relative; margin:8px 0 4px; padding-left:36px; max-width:none}
-  .road::before{content:""; position:absolute; left:12px; top:12px; bottom:12px; width:2px; background:var(--line)}
-  .mile{position:relative; background:var(--surface); border:1px solid var(--line); border-radius:12px;
-    padding:16px 20px; box-shadow:var(--shadow); margin:0 0 12px}
+  .road::before{content:""; position:absolute; left:12px; top:12px; bottom:12px; width:1px; background:var(--line-strong)}
+  .mile{position:relative; background:var(--surface); border:1px solid var(--line); border-radius:8px;
+    padding:14px 18px; margin:0 0 12px}
   .mile::before{content:attr(data-n); position:absolute; left:-36px; top:16px; width:26px; height:26px;
-    border-radius:50%; background:var(--accent); color:var(--accent-ink);
-    font-family:"JetBrains Mono",monospace; font-size:12px; font-weight:600; line-height:26px; text-align:center}
-  .mile h3{margin:0; font-size:16.5px; font-weight:800; display:flex; flex-wrap:wrap; align-items:baseline; gap:8px}
-  .mdur{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.05em;
-    font-weight:600; color:var(--accent); background:var(--accent-soft); border-radius:999px;
-    padding:2px 10px; white-space:nowrap}
-  .mile p{margin:8px 0 0; font-size:14.5px; color:var(--muted)}
+    border-radius:50%; background:var(--surface); color:var(--ink); box-shadow:inset 0 0 0 1px var(--line-strong);
+    font-size:12px; font-weight:600; line-height:26px; text-align:center; font-variant-numeric:tabular-nums}
+  .mile h3{margin:0; font-size:14px; font-weight:600; display:flex; flex-wrap:wrap; align-items:baseline; gap:8px}
+  .mdur{font-size:12px; font-weight:500; color:var(--muted); background:var(--surface-2); border:1px solid var(--line); border-radius:5px;
+    padding:1px 7px; white-space:nowrap}
+  .mile p{margin:8px 0 0; font-size:13px; color:var(--muted)}
   .mile p b{color:var(--ink)}
-  .mgap{position:relative; margin:0 0 12px; padding:2px 0 2px 8px; font-size:13.5px; color:var(--muted); max-width:none}
+  .mgap{position:relative; margin:0 0 12px; padding:2px 0 2px 8px; font-size:13px; color:var(--muted); max-width:none}
   .mgap::before{content:""; position:absolute; left:-27px; top:10px; width:8px; height:8px; border-radius:50%;
     background:var(--faint)}
-  .gdur{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.05em; font-weight:600;
-    color:var(--muted); background:var(--wait-bg); border-radius:999px; padding:2px 10px;
+  .gdur{font-size:12px; font-weight:500;
+    color:var(--muted); background:var(--wait-bg); border-radius:5px; padding:1px 7px;
     white-space:nowrap; margin-right:6px}
 
   /* --- payment timeline --- */
   .tl-scroll{overflow-x:auto}
   .tl{position:relative; min-width:640px; height:345px; margin-top:4px}
-  .tl-track{position:absolute; left:0; right:0; top:156px; height:10px; border-radius:5px;
-    background:var(--bg); border:1px solid var(--line)}
+  .tl-track{position:absolute; left:0; right:0; top:160px; height:2px; border-radius:1px;
+    background:var(--line-strong)}
   .tl-tick{position:absolute; top:170px; transform:translateX(-50%); white-space:nowrap;
-    font-family:"JetBrains Mono",monospace; font-size:10px; color:var(--faint)}
+    font-size:11px; color:var(--faint); font-variant-numeric:tabular-nums}
   .tl-tick.end{transform:translateX(-85%)}
   .tl-tick.end::before{left:85%}
   .tl-tick::before{content:""; position:absolute; left:50%; top:-9px; width:1px; height:6px; background:var(--faint)}
   .tl-ev{position:absolute; top:0; bottom:0; width:0; transform:translateX(-50%)}
   .tl-dot{position:absolute; left:50%; top:161px; transform:translate(-50%,-50%); width:14px; height:14px;
-    border-radius:50%; background:var(--accent); border:2px solid var(--surface); box-shadow:var(--shadow); z-index:2}
+    border-radius:50%; background:var(--accent); border:2px solid var(--surface); box-shadow:0 0 0 1px var(--line); z-index:2}
   .tl-stem{position:absolute; left:50%; width:1px; background:var(--line)}
   .tl-ev.up .tl-stem{top:88px; height:72px}
   .tl-ev.dn .tl-stem{top:162px; height:72px}
@@ -211,185 +205,433 @@
   .tl-ev.up .tl-card{bottom:236px}
   .tl-ev.dn .tl-card{top:238px}
   .tl-ev.first .tl-card{left:-6px; transform:none; text-align:left}
-  .tl-card b{display:block; font-size:13px; line-height:1.25; margin-bottom:2px}
-  .tl-sum{display:block; font-family:"JetBrains Mono",monospace; font-size:15px; font-weight:600;
-    color:var(--accent); font-variant-numeric:tabular-nums}
-  .tl-pct{display:block; font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--muted)}
+  .tl-card b{display:block; font-size:12.5px; font-weight:500; line-height:1.3; margin-bottom:2px}
+  .tl-sum{display:block; font-size:15px; font-weight:600;
+    color:var(--ink); font-variant-numeric:tabular-nums}
+  .tl-pct{display:block; font-size:11.5px; color:var(--muted); font-variant-numeric:tabular-nums}
   .tl-when{display:block; font-size:11px; color:var(--muted); margin-top:2px}
 
-  footer{margin-top:48px; font-size:13px; color:var(--muted); max-width:none}
+  footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--line); font-size:12.5px; color:var(--muted); max-width:none}
 
   /* --- calculator --- */
-  .panel{background:var(--surface); border:1px solid var(--line); border-radius:14px;
-    padding:24px 26px; box-shadow:var(--shadow); margin-bottom:22px}
-  .banks{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:22px}
-  .banks button{font:inherit; font-size:14.5px; font-weight:600; color:var(--ink);
-    background:var(--bg); border:1px solid var(--line); border-radius:999px;
-    padding:8px 18px; cursor:pointer}
+  .panel{background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:20px 22px; margin-bottom:16px}
+  .banks{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:20px}
+  .banks button{font:inherit; font-size:13px; font-weight:500; color:var(--ink);
+    background:var(--surface); border:1px solid var(--line); border-radius:6px;
+    height:30px; padding:0 11px; cursor:pointer; display:inline-flex; align-items:center; gap:6px; transition:background .12s, border-color .12s}
+  .banks button:hover{background:var(--surface-2); border-color:var(--line-strong)}
   .banks button.on{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
   .banks button.hypo{border-style:dashed}
   .banks button.on.hypo{background:var(--accent-soft); color:var(--accent); border:1px dashed var(--accent)}
+  .banks button.on .crown::before{background:rgba(255,255,255,.2); color:inherit}
   .banks button:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
   .sliderrow{margin:18px 0 6px}
   .sliderrow .lab{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px}
-  .sliderrow .lab .t{font-weight:600}
-  .sliderrow .lab .v{font-family:"JetBrains Mono",monospace; font-size:20px; font-weight:600;
-    font-variant-numeric:tabular-nums; color:var(--accent)}
+  .sliderrow .lab .t{font-weight:500}
+  .sliderrow .lab .v{font-size:17px; font-weight:600; letter-spacing:-.01em;
+    font-variant-numeric:tabular-nums; color:var(--ink)}
   input[type=range]{width:100%; accent-color:var(--accent); height:28px; margin:0}
-  .minmax{display:flex; justify-content:space-between; font-size:12px; color:var(--faint);
-    font-family:"JetBrains Mono",monospace}
-  .jump{font:inherit; font-size:12px; font-weight:600; color:var(--accent);
-    background:none; border:1px solid var(--line); border-radius:999px;
-    padding:2px 12px; cursor:pointer}
+  .minmax{display:flex; justify-content:space-between; font-size:11.5px; color:var(--faint);
+    font-variant-numeric:tabular-nums}
+  .jump{font:inherit; font-size:12px; font-weight:500; color:var(--muted);
+    background:var(--surface); border:1px solid var(--line); border-radius:5px;
+    padding:1px 8px; cursor:pointer}
   .jumprow{margin:0 0 6px}
-  .jump:hover{border-color:var(--accent)}
+  .jump:hover{border-color:var(--line-strong); color:var(--ink)} .jump:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
   .sliderwrap{position:relative}
-  .mintick{position:absolute; top:2px; width:5px; height:24px; background:var(--alert);
-    border-radius:3px; pointer-events:none; transform:translateX(-50%); box-shadow:0 0 0 2px var(--surface); z-index:1}
+  .mintick{position:absolute; top:6px; width:3px; height:16px; background:var(--alert);
+    border-radius:2px; pointer-events:none; transform:translateX(-50%); box-shadow:0 0 0 2px var(--surface); z-index:1}
   .mintick::after{content:attr(data-label); position:absolute; top:27px; left:50%; transform:translateX(-50%);
-    font-family:"JetBrains Mono",monospace; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
-    color:var(--alert); background:var(--alert-bg); border-radius:4px; padding:1px 6px; white-space:nowrap}
+    font-size:11px; font-weight:500;
+    color:var(--alert); background:var(--alert-bg); border-radius:4px; padding:0 5px; white-space:nowrap}
   .sliderwrap + .minmax{margin-top:2px}
   .jumps{display:inline-flex; gap:6px; margin-left:10px; vertical-align:middle}
   .jumps .jump{padding:1px 10px; font-size:11.5px}
   .panel > .sliderrow{margin:12px 0 4px}
   .income{padding:12px 16px; margin-bottom:14px}
   .income .capinfo{margin-top:6px; font-size:13.5px}
-  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-bottom:22px}
-  .res{background:var(--surface); border:1px solid var(--line); border-radius:12px;
-    padding:16px 18px; box-shadow:var(--shadow)}
-  .res .l{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.07em;
-    text-transform:uppercase; color:var(--muted); display:block; margin-bottom:6px}
-  .res .v{display:block; font-family:"JetBrains Mono",monospace; font-size:23px; font-weight:600;
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-bottom:16px}
+  .res{background:var(--surface); border:1px solid var(--line); border-radius:8px;
+    padding:14px 16px}
+  .res .l{font-size:12px; font-weight:500; color:var(--muted); display:block; margin-bottom:4px}
+  .res .v{display:block; font-size:22px; font-weight:600; letter-spacing:-.015em;
     font-variant-numeric:tabular-nums; line-height:1.25}
-  .res .s{display:block; font-size:13px; color:var(--muted); margin-top:6px}
+  .res .s{display:block; font-size:12px; color:var(--muted); margin-top:6px}
   .res .s + .s{margin-top:2px}
-  .res.hero{border-left:4px solid var(--accent)}
-  .res.hero .v{color:var(--accent)}
-  .taxgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(360px,1fr)); gap:14px; margin-bottom:22px}
+  .res.hero{box-shadow:inset 0 2px 0 var(--accent)}
+  .res.hero .v{color:var(--ink)}
+  .taxgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr)); gap:12px; margin-bottom:16px}
   .taxgrid .panel{margin-bottom:0}
-  .taxcap{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.07em;
-    text-transform:uppercase; color:var(--muted); margin:0 0 6px}
-  .tax table{border-collapse:collapse; width:100%; min-width:0; font-size:14.5px}
+  .taxcap{font-size:12px; font-weight:500; color:var(--muted); margin:0 0 6px}
+  .tax table{border-collapse:collapse; width:100%; min-width:0; font-size:13px}
   .tax td{padding:8px 4px; border-bottom:1px solid var(--line)}
   .tax tr:last-child td{border-bottom:none; font-weight:600}
-  .tax td.n{font-family:"JetBrains Mono",monospace; font-variant-numeric:tabular-nums;
+  .tax td.n{font-variant-numeric:tabular-nums;
     text-align:right; white-space:nowrap}
   .info{display:inline-flex; align-items:center; justify-content:center; width:16px; height:16px;
-    border-radius:50%; background:var(--accent-soft); color:var(--accent); font-size:11px; font-weight:700;
-    margin-left:6px; cursor:help; position:relative; font-family:Literata,Georgia,serif; font-style:italic}
+    border-radius:50%; background:none; box-shadow:inset 0 0 0 1px var(--line-strong); color:var(--faint); font-size:10px; font-weight:600;
+    margin-left:4px; cursor:help; position:relative; font-family:var(--sans); vertical-align:1px}
+  .info:hover, .info:focus-visible{color:var(--ink); box-shadow:inset 0 0 0 1px var(--muted); outline:none}
   .info::after{content:attr(data-tip); position:absolute; left:-8px; bottom:calc(100% + 8px);
-    width:360px; max-width:72vw; background:var(--ink); color:var(--bg);
+    width:360px; max-width:72vw; background:var(--surface); color:var(--ink); border:1px solid var(--line); box-shadow:var(--shadow-pop);
     padding:10px 12px; border-radius:8px; font-size:12.5px; font-style:normal;
-    font-family:"Golos Text",-apple-system,sans-serif; font-weight:400;
-    line-height:1.45; text-align:left; opacity:0; pointer-events:none; transition:opacity .05s; z-index:5;
+    font-family:var(--sans); font-weight:400;
+    line-height:1.45; text-align:left; display:none; pointer-events:none; z-index:5;
     white-space:normal}
-  .info:hover::after, .info:focus::after{opacity:1}
-  .income{background:var(--accent-soft); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin:0 0 22px}
+  .info:hover::after, .info:focus::after{display:block}
+  .income{background:var(--surface-2); border:1px solid var(--line); border-radius:8px; padding:14px 16px; margin:0 0 20px}
   .income .sliderrow{margin:0 0 6px}
   .income .lab{gap:12px; flex-wrap:wrap}
-  .income .lab .t{font-size:17px}
+  .income .lab .t{font-size:14px}
   .incin{display:inline-flex; align-items:baseline; gap:6px}
-  .incin input{font:inherit; font-family:"JetBrains Mono",monospace; font-size:20px; font-weight:600; color:var(--accent);
-    width:8.5ch; text-align:right; background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:2px 8px}
-  .incin input:focus{outline:2px solid var(--accent); outline-offset:1px}
-  .incin span{font-family:"JetBrains Mono",monospace; font-size:14px; color:var(--muted)}
-  .capinfo{font-size:14px; margin:10px 0 0}
-  .capinfo b{color:var(--accent)}
+  .incin input{font:inherit; font-size:15px; font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums;
+    width:9ch; height:30px; text-align:right; background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:0 8px}
+  .incin input:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft)}
+  .incin span{font-size:13px; color:var(--muted)}
+  .capinfo{font-size:13px; margin:10px 0 0}
+  .capinfo b{color:var(--ink); font-weight:600}
   .capinfo .dim{display:block; font-size:12.5px; margin-top:4px}
   .hm{display:inline-block; border-radius:4px; padding:0 5px; margin:0 -5px 2px}
-  :root{--rowhl:#C9DAF2; --best-bg:#CFEBD9; --best-ink:#11643A; --near-bg:#EEF2C6; --near-ink:#687610}
-  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){--rowhl:#0E1726; --best-bg:#1E4D34; --best-ink:#7FE3AC; --near-bg:#3A4120; --near-ink:#CFDB6E} }
-  :root[data-theme="dark"]{--rowhl:#0E1726; --best-bg:#1E4D34; --best-ink:#7FE3AC; --near-bg:#3A4120; --near-ink:#CFDB6E}
-  .cues .hm.top{background:var(--best-bg); color:var(--best-ink); font-weight:700}
-  .cues .hm.near{background:var(--near-bg); color:var(--near-ink); font-weight:600}
+  :root{--rowhl:#F4F4F6; --best-bg:#DDF1E4; --best-ink:#1D6B3F; --near-bg:#EEF3D6; --near-ink:#5F6A14}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){--rowhl:#2A2B30; --best-bg:#1F4330; --best-ink:#86DEAD; --near-bg:#353B1E; --near-ink:#C8D376} }
+  :root[data-theme="dark"]{--rowhl:#2A2B30; --best-bg:#1F4330; --best-ink:#86DEAD; --near-bg:#353B1E; --near-ink:#C8D376}
+  .cues .hm.top{background:var(--best-bg); color:var(--best-ink); font-weight:600}
+  .cues .hm.near{background:var(--near-bg); color:var(--near-ink); font-weight:500}
   .cues .hm.mid{background:var(--warn-bg); color:var(--warn)}
   .cues .hm.worst{background:var(--alert-bg); color:var(--alert)}
-  .cuebar{display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; margin:0 0 12px; font-size:13px; color:var(--muted)}
-  .cuebar .sw{display:inline-block; border-radius:4px; padding:1px 8px; font-weight:600}
+  .cuebar{display:flex; flex-wrap:wrap; align-items:center; gap:8px 16px; margin:0 0 10px; font-size:12.5px; color:var(--muted)}
+  .cuebar .sw{display:inline-block; border-radius:4px; padding:0 6px; font-weight:500}
   .cuebar .sw.top{background:var(--best-bg); color:var(--best-ink)}
   .cuebar .sw.near{background:var(--near-bg); color:var(--near-ink)}
   .cuebar .sw.mid{background:var(--warn-bg); color:var(--warn)}
   .cuebar .sw.worst{background:var(--alert-bg); color:var(--alert)}
-  .switch{display:inline-flex; align-items:center; gap:8px; font:inherit; font-size:13.5px; font-weight:600; color:var(--ink); background:none; border:0; padding:2px 0; cursor:pointer}
-  .switch .track{position:relative; width:36px; height:20px; border-radius:999px; background:var(--line); transition:background .15s}
-  .switch .knob{position:absolute; top:2px; left:2px; width:16px; height:16px; border-radius:50%; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,.3); transition:transform .15s}
+  .switch{display:inline-flex; align-items:center; gap:8px; font:inherit; font-size:13px; font-weight:500; color:var(--ink); background:none; border:0; padding:2px 0; cursor:pointer}
+  .switch .track{position:relative; width:28px; height:16px; border-radius:999px; background:var(--line); transition:background .15s}
+  .switch .knob{position:absolute; top:2px; left:2px; width:12px; height:12px; border-radius:50%; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,.3); transition:transform .15s}
   .switch[aria-checked="true"] .track{background:var(--accent)}
-  .switch[aria-checked="true"] .knob{transform:translateX(16px)}
+  .switch[aria-checked="true"] .knob{transform:translateX(12px)}
   .switch:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:6px}
   .offers{margin-bottom:16px}
-  .offers table{min-width:1500px; font-size:13.5px}
+  .offers table{min-width:1500px; font-size:12.5px}
   .offers th, .offers td{padding:7px 8px; text-align:right; white-space:nowrap; border-bottom:1px solid var(--line)}
-  .offers th.rowh{text-align:left; position:sticky; left:0; z-index:2; background:var(--surface); font-family:"Golos Text",-apple-system,sans-serif; font-size:13px; letter-spacing:0; text-transform:none; color:var(--ink); font-weight:600; min-width:190px; box-shadow:1px 0 0 var(--line)}
+  .offers th.rowh{text-align:left; position:sticky; left:0; z-index:2; background:var(--surface); font-family:var(--sans); font-size:12.5px; letter-spacing:0; text-transform:none; color:var(--ink); font-weight:500; min-width:190px; box-shadow:1px 0 0 var(--line)}
   .offers th.rowh .dim{font-weight:400; font-size:11.5px}
-  .offers th.bankh{text-align:center; color:var(--ink); font-size:11.5px; border-left:1px solid var(--line)}
+  .offers th.bankh{text-align:center; color:var(--ink); font-size:12px; font-weight:600; border-left:1px solid var(--line)}
   .offers th.offh{text-align:right; padding:4px 6px}
-  .offers th.offh button{font:inherit; font-family:"Golos Text",-apple-system,sans-serif; font-size:12px; font-weight:600; letter-spacing:0; text-transform:none; color:var(--muted); background:none; border:1px solid transparent; border-radius:999px; padding:3px 9px; cursor:pointer; white-space:nowrap}
+  .offers th.offh button{font:inherit; font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:0; text-transform:none; color:var(--muted); background:none; border:1px solid transparent; border-radius:5px; padding:2px 7px; cursor:pointer; white-space:nowrap}
   .offers th.offh button:hover{border-color:var(--line); color:var(--ink)}
   .offers th.offh.sel button{background:var(--accent); color:var(--accent-ink)}
-  .offers td{font-family:"JetBrains Mono",monospace; font-variant-numeric:tabular-nums}
+  .offers td{font-variant-numeric:tabular-nums}
   .offers td.sel{background:var(--accent-soft)}
-  .offers td .dim{display:block; font-family:"Golos Text",-apple-system,sans-serif; font-size:11px; margin-top:1px}
+  .offers td .dim{display:block; font-family:var(--sans); font-size:11px; margin-top:1px}
   .offers td.capd .hm{color:var(--faint)}
   .offers td.capd .dim{color:var(--warn); font-weight:600}
-  .offers tr.strong td, .offers tr.strong th.rowh{font-weight:700; background-image:linear-gradient(var(--rowhl),var(--rowhl)); background-size:100% 100%}
+  .offers tr.strong td, .offers tr.strong th.rowh{font-weight:600; background-image:linear-gradient(var(--rowhl),var(--rowhl)); background-size:100% 100%}
   .offers tr.strong td.sel{background-image:none}
   .offers tbody tr:last-child td, .offers tbody tr:last-child th{border-bottom:none}
-  .calcnote{background:var(--warn-bg); color:var(--warn); border-radius:10px; padding:12px 16px;
-    font-size:13.5px; margin-top:16px; display:none}
+  .calcnote{background:var(--warn-bg); color:var(--warn); border-radius:6px; padding:10px 14px;
+    font-size:13px; margin-top:16px; display:none}
   .calcnote.show{display:block}
   .rvb{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:0 32px}
   .rvb .sliderrow{margin:10px 0 8px}
   .res .v.ok{color:var(--good)}
   .res .v.neg{color:var(--alert)}
+  /* --- app shell: floating glass panels · sidebar · main · scenario inspector --- */
+  :root{
+    --glass:rgba(255,255,255,.62); --glass-line:rgba(15,17,30,.07); --glass-field:rgba(255,255,255,.7);
+    --glass-hover:rgba(15,17,30,.045); --glass-sel:rgba(255,255,255,.9);
+    --glass-hi:inset 0 1px 0 rgba(255,255,255,.9), inset 0 0 0 1px rgba(255,255,255,.4);
+    --glass-shadow:0 1px 2px rgba(15,17,30,.04), 0 10px 32px rgba(15,17,30,.08);
+    --amb-1:rgba(94,106,210,.13); --amb-2:rgba(56,189,248,.10);
+  }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+    --glass:rgba(42,43,49,.58); --glass-line:rgba(255,255,255,.07); --glass-field:rgba(255,255,255,.05);
+    --glass-hover:rgba(255,255,255,.05); --glass-sel:rgba(255,255,255,.09);
+    --glass-hi:inset 0 1px 0 rgba(255,255,255,.08), inset 0 0 0 1px rgba(255,255,255,.03);
+    --glass-shadow:0 1px 2px rgba(0,0,0,.3), 0 14px 44px rgba(0,0,0,.45);
+    --amb-1:rgba(139,148,240,.12); --amb-2:rgba(56,189,248,.06);
+  } }
+  :root[data-theme="dark"]{
+    --glass:rgba(42,43,49,.58); --glass-line:rgba(255,255,255,.07); --glass-field:rgba(255,255,255,.05);
+    --glass-hover:rgba(255,255,255,.05); --glass-sel:rgba(255,255,255,.09);
+    --glass-hi:inset 0 1px 0 rgba(255,255,255,.08), inset 0 0 0 1px rgba(255,255,255,.03);
+    --glass-shadow:0 1px 2px rgba(0,0,0,.3), 0 14px 44px rgba(0,0,0,.45);
+    --amb-1:rgba(139,148,240,.12); --amb-2:rgba(56,189,248,.06);
+  }
+  body{background:radial-gradient(900px 560px at 0% 0%, var(--amb-1), transparent 70%), radial-gradient(900px 620px at 100% 100%, var(--amb-2), transparent 70%), var(--bg); background-attachment:fixed}
+  .glass{background:var(--glass); -webkit-backdrop-filter:blur(28px) saturate(170%); backdrop-filter:blur(28px) saturate(170%);
+    border:1px solid var(--glass-line); border-radius:18px; box-shadow:var(--glass-hi), var(--glass-shadow)}
+  @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){ .glass{background:var(--surface)} }
+
+  .app{--sw:240px; --iw:360px; --ease:cubic-bezier(.32,.72,0,1); display:grid; grid-template-columns:var(--sw) minmax(0,1fr) var(--iw); min-height:100vh;
+    overflow-x:clip; transition:grid-template-columns .32s var(--ease)}
+  .app.scol{--sw:0px}
+  .app.icol, .app.noinsp{--iw:0px}
+  .sglass, .iglass{transition:opacity .22s var(--ease), transform .32s var(--ease)}
+  .app.scol .sglass{opacity:0; transform:translateX(-16px) scale(.98); pointer-events:none}
+  .app.icol .iglass, .app.noinsp .iglass{opacity:0; transform:translateX(16px) scale(.98); pointer-events:none}
+
+  /* sidebar */
+  .side{position:sticky; top:0; height:100vh; padding:10px 0 10px 10px; z-index:20}
+  .sglass{width:230px; height:100%; display:flex; flex-direction:column; gap:14px; padding:10px; transform-origin:left center}
+  .shead{display:flex; align-items:center; justify-content:space-between; gap:8px}
+  .brand{margin:0; font-size:13px; font-weight:600; letter-spacing:0; line-height:1.4; padding:4px 6px; white-space:nowrap}
+  .brand a{color:var(--ink); text-decoration:none; display:flex; align-items:center; gap:8px}
+  .brand i{width:16px; height:16px; border-radius:5px; background:linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 55%, #38bdf8)); display:inline-block; box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+  .snav{display:flex; flex-direction:column; gap:1px}
+  .ngroup{font-size:11.5px; font-weight:500; color:var(--faint); margin:12px 8px 4px}
+  .snav a{display:flex; align-items:center; justify-content:space-between; gap:8px; height:30px; padding:0 8px; border-radius:8px;
+    font-size:13px; font-weight:500; color:var(--muted); text-decoration:none; transition:background .15s, color .15s, box-shadow .15s}
+  .snav a:hover{background:var(--glass-hover); color:var(--ink)}
+  .snav a[aria-current="page"]{background:var(--glass-sel); color:var(--ink); box-shadow:0 0 0 1px var(--glass-line), 0 1px 2px rgba(0,0,0,.06)}
+  kbd{font:500 11px var(--sans); color:var(--faint); border:1px solid var(--glass-line); border-radius:4px; min-width:18px; height:18px; display:inline-flex; align-items:center; justify-content:center; padding:0 4px}
+  .sfoot{font-size:12px; color:var(--faint); padding:0 8px 4px; margin:0}
+  .themesw{margin-top:auto; margin-left:6px; display:inline-flex; align-self:flex-start; padding:2px; gap:2px; border:1px solid var(--glass-line); border-radius:9px; background:var(--glass-field)}
+  .themesw button{width:28px; height:22px; display:flex; align-items:center; justify-content:center; border:0; border-radius:7px; background:none; color:var(--faint); cursor:pointer; padding:0; transition:background .15s, color .15s, box-shadow .15s}
+  .themesw button svg{width:14px; height:14px}
+  .themesw button:hover{color:var(--ink)}
+  .themesw button[aria-checked="true"]{background:var(--glass-sel); color:var(--ink); box-shadow:0 0 0 1px var(--glass-line), 0 1px 2px rgba(0,0,0,.08)}
+  .themesw button:focus-visible{outline:2px solid var(--accent); outline-offset:1px}
+  html.theming, html.theming *{transition:background-color .25s ease, border-color .25s ease, color .25s ease, fill .25s ease !important}
+
+  /* panel toggles: inside each panel; a reopen button appears in the summary bar when a panel is closed */
+  .ptog{display:flex; align-items:center; justify-content:center; flex-shrink:0; width:28px; height:28px; border-radius:8px; background:none; border:0; color:var(--faint); cursor:pointer; padding:0; transition:color .15s, background .15s}
+  .ptog:hover{color:var(--ink); background:var(--glass-hover)}
+  .ptog:focus-visible{outline:2px solid var(--accent); outline-offset:1px}
+  .ptog svg{width:16px; height:16px; display:block}
+  .kpis .ptog{align-self:center; width:0; margin:0; opacity:0; overflow:hidden; pointer-events:none; transition:width .32s var(--ease), margin .32s var(--ease), opacity .2s, color .15s, background .15s}
+  .app.scol #sideTog{width:32px; height:32px; margin-left:8px; opacity:1; pointer-events:auto}
+  .app.icol:not(.noinsp) #inspTog{width:32px; height:32px; margin-right:8px; opacity:1; pointer-events:auto}
+
+  /* main + floating summary bar */
+  .main{min-width:0; padding:0 18px 64px}
+  .kpis{position:sticky; top:10px; z-index:30; display:grid; grid-template-columns:auto repeat(4,minmax(0,1fr)) auto; margin:10px 0 24px; border-radius:16px}
+  .kpi{padding:11px 18px; display:flex; flex-direction:column; min-width:0; border-left:1px solid var(--glass-line)}
+  .kpi:first-of-type{border-left:0}
+  .kl{font-size:12px; font-weight:500; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+  .kv{font-size:19px; font-weight:600; letter-spacing:-.015em; font-variant-numeric:tabular-nums; white-space:nowrap; transition:color .2s}
+  .kd{font-size:11.5px; font-weight:500; font-variant-numeric:tabular-nums; height:16px; opacity:0; transition:opacity .2s}
+  .kd.show{opacity:1}
+  .kd.up{color:var(--alert)} .kd.dn{color:var(--good)}
+  .kpi.flash .kv{color:var(--accent)}
+  .view{padding:0 10px}
+  .view[hidden]{display:none!important}
+  .vhead{display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin:0 0 12px}
+  .view h2{margin:0; padding:0; border:0; font-size:18px}
+  .view .stamp{margin:0 0 16px}
+  h3.sub{font-size:14px; font-weight:600; margin:32px 0 6px}
+  :root{interpolate-size:allow-keywords}
+  details::details-content{block-size:0; overflow:hidden; transition:block-size .24s cubic-bezier(.32,.72,0,1), content-visibility .24s allow-discrete}
+  details[open]::details-content{block-size:auto}
+  details.more{margin:20px 0 0; border-top:1px solid var(--line); padding-top:12px}
+  details.more summary{cursor:pointer; font-size:12.5px; font-weight:500; color:var(--muted); list-style:none; display:inline-flex; align-items:center; gap:6px}
+  details.more summary::-webkit-details-marker{display:none}
+  details.more summary::before, .rvbset summary::before{content:""; width:6px; height:6px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor; transform:rotate(-45deg); transition:transform .15s; margin-right:2px}
+  details[open] > summary::before{transform:rotate(45deg)}
+  details.more summary:hover{color:var(--ink)}
+  footer{margin-top:48px; padding-left:10px}
+
+  /* inspector */
+  .insp{position:sticky; top:0; height:100vh; padding:10px 10px 10px 0; z-index:20}
+  .iglass{width:350px; height:100%; display:flex; flex-direction:column; overflow:hidden; transform-origin:right center}
+  .ibody{flex:1; overflow:auto; overscroll-behavior:contain}
+  .ihead{display:none}
+  .itop{display:flex; align-items:center; gap:8px; height:50px; padding:0 10px 0 16px; border-bottom:1px solid var(--glass-line); flex-shrink:0}
+  .itop .it{margin-right:auto}
+  .it{font-size:13px; font-weight:600; color:var(--ink)}
+  .ghost{font:inherit; font-size:12px; font-weight:500; color:var(--muted); background:var(--glass-field); border:1px solid var(--glass-line); border-radius:8px; height:26px; padding:0 9px; cursor:pointer; transition:color .15s, border-color .15s}
+  .ghost:hover{color:var(--ink); border-color:var(--line-strong)}
+  .igroup{padding:14px 16px 16px; border-bottom:1px solid var(--glass-line)}
+  .glab{font-size:11.5px; font-weight:500; color:var(--faint); margin:0 0 10px}
+  .selwrap{position:relative; display:block}
+  .selwrap::after{content:""; position:absolute; right:12px; top:50%; width:6px; height:6px; border-right:1.5px solid var(--muted); border-bottom:1.5px solid var(--muted); transform:translateY(-70%) rotate(45deg); pointer-events:none}
+  #offerSel{appearance:none; -webkit-appearance:none; width:100%; height:34px; font:inherit; font-size:13px; font-weight:500; color:var(--ink); background:var(--glass-field); border:1px solid var(--glass-line); border-radius:10px; padding:0 30px 0 11px; cursor:pointer; transition:border-color .15s, box-shadow .15s}
+  #offerSel:hover{border-color:var(--line-strong)}
+  #offerSel:focus-visible{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft)}
+  .insp .income{margin:0; padding:0; background:none; border:0}
+  .insp .sliderrow, .insp .income .sliderrow{margin:0 0 14px}
+  .insp .sliderrow:last-of-type{margin-bottom:4px}
+  .insp .lab{flex-wrap:wrap; gap:4px 8px}
+  .insp .lab .t{font-size:13px}
+  .insp .lab .t > .dim{display:none}
+  .insp .sliderrow .lab .v{font-size:14px}
+  .insp .jumps{margin-left:6px}
+  .insp .jump{background:var(--glass-field); border-color:var(--glass-line); border-radius:7px}
+  .insp .capinfo{font-size:12px; margin-top:8px; color:var(--muted)} .insp .capinfo b{color:var(--ink)}
+  .insp .capinfo .dim{font-size:11.5px}
+  .insp .incin input{font-size:13px; height:26px; width:8.5ch; background:var(--glass-field); border-color:var(--glass-line); border-radius:8px}
+  .insp .calcnote{margin-top:12px; font-size:12px}
+  .insp .sliderwrap + .minmax{margin-top:18px}
+  .view .grid{grid-template-columns:repeat(auto-fit,minmax(min(170px,100%),1fr))}
+  .insp .rvb{display:block; margin-top:4px}
+  .rvbset summary{cursor:pointer; list-style:none; display:flex; align-items:center; gap:6px; margin:0}
+  .rvbset[open] summary{margin-bottom:12px}
+  .rvbset summary::-webkit-details-marker{display:none}
+  .rvbset{border-bottom:0}
+
+  /* medium: sidebar → floating tab bar */
+  @media (max-width:1180px){
+    .app, .app.scol{--iw:340px; grid-template-columns:minmax(0,1fr) var(--iw); grid-template-rows:auto 1fr}
+    .app.icol, .app.noinsp{--iw:0px}
+    .app.scol .sglass{opacity:1; transform:none; pointer-events:auto}
+    .shead .ptog, #sideTog{display:none}
+    .side{grid-column:1 / -1; position:sticky; top:0; z-index:40; height:auto; padding:10px 10px 0}
+    .sglass{width:auto; height:48px; flex-direction:row; align-items:center; gap:12px; padding:0 8px; overflow-x:auto; scrollbar-width:none; border-radius:16px}
+    .sglass::-webkit-scrollbar{display:none}
+    .snav{flex-direction:row}
+    .ngroup, .sfoot, .snav kbd{display:none}
+    .themesw{margin:0 0 0 auto; align-self:center; flex-shrink:0}
+    .snav a{white-space:nowrap}
+    .main{grid-column:1}
+    .insp{grid-column:2; top:58px; height:calc(100vh - 58px)}
+    .iglass{width:330px}
+    .kpis{top:68px}
+  }
+  /* phone: scenario → floating bottom sheet */
+  @media (max-width:820px){
+    .app, .app.noinsp{display:block}
+    .side{padding:8px 8px 0}
+    .main{padding:0 8px 120px}
+    .kpis{top:64px; margin:8px 0 20px; grid-template-columns:repeat(2,minmax(0,1fr))}
+    .kpis .ptog{display:none}
+    .kpi{padding:9px 14px; border-left:0}
+    .kpi:nth-of-type(2n){border-left:1px solid var(--glass-line)}
+    .kpi:nth-of-type(n+3){border-top:1px solid var(--glass-line)}
+    .kv{font-size:16px}
+    .view{padding:0 8px}
+    .app.icol .iglass, .app.noinsp .iglass{opacity:1; transform:none; pointer-events:auto}
+    .app.noinsp .insp{display:none}
+    .insp{position:fixed; left:0; right:0; bottom:0; top:auto; height:auto; z-index:50; padding:0 8px calc(8px + env(safe-area-inset-bottom,0px))}
+    .iglass{width:auto; height:auto; max-height:80vh; border-radius:22px}
+    .itop .ptog{display:none}
+    .insp:not(.open) .itop{display:none}
+    .ihead{display:flex; align-items:center; gap:10px; width:100%; min-height:52px; padding:0 16px; background:none; border:0; font:inherit; color:var(--ink); cursor:pointer; text-align:left; flex-shrink:0}
+    .isum{flex:1; min-width:0; font-size:12.5px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+    .chev{width:8px; height:8px; border-right:1.5px solid var(--muted); border-bottom:1.5px solid var(--muted); transform:rotate(-135deg); transition:transform .2s var(--ease)}
+    .insp.open .chev{transform:rotate(45deg)}
+    .ibody{max-height:0; transition:max-height .36s var(--ease)}
+    .insp.open .ibody{max-height:calc(80vh - 102px)}
+  }
+  /* --- charts (palette validated with the dataviz skill: light on #FFF, dark on #232428) --- */
+  :root{--c1:#5E6AD2; --c2:#eb6834; --c3:#1baf7a}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){--c1:#7A83E6; --c2:#d95926; --c3:#199e70} }
+  :root[data-theme="dark"]{--c1:#7A83E6; --c2:#d95926; --c3:#199e70}
+  .chart{margin:0 0 16px; background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 16px 12px}
+  .chart figcaption{display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 14px; margin:0 0 10px}
+  .chart .ct{font-size:13px; font-weight:600; color:var(--ink)}
+  .chart .cs{font-size:12.5px; color:var(--muted); flex:1 1 260px; min-width:0}
+  .chart .lg{display:inline-flex; flex-wrap:wrap; gap:4px 14px; font-size:12px; color:var(--muted)}
+  .lg i, .ctip i, .cashleg i{display:inline-block; width:10px; height:10px; border-radius:3px; vertical-align:-1px; margin-right:6px}
+  .lg i.ln{height:3px; border-radius:2px; vertical-align:middle}
+  .lg i.hol{border-radius:50%; box-shadow:inset 0 0 0 1.5px var(--faint)}
+  .chart .ghost{margin-left:auto}
+  .chart.off .plot, .chart.off .lg{display:none}
+  .chart.off figcaption{margin:0}
+  .plot{position:relative; touch-action:pan-y}
+  .plot svg{display:block; overflow:visible}
+  .plot + .plot{margin-top:6px}
+  .cgrid{stroke:var(--line); stroke-width:1}
+  .cbase{stroke:var(--line-strong); stroke-width:1}
+  .ctick{font-size:11px; fill:var(--faint); font-variant-numeric:tabular-nums}
+  .cttl{font-size:11.5px; font-weight:500; fill:var(--muted)}
+  .clab{font-size:12px; font-weight:500; fill:var(--ink); paint-order:stroke; stroke:var(--surface); stroke-width:4px; stroke-linejoin:round}
+  .cl{fill:none; stroke-width:2; stroke-linejoin:round; stroke-linecap:round}
+  .s1{stroke:var(--c1)} .s2{stroke:var(--c2)}
+  .f1{fill:var(--c1)} .f2{fill:var(--c2)} .f3{fill:var(--c3)} .f0{fill:var(--faint)}
+  .b1{background:var(--c1)} .b2{background:var(--c2)} .b3{background:var(--c3)} .b0{background:var(--faint)}
+  .carea{fill:var(--c1); opacity:.12}
+  .cdot{stroke:var(--surface); stroke-width:2}
+  .cdot.hollow{fill:var(--surface); stroke:var(--faint); stroke-width:1.5}
+  .cdot.sel{stroke-width:2.5}
+  .cdot{transform-box:fill-box; transform-origin:center; transition:transform .16s cubic-bezier(.32,.72,0,1)}
+  .cdot.hov{transform:scale(1.3)}
+  .halo{fill:var(--c1); opacity:.16; pointer-events:none}
+  .cguide{stroke:var(--c1); stroke-width:1; stroke-dasharray:3 3; opacity:.55; pointer-events:none}
+  .clab.clsel{font-weight:600}
+  .sl{fill:none; stroke-width:1.5; stroke-linecap:round; transition:opacity .15s, stroke-width .15s}
+  .shit{fill:none; stroke:transparent; stroke-width:14; cursor:pointer}
+  .slope .se{stroke:var(--surface); stroke-width:2; transition:opacity .15s}
+  .slope.oth .sl{stroke:var(--line-strong)} .slope.oth .se{fill:var(--faint)}
+  .slope.trap .sl{stroke:var(--c2); stroke-width:2} .slope.trap .se{fill:var(--c2)}
+  .slope.sel .sl{stroke:var(--c1); stroke-width:3} .slope.sel .se{fill:var(--c1)}
+  .sname{font-size:12px; fill:var(--muted); font-variant-numeric:tabular-nums}
+  .srank{font-size:11px; fill:var(--faint); font-variant-numeric:tabular-nums}
+  .sval{fill:var(--faint); font-weight:400}
+  .slab.trap .sname, .slab.sel .sname, .slab.hot .sname{fill:var(--ink); font-weight:500}
+  .slab.sel .sname{font-weight:600}
+  .slab{transition:opacity .15s}
+  .chart.focus .slope:not(.hot), .chart.focus .slab:not(.hot){opacity:.25}
+  .chart.focus .slope.hot .sl{stroke-width:3}
+  .cmark{stroke:var(--line-strong); stroke-width:1; stroke-dasharray:3 3}
+  .chair{stroke:var(--muted); stroke-width:1; pointer-events:none}
+  .hit{fill:transparent; cursor:pointer}
+  .ovl{fill:transparent; cursor:crosshair}
+  .barg rect{transition:opacity .12s}
+  .barg.dim rect{opacity:.35}
+  .ctip{position:fixed; z-index:60; display:none; pointer-events:none; background:var(--surface); color:var(--ink); border:1px solid var(--line);
+    border-radius:8px; box-shadow:var(--shadow-pop); padding:8px 10px; font-size:12px; line-height:1.55; font-variant-numeric:tabular-nums; white-space:nowrap}
+  .ctip b{font-weight:600}
+  .ctip .r{display:flex; justify-content:space-between; gap:18px}
+  .ctip .k{color:var(--muted)}
+  .cashleg{display:flex; flex-wrap:wrap; gap:6px 18px; margin-top:10px; font-size:12px; color:var(--muted)}
+  .cashleg b{color:var(--ink); font-weight:500; font-variant-numeric:tabular-nums; margin-left:4px}
+  /* crowns: emoji replaced by a small badge, the .crown hover tooltip stays */
+  .crown{font-size:0; cursor:help; vertical-align:1px}
+  .crown::before{font-size:11px; font-weight:500; line-height:16px; display:inline-block; padding:0 5px; border-radius:4px;
+    background:var(--accent-soft); color:var(--accent)}
+  .crown[data-crown="taeg"]::before{content:"Lowest TAEG"}
+  .crown[data-crown="pay"]::before{content:"Lowest payment"}
+  a{color:var(--accent)}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  input[type=range]:focus-visible{outline-offset:4px; border-radius:4px}
+  @media (prefers-reduced-motion: reduce){ *{transition:none!important} }
+  @media (max-width:640px){ .panel{padding:16px} }
 </style>
 
 
-<div class="wrap">
-  <p class="eyebrow">the-house · mortgage application</p>
-  <h1>Mortgage radar</h1>
-  <p class="stamp">Updated <b>25.09.2026</b> · applicant Angelo Wellens · goal: a 400 000 € loan on a 585 000 € home (68 % of price), ~227 000 € own funds for the down payment and costs · 7 banks, 15 offers via a broker</p>
-
-  <h2 style="margin-top:8px">Offers</h2>
-  <p class="lede">The broker’s comparison of 18.09.2026 — 7 banks, 15 offers — quoted on a 585 000 € home with a 400 000 € loan. Set the house price and down payment in the calculator below and every offer is re-run for your price and down payment: payments from each bank’s rates, taxes re-calculated, insurance scaled, and any bank that won’t lend that much is marked “capped”. At 585 000 € and 185 000 € down the table matches the broker’s sheet to the cent. Click an offer to open it in the calculator below.</p>
-  <div class="cuebar"><button type="button" id="cueBtn" class="switch" role="switch" aria-checked="true"><span class="track"><span class="knob"></span></span>Colour cues</button><span><span class="sw top">green</span> the best</span><span><span class="sw near">yellow-green</span> close to the best</span><span>On spread, fixed rate, total cost and monthly payment · hover for the gap to the best</span></div>
-  <div class="tablebox offers cues" id="offersBox"><table id="offersTable"></table></div>
-
-  <h2>Calculator</h2>
-  <p class="lede">One offer in detail: what you pay upfront, every month, and over the whole term. Pick the offer here or click it in the table. Your income, house price and down payment below drive the offers table above too.</p>
-  <div class="panel">
-    <div class="banks" id="banks" role="group" aria-label="Bank"></div>
-    <div class="income">
-      <div class="sliderrow">
-        <div class="lab"><span class="t">Your net income per year <span class="dim" style="font-weight:400; font-size:14px">· household, after tax and social security</span></span>
-          <label class="incin"><input type="text" inputmode="numeric" id="incomeN" aria-label="Net income per year in euros"><span>€ / yr</span></label></div>
-        <input type="range" id="income" min="60000" max="150000" step="500" value="90000" aria-label="Net income per year">
-        <div class="minmax"><span>60 000 €</span><span>150 000 €</span></div>
-      </div>
-      <p class="capinfo" id="capInfo"></p>
-    </div>
-    <div class="sliderrow">
-      <div class="lab"><span class="t">House price <span class="jumps"><button class="jump" id="priceMaxBtn" type="button">to max</button> <button class="jump" id="optBtn" type="button" title="Highest house price at the bank’s minimum down payment: income ceiling ÷ % of price. Above it the loan stays at the ceiling and every extra euro of price is ours.">optimum</button></span></span><span class="v" id="priceV"></span></div>
-      <div class="sliderwrap">
-        <input type="range" id="price" min="300000" max="800000" step="1000" value="585000" aria-label="House price">
-        <div class="mintick" id="maxTick" data-label="max" title="maximum price at the current down payment"></div>
-      </div>
-      <div class="minmax"><span>300 000 €</span><span>800 000 €</span></div>
-    </div>
-
-    <div class="sliderrow">
-      <div class="lab"><span class="t">Down payment <span class="dim" style="font-weight:400">· your own money towards the price</span> <span class="jumps"><button class="jump" id="downMinBtn" type="button">to selected bank’s minimum</button></span></span><span class="v" id="downV"></span></div>
-      <div class="sliderwrap">
-        <input type="range" id="down" min="30000" max="480000" step="100" value="185000" aria-label="Down payment">
-        <div class="mintick" id="minTick" data-label="min" title="minimum down payment for this price"></div>
-      </div>
-      <div class="minmax"><span id="downMinL"></span><span id="downMaxL"></span></div>
-    </div>
-    <p class="legend" id="offersSum" style="margin:14px 0 0"></p>
-
-    <div class="calcnote" id="note"></div>
+<div class="app">
+<aside class="side" aria-label="Sections"><div class="glass sglass">
+  <div class="shead"><h1 class="brand"><a href="#offers"><i></i>Mortgage Radar</a></h1><button class="ptog" data-tog="side" type="button" aria-label="Hide sidebar" title="Hide sidebar ([)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="2.5"/><path d="M6 2.8v10.4"/></svg></button></div>
+  <nav class="snav">
+    <p class="ngroup">Compare</p>
+    <a href="#offers" data-view="offers"><span>Offers</span><kbd>1</kbd></a>
+    <a href="#breakdown" data-view="breakdown"><span>Breakdown</span><kbd>2</kbd></a>
+    <a href="#rvb" data-view="rvb"><span>Rent vs buy</span><kbd>3</kbd></a>
+    <p class="ngroup">Application</p>
+    <a href="#status" data-view="status"><span>Status by bank</span><kbd>4</kbd></a>
+    <a href="#roadmap" data-view="roadmap"><span>Roadmap</span><kbd>5</kbd></a>
+    <p class="ngroup">Reference</p>
+    <a href="#banks" data-view="banks"><span>Banks</span><kbd>6</kbd></a>
+    <a href="#glossary" data-view="glossary"><span>Glossary</span><kbd>7</kbd></a>
+  </nav>
+  <div class="themesw" role="radiogroup" aria-label="Theme" title="Theme (T)">
+    <button type="button" role="radio" data-theme-opt="system" aria-label="System"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><rect x="1.8" y="2.5" width="12.4" height="8.5" rx="1.5"/><path d="M5.5 13.8h5M8 11v2.8"/></svg></button><button type="button" role="radio" data-theme-opt="light" aria-label="Light"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="2.8"/><path d="M8 1.5v1.3M8 13.2v1.3M1.5 8h1.3M13.2 8h1.3M3.4 3.4l.9.9M11.7 11.7l.9.9M3.4 12.6l.9-.9M11.7 4.3l.9-.9"/></svg></button><button type="button" role="radio" data-theme-opt="dark" aria-label="Dark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M13.2 9.6A5.5 5.5 0 0 1 6.4 2.8a5.5 5.5 0 1 0 6.8 6.8Z"/></svg></button>
   </div>
-
+  <p class="sfoot">Updated 25.09.2026<br>7 banks · 15 offers via a broker</p>
+</div></aside>
+<main class="main" id="main">
+  <div class="kpis glass" id="kpis">
+    <button class="ptog" id="sideTog" data-tog="side" type="button" aria-label="Show sidebar" title="Show sidebar ([)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="2.5"/><path d="M6 2.8v10.4"/></svg></button>
+    <div class="kpi"><span class="kl">Loan</span><span class="kv" id="kLoan"></span><span class="kd" id="kLoanD"></span></div>
+    <div class="kpi"><span class="kl" id="kPayL">Monthly payment</span><span class="kv" id="kPay"></span><span class="kd" id="kPayD"></span></div>
+    <div class="kpi"><span class="kl">Cash for the deal</span><span class="kv" id="kCash"></span><span class="kd" id="kCashD"></span></div>
+    <div class="kpi"><span class="kl" id="kTotL">Total over the term</span><span class="kv" id="kTot"></span><span class="kd" id="kTotD"></span></div>
+    <button class="ptog" id="inspTog" data-tog="insp" type="button" aria-label="Show scenario panel" title="Show scenario panel (])"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="2.5"/><path d="M10 2.8v10.4"/></svg></button>
+  </div>
+<section class="view" data-view="offers" aria-labelledby="h-offers" hidden>
+  <div class="vhead"><h2 id="h-offers">Offers</h2></div>
+  <p class="stamp lede">Updated <b>25.09.2026</b> · applicant Angelo Wellens · goal: a 400 000 € loan on a 585 000 € home (68 % of price), ~227 000 € own funds for the down payment and costs · 7 banks, 15 offers via a broker</p>
+    <figure class="chart" id="chOffers"><figcaption><span class="ct">Cheapest per month isn’t cheapest overall</span><span class="cs" id="chOffersSum"></span><span class="lg"><span><i class="b1 ln"></i>Your pick</span><span><i class="b2 ln"></i>Drops 4+ places</span><span><i class="b0 ln"></i>Other offers</span></span><button class="ghost" id="chOffersBtn" type="button" aria-pressed="false">Hide chart</button></figcaption><div class="plot"></div></figure>
+<div class="cuebar"><button type="button" id="cueBtn" class="switch" role="switch" aria-checked="true"><span class="track"><span class="knob"></span></span>Colour cues</button><span><span class="sw top">green</span> the best</span><span><span class="sw near">yellow-green</span> close to the best</span><span>On spread, fixed rate, total cost and monthly payment · hover for the gap to the best</span></div>
+<div class="tablebox offers cues" id="offersBox"><table id="offersTable"></table></div>
+    <p class="legend" id="offersSum"></p>
+  <details class="more"><summary>How this table works</summary>
+  <p class="legend">The broker’s comparison of 18.09.2026 — 7 banks, 15 offers — quoted on a 585 000 € home with a 400 000 € loan. Set the house price and down payment in the Scenario panel and every offer is re-run for your price and down payment: payments from each bank’s rates, taxes re-calculated, insurance scaled, and any bank that won’t lend that much is marked “capped”. At 585 000 € and 185 000 € down the table matches the broker’s sheet to the cent. Click an offer to select it in the Scenario panel.</p>
+  </details>
+</section>
+<section class="view" data-view="breakdown" aria-labelledby="h-breakdown" hidden>
+  <div class="vhead"><h2 id="h-breakdown">Breakdown</h2></div>
   <div class="grid">
     <div class="res hero"><span class="l">Total cash needed for the deal</span><span class="v" id="cashV"></span><span class="s" id="cashS"></span></div>
     <div class="res hero"><span class="l" id="pay1L">Monthly payment, first 24 months</span><span class="v" id="pay1"></span><span class="s" id="pay1S"></span><span class="s" id="pay2S"></span></div>
@@ -397,8 +639,7 @@
     <div class="res"><span class="l" id="totL">Total over the term</span><span class="v" id="totV"></span><span class="s" id="totS1"></span><span class="s" id="totS2"></span></div>
   </div>
   <p class="legend" id="loanLine" style="margin-bottom:16px"></p>
-
-  <div class="taxgrid">
+    <figure class="chart" id="chCash"><figcaption><span class="ct">Where the cash for the deal goes</span><span class="cs" id="chCashSum"></span></figcaption><div class="plot"></div></figure><div class="taxgrid">
     <div class="panel tax">
       <p class="taxcap">One-off · cash for the deal</p>
       <table>
@@ -428,6 +669,7 @@
     </div>
   </div>
 
+  <figure class="chart" id="chAmort"><figcaption><span class="ct">Where your payments go, year by year</span><span class="cs" id="chAmortSum"></span><span class="lg"><span><i class="b1"></i>Principal</span><span><i class="b2"></i>Interest</span></span></figcaption><div class="plot"></div><div class="plot plot2"></div></figure>
   <div class="panel tax" style="margin-bottom:22px">
     <p class="taxcap">When the money goes out · scale in days from the offer, dot size = share of the total</p>
     <div class="tl-scroll">
@@ -463,39 +705,14 @@
     <p class="legend" style="margin-top:10px">Whole cash pool for the deal: <b id="schTot"></b> (100 %). Each payment counts towards the next: the reservation towards the deposit, the deposit towards the price. <b>Without a CPCV no deposit is paid</b> — the whole amount moves to the escritura (almost the entire pool on one day). The deposit is negotiable: 10 % is customary, 5 % can be agreed. IMT and stamp duty are paid by payment slip (guia) right before signing, so by escritura day the whole remainder must be liquid. The reservation is assumed at 1 500 €, survey and lawyer at roughly 550 €.</p>
   </div>
   <p class="legend" id="bankFoot"></p>
+  <details class="more"><summary>How this is calculated</summary>
+  <p class="legend">One offer in detail: what you pay upfront, every month, and over the whole term. Pick the offer in the Scenario panel or click it in the Offers table. Your income, house price and down payment drive the Offers table too.</p>
   <p class="legend">The “optimum” button sets price = your income ceiling ÷ the bank’s % of price: the last price at which the down payment is still the bank’s minimum. Above it the loan stays at the ceiling and every extra euro of price is ours. Formulas: loan = min(price − down payment, bank % × price, income ceiling); annuity payment at the bank’s rate (fixed period per offer: 24, 36 or 60 months, or the whole term; then Euribor 6M 2,46 % + spread); IMT = base × rate − abatimento. Checked against the broker’s comparison at 585 000 € and 400 000 €: Eurobic mixed 1 473,22 €, Santander 1 462,34 €, CGD 1 611,86 €, Bankinter fixed 1 832,98 € — all match; IMT 33 036,65 € + stamp duties 7 080,00 € + each bank’s fees reproduce its “total costs including taxes” to the cent.</p>
-
-  <h2>Rent vs buy</h2>
-  <p class="lede">Same house, bank and down payment as in the calculator above. The renter keeps the same money that would have gone into the deal and each month sets aside the difference between the owner’s costs and the rent. The answer depends more on the horizon, house-price growth and the return on savings than on the bank’s terms — move them.</p>
-  <div class="panel">
-    <div class="rvb">
-      <div class="sliderrow">
-        <div class="lab"><span class="t">Current rent</span><span class="v" id="rvbRentLab"></span></div>
-        <input type="range" id="rvbRent" min="600" max="3500" step="10" value="1600" aria-label="Rent per month">
-        <div class="minmax"><span>600 €</span><span>3 500 €</span></div>
-      </div>
-      <div class="sliderrow">
-        <div class="lab"><span class="t">Horizon</span><span class="v" id="rvbYearsLab"></span></div>
-        <input type="range" id="rvbYears" min="1" max="30" step="1" value="10" aria-label="Horizon in years">
-        <div class="minmax"><span>1 year</span><span>30 years</span></div>
-      </div>
-      <div class="sliderrow">
-        <div class="lab"><span class="t">House-price growth</span><span class="v" id="rvbGHLab"></span></div>
-        <input type="range" id="rvbGH" min="0" max="8" step="0.5" value="3" aria-label="House-price growth per year">
-        <div class="minmax"><span>0 %</span><span>8 %/yr</span></div>
-      </div>
-      <div class="sliderrow">
-        <div class="lab"><span class="t">Return on savings</span><span class="v" id="rvbGILab"></span></div>
-        <input type="range" id="rvbGI" min="0" max="8" step="0.5" value="3" aria-label="Return on savings per year">
-        <div class="minmax"><span>0 %</span><span>8 %/yr</span></div>
-      </div>
-      <div class="sliderrow">
-        <div class="lab"><span class="t">Rent growth</span><span class="v" id="rvbGRLab"></span></div>
-        <input type="range" id="rvbGR" min="0" max="6" step="0.5" value="2" aria-label="Rent growth per year">
-        <div class="minmax"><span>0 %</span><span>6 %/yr</span></div>
-      </div>
-    </div>
-  </div>
+  </details>
+</section>
+<section class="view" data-view="rvb" aria-labelledby="h-rvb" hidden>
+  <div class="vhead"><h2 id="h-rvb">Rent vs buy</h2></div>
+    <figure class="chart" id="chRvb"><figcaption><span class="ct">Who’s ahead over time</span><span class="cs" id="chRvbSum"></span><span class="lg"><span><i class="b1 ln"></i>Buy, net if selling</span><span><i class="b2 ln"></i>Rent, savings</span></span></figcaption><div class="plot"></div></figure>
   <div class="grid">
     <div class="res hero"><span class="l" id="rvbBuyL"></span><span class="v" id="rvbBuyV"></span><span class="s" id="rvbBuyS1"></span><span class="s" id="rvbBuyS2"></span></div>
     <div class="res hero"><span class="l" id="rvbRentL"></span><span class="v" id="rvbRentV"></span><span class="s" id="rvbRentS1"></span><span class="s" id="rvbRentS2"></span></div>
@@ -503,17 +720,19 @@
     <div class="res"><span class="l">Saving for this house without a loan</span><span class="v" id="rvbSaveV"></span><span class="s" id="rvbSaveS1"></span><span class="s" id="rvbSaveS2"></span></div>
   </div>
   <p class="legend" id="rvbCost"></p>
+  <details class="more"><summary>Assumptions</summary>
+  <p class="legend">Same house, bank and down payment as in the Scenario panel. The renter keeps the same money that would have gone into the deal and each month sets aside the difference between the owner’s costs and the rent. The answer depends more on the horizon, house-price growth and the return on savings than on the bank’s terms — move them.</p>
   <p class="legend">Assumptions: both scenarios spend the same — the renter keeps the same cash that would have gone into the deal and each month sets aside (or draws down) the difference between the owner’s costs (payment + insurance + upkeep) and the rent. Loan principal is not a cost but savings held in the walls; the owner’s costs are interest, insurance, upkeep and the forgone return on the cash. Upkeep is 1,2 % of the house’s current value per year (repairs ~1 % + IMI ~0,2 %). At the end of the horizon the buyer sells: minus agent 5 % + IVA (6,15 % of price) and a 0,5 % early-repayment fee on the balance. Not included: tax on investment income (IRS 28 %) and capital-gains tax on the sale (mais-valias) — none if the money goes into another primary home, otherwise half the gain is taxed under IRS. Rate after the fixed period = current Euribor; everything in nominal terms. Default rent: 1 600 €/month, roughly what a comparable home rents for.</p>
-
-  <h2>Status by bank</h2>
-  <p class="lede">Status is the stage the file has reached (1 file → 2 preliminary analysis → 3 decision pending, no property → 4 approved, no property → 5 property-specific); the glossary is behind the ⓘ in the column header. “Next step” is what we are waiting for from the bank or doing ourselves. Hover over a status pill (tap on a phone) to see the bank’s history: what it replied, when, and what we’re waiting for.</p>
-
+  </details>
+</section>
+<section class="view" data-view="status" aria-labelledby="h-status" hidden>
+  <div class="vhead"><h2 id="h-status">Status by bank</h2></div>
   <div class="strip">
     <div class="stat"><span class="n">10</span><span class="l">banks approached</span></div>
     <div class="stat ac"><span class="n">4</span><span class="l">2 · preliminary analysis</span></div>
     <div class="stat wt"><span class="n">2</span><span class="l">3 · decision pending, no property</span></div>
     <div class="stat gd"><span class="n">1</span><span class="l">4 · approved, no property</span></div>
-    <div class="stat al"><span class="n">3</span><span class="l">✖ refused or dropped</span></div>
+    <div class="stat al"><span class="n">3</span><span class="l">refused or dropped</span></div>
   </div>
 
   <div class="tablebox banks-table">
@@ -596,7 +815,7 @@
         </tr>
         <tr class="dead">
           <td class="bank">Novo Banco</td>
-          <td class="st"><span class="pill al">✖ refused · at 1–2</span><span class="stnote">Refused at stage 1–2: the broker’s message of 12.09 — declined, no reason given.</span></td>
+          <td class="st"><span class="pill al">Refused · at 1–2</span><span class="stnote">Refused at stage 1–2: the broker’s message of 12.09 — declined, no reason given.</span></td>
           <td class="next">Nothing.</td>
           <td>—</td>
           <td>—</td>
@@ -604,7 +823,7 @@
         </tr>
         <tr class="dead">
           <td class="bank">Millennium BCP</td>
-          <td class="st"><span class="pill al">✖ refused · at 2</span><span class="stnote">Refused at stage 2, 15.09: debt-to-income over the bank’s limit when counting self-employed income at 75 %.</span></td>
+          <td class="st"><span class="pill al">Refused · at 2</span><span class="stnote">Refused at stage 2, 15.09: debt-to-income over the bank’s limit when counting self-employed income at 75 %.</span></td>
           <td class="next">Nothing.</td>
           <td>—</td>
           <td>—</td>
@@ -612,7 +831,7 @@
         </tr>
         <tr class="dead">
           <td class="bank">UCI</td>
-          <td class="st"><span class="pill al">✖ dropped · at 2</span><span class="stnote">Dropped by us at stage 2, 16.09: a specialist mortgage lender offering 70 % of price for the self-employed and a 5-year fix at 4,25 % — the most expensive rate we were quoted.</span></td>
+          <td class="st"><span class="pill al">Dropped · at 2</span><span class="stnote">Dropped by us at stage 2, 16.09: a specialist mortgage lender offering 70 % of price for the self-employed and a 5-year fix at 4,25 % — the most expensive rate we were quoted.</span></td>
           <td class="next">Nothing.</td>
           <td>—</td>
           <td>—</td>
@@ -621,11 +840,14 @@
       </tbody>
     </table>
   </div>
-  <p class="legend">All figures come from the broker’s comparison of 18.09.2026 (acquisition value 585 000 €, loan 400 000 €, 6-month Euribor at 2,46 %), except Eurobic’s approval letter of 22.09. The terms run from 25 to 35 years, so don’t compare offers on the monthly payment alone: compare TAEG and total cost (MTIC). Bankinter looks expensive per month, but its 25-year term gives one of the lowest total costs; Santander has the lowest payment but one of the highest total costs. Abanca’s figures are on 351 000 € because it lends only 60 % of the price. “With insurance” includes life insurance on the borrower and home insurance at the starting premium; life premiums rise with age. Two crowns — hover to see which is which: 👑 lowest TAEG and total cost (Eurobic, 3,70 %) and 👑 lowest monthly payment on 400 000 € (Santander, 1 590,14 € with insurance). No bank has given property-specific final approval yet; that needs a chosen house and a valuation.</p>
-
-  <h2>Deal roadmap</h2>
+  <p class="legend">All figures come from the broker’s comparison of 18.09.2026 (acquisition value 585 000 €, loan 400 000 €, 6-month Euribor at 2,46 %), except Eurobic’s approval letter of 22.09. The terms run from 25 to 35 years, so don’t compare offers on the monthly payment alone: compare TAEG and total cost (MTIC). Bankinter looks expensive per month, but its 25-year term gives one of the lowest total costs; Santander has the lowest payment but one of the highest total costs. Abanca’s figures are on 351 000 € because it lends only 60 % of the price. “With insurance” includes life insurance on the borrower and home insurance at the starting premium; life premiums rise with age. Two badges — hover for details: <b>Lowest TAEG</b> and total cost (Eurobic, 3,70 %) and <b>Lowest payment</b> on 400 000 € (Santander, 1 590,14 € with insurance). No bank has given property-specific final approval yet; that needs a chosen house and a valuation.</p>
+  <details class="more"><summary>How status works</summary>
+  <p class="legend">Status is the stage the file has reached (1 file → 2 preliminary analysis → 3 decision pending, no property → 4 approved, no property → 5 property-specific); the glossary is behind the <span class="info" aria-hidden="true">i</span> in the column header. “Next step” is what we are waiting for from the bank or doing ourselves. Hover over a status pill (tap on a phone) to see the bank’s history: what it replied, when, and what we’re waiting for.</p>
+  </details>
+</section>
+<section class="view" data-view="roadmap" aria-labelledby="h-roadmap" hidden>
+  <div class="vhead"><h2 id="h-roadmap">Deal roadmap</h2></div>
   <p class="lede">The path from a house we like to the keys. The order fits our situation: we already have an approval letter without a property (Eurobic), so the bank steps are short, and the promissory contract (CPCV) moves to the end or drops out. Timings are typical for the market.</p>
-
   <div class="road">
     <div class="mile" data-n="1">
       <h3>Offer and reservation <span class="dim" style="font-weight:400">(proposta / ficha de reserva)</span> <span class="mdur">seller replies in 1–5 days</span></h3>
@@ -662,10 +884,16 @@
       <p>At the notary: signatures, the bank releases the loan, the seller gets paid, we get the keys. Ownership transfers only here. The bank registers the purchase and the mortgage (already in its costs).</p>
     </div>
   </div>
-  <p class="legend">In total, from offer acceptance to keys is usually 1,5–3 months (minimum ~1 month with documents ready and no CPCV, maximum ~4 with a seller chain and a slow bank). The payment schedule by stage is in “When the money goes out” under the calculator.</p>
+  <p class="legend">In total, from offer acceptance to keys is usually 1,5–3 months (minimum ~1 month with documents ready and no CPCV, maximum ~4 with a seller chain and a slow bank). The payment schedule by stage is in “When the money goes out” in Breakdown.</p>
+</section>
+<section class="view" data-view="banks" aria-labelledby="h-banks" hidden>
+  <div class="vhead"><h2 id="h-banks">Banks</h2></div>
+  <div class="callout">
+    <p><b>The cheapest payment isn’t the cheapest loan.</b> On the same 400 000 € and 35 years, Santander’s payment is 7,78 € a month lower than Eurobic’s, yet its total cost is ~91 400 € higher. Across terms it’s starker: Bankinter’s 25-year fixed has the highest payment of all (2 039,76 €) and one of the lowest total costs (636 154,75 €). Pick on TAEG and MTIC; use the payment only to check what we can carry.</p>
+  </div>
 
-  <h2>Eurobic vs Santander</h2>
-  <p class="lede">The two front-runners, on the same amount and term (400 000 €, 35 years) — so unlike the table above, every row compares directly.</p>
+  <h3 class="sub">Eurobic vs Santander</h3>
+  <p class="lede">The two front-runners, on the same amount and term (400 000 €, 35 years) — so unlike the Offers table, every row compares directly.</p>
   <div class="duel">
     <table>
       <thead>
@@ -685,8 +913,7 @@
     </table>
   </div>
   <p class="legend">Santander wins five small rows — 7,78 € a month, 446 € upfront — and loses the one that matters: TAEG 4,50 % against 3,70 %, and ~91 400 € more in total cost over 35 years. The monthly payment hides costs that the TAEG and MTIC include: linked products, fees, and insurance premiums that rise with age. Upfront costs are mostly tax: IMT 33 036,65 € + purchase stamp duty 4 680,00 € + loan stamp duty 2 400,00 € = 40 116,65 € for both banks; the rest is bank fees and registrations (Eurobic 2 222,35 €, Santander 1 776,10 €).</p>
-
-  <h2>What we know about each bank</h2>
+  <h3 class="sub">What we know about each bank</h3>
   <div class="cards">
     <div class="card">
       <h3>Eurobic</h3>
@@ -765,11 +992,9 @@
     </div>
   </div>
 
-  <div class="callout">
-    <p><b>The cheapest payment isn’t the cheapest loan.</b> On the same 400 000 € and 35 years, Santander’s payment is 7,78 € a month lower than Eurobic’s, yet its total cost is ~91 400 € higher. Across terms it’s starker: Bankinter’s 25-year fixed has the highest payment of all (2 039,76 €) and one of the lowest total costs (636 154,75 €). Pick on TAEG and MTIC; use the payment only to check what we can carry.</p>
-  </div>
-
-  <h2>How to compare offers</h2>
+</section>
+<section class="view" data-view="glossary" aria-labelledby="h-glossary" hidden>
+  <div class="vhead"><h2 id="h-glossary">How to compare offers</h2></div>
   <p class="lede">The headline rate is misleading: a bank can offer a low rate and make it back through insurance and fees. Compare loans at the same amount and term, using these four figures — all of them are in the bank’s standard offer.</p>
   <div class="gloss">
     <div class="term"><b>Offer</b><p>FINE in Portuguese (ESIS in English): the standard EU mortgage offer every bank must give you, with rate, TAEG, payment, fees and total cost in the same format.</p></div>
@@ -779,9 +1004,80 @@
     <div class="term"><b>MTIC</b><p>Everything you pay the bank over the whole term: principal + interest + costs. The loan’s total price in one number.</p></div>
   </div>
 
+</section>
   <footer>
     Sources: the broker’s comparison of 18.09.2026 (seven banks, fifteen offers, acquisition value 585 000 €, 6-month Euribor 2,46 %) and Eurobic’s approval letter of 22.09.2026. The rate after each fixed period is variable: if Euribor rises, payments rise with it — the calculator uses today’s Euribor.<br>Portfolio case study · names, dates and statuses adapted.
   </footer>
+</main>
+<aside class="insp" id="insp" aria-label="Scenario"><div class="glass iglass">
+  <button class="ihead" id="inspToggle" type="button" aria-expanded="false" aria-controls="inspBody"><span class="it">Scenario</span><span class="isum" id="inspSum"></span><span class="chev" aria-hidden="true"></span></button>
+  <div class="itop"><span class="it">Scenario</span><button class="ghost" id="resetBtn" type="button" title="Back to the broker’s scenario (R)">Reset</button><button class="ptog" data-tog="insp" type="button" aria-label="Hide scenario panel" title="Hide scenario panel (])"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="2.5"/><path d="M10 2.8v10.4"/></svg></button></div>
+  <div class="ibody" id="inspBody">
+  <div class="igroup"><p class="glab">Offer</p>
+    <label class="selwrap"><select id="offerSel" aria-label="Offer"></select></label>
+    <div class="banks" id="banks" role="group" aria-label="Bank" hidden></div>
+  </div>
+  <div class="igroup"><p class="glab">You</p>
+    <div class="income">
+      <div class="sliderrow">
+        <div class="lab"><span class="t">Your net income per year <span class="dim" style="font-weight:400; font-size:14px">· household, after tax and social security</span></span>
+          <label class="incin"><input type="text" inputmode="numeric" id="incomeN" aria-label="Net income per year in euros"><span>€ / yr</span></label></div>
+        <input type="range" id="income" min="60000" max="150000" step="500" value="90000" aria-label="Net income per year">
+        <div class="minmax"><span>60 000 €</span><span>150 000 €</span></div>
+      </div>
+      <p class="capinfo" id="capInfo"></p>
+    </div>
+  </div>
+  <div class="igroup"><p class="glab">House</p>
+    <div class="sliderrow">
+      <div class="lab"><span class="t">House price <span class="jumps"><button class="jump" id="priceMaxBtn" type="button">to max</button> <button class="jump" id="optBtn" type="button" title="Highest house price at the bank’s minimum down payment: income ceiling ÷ % of price. Above it the loan stays at the ceiling and every extra euro of price is ours.">optimum</button></span></span><span class="v" id="priceV"></span></div>
+      <div class="sliderwrap">
+        <input type="range" id="price" min="300000" max="1500000" step="1000" value="585000" aria-label="House price">
+        <div class="mintick" id="maxTick" data-label="max" title="maximum price at the current down payment"></div>
+      </div>
+      <div class="minmax"><span>300 000 €</span><span>1 500 000 €</span></div>
+    </div>
+    <div class="sliderrow">
+      <div class="lab"><span class="t">Down payment <span class="dim" style="font-weight:400">· your own money towards the price</span> <span class="jumps"><button class="jump" id="downMinBtn" type="button">bank minimum</button></span></span><span class="v" id="downV"></span></div>
+      <div class="sliderwrap">
+        <input type="range" id="down" min="30000" max="480000" step="100" value="185000" aria-label="Down payment">
+        <div class="mintick" id="minTick" data-label="min" title="minimum down payment for this price"></div>
+      </div>
+      <div class="minmax"><span id="downMinL"></span><span id="downMaxL"></span></div>
+    </div>
+    <div class="calcnote" id="note"></div>
+  </div>
+  <details class="igroup rvbset"><summary class="glab">Rent vs buy assumptions</summary>
+    <div class="rvb">
+      <div class="sliderrow">
+        <div class="lab"><span class="t">Current rent</span><span class="v" id="rvbRentLab"></span></div>
+        <input type="range" id="rvbRent" min="600" max="3500" step="10" value="1600" aria-label="Rent per month">
+        <div class="minmax"><span>600 €</span><span>3 500 €</span></div>
+      </div>
+      <div class="sliderrow">
+        <div class="lab"><span class="t">Horizon</span><span class="v" id="rvbYearsLab"></span></div>
+        <input type="range" id="rvbYears" min="1" max="30" step="1" value="10" aria-label="Horizon in years">
+        <div class="minmax"><span>1 year</span><span>30 years</span></div>
+      </div>
+      <div class="sliderrow">
+        <div class="lab"><span class="t">House-price growth</span><span class="v" id="rvbGHLab"></span></div>
+        <input type="range" id="rvbGH" min="0" max="8" step="0.5" value="3" aria-label="House-price growth per year">
+        <div class="minmax"><span>0 %</span><span>8 %/yr</span></div>
+      </div>
+      <div class="sliderrow">
+        <div class="lab"><span class="t">Return on savings</span><span class="v" id="rvbGILab"></span></div>
+        <input type="range" id="rvbGI" min="0" max="8" step="0.5" value="3" aria-label="Return on savings per year">
+        <div class="minmax"><span>0 %</span><span>8 %/yr</span></div>
+      </div>
+      <div class="sliderrow">
+        <div class="lab"><span class="t">Rent growth</span><span class="v" id="rvbGRLab"></span></div>
+        <input type="range" id="rvbGR" min="0" max="6" step="0.5" value="2" aria-label="Rent growth per year">
+        <div class="minmax"><span>0 %</span><span>6 %/yr</span></div>
+      </div>
+    </div>
+  </details>
+  </div>
+</div></aside>
 </div>
 <script>
 'use strict';
@@ -1048,7 +1344,7 @@ function update(source){
   $('mLife').textContent = eur2(lifeS);
   $('mHome').textContent = eur2(homeS);
   $('mTot').textContent = ap + eur2(p1 + ins);
-  $('iAnn').dataset.tip = 'Annuity payment: loan ' + eur0(loan) + ' over ' + b.months + ' months (' + yearsLabel(b.months) + ') at a fixed rate of ' + fmt2.format(b.r1*100) + ' %.' + (allFixed ? ' The rate is fixed for the whole term.' : ' After ' + fixm + ' months the rate becomes variable (Euribor + the bank’s spread) — the payment is recalculated, see the note in the box above.');
+  $('iAnn').dataset.tip = 'Annuity payment: loan ' + eur0(loan) + ' over ' + b.months + ' months (' + yearsLabel(b.months) + ') at a fixed rate of ' + fmt2.format(b.r1*100) + ' %.' + (allFixed ? ' The rate is fixed for the whole term.' : ' After ' + fixm + ' months the rate becomes variable (Euribor + the bank’s spread) — the payment is recalculated, see the monthly payment card.');
   $('iLife').dataset.tip = 'Life insurance on both borrowers — a mandatory condition of the loan. The premium isn’t fixed: it rises with age; this is the starting figure.' + (b.insNote ? ' ' + b.insNote : '');
   $('iHome').dataset.tip = 'Home insurance (multirriscos) — mandatory with a mortgage, covers the property against fire, flooding and the like.' + (b.insNote ? ' ' + b.insNote : '');
   $('iMTot').dataset.tip = 'Principal + interest + both mandatory insurances. Bank fees aren’t included — they’re one-off, in the left-hand table.';
@@ -1063,7 +1359,7 @@ function update(source){
   } else note.className = 'calcnote';
 
   if (short > 0){
-    note.textContent = b.name + ' lends at most ' + eur0(loan) + ' here (' + (loan >= b.cap - 0.5 && b.cap < b.ltv*price ? 'your income limit' : Math.round(b.ltv*100) + ' % of the price') + '), so it needs ' + eur0(short) + ' more down payment than you set. The figures below include it.';
+    note.textContent = b.name + ' lends at most ' + eur0(loan) + ' here (' + (loan >= b.cap - 0.5 && b.cap < b.ltv*price ? 'your income limit' : Math.round(b.ltv*100) + ' % of the price') + '), so it needs ' + eur0(short) + ' more down payment than you set. The figures include it.';
     note.className = 'calcnote show';
   }
   $('bankFoot').textContent = b.foot;
@@ -1340,7 +1636,7 @@ function renderOffers(price, down){
   const groups = [];
   keys.forEach(k => { const g = BANKS[k].bank; if (!groups.length || groups[groups.length-1].g !== g) groups.push({g, n:0}); groups[groups.length-1].n++; });
   let h = '<thead><tr><th class="rowh"></th>' + groups.map(g => '<th class="bankh" colspan="' + g.n + '">' + g.g + '</th>').join('') + '</tr>';
-  h += '<tr><th class="rowh">Type</th>' + keys.map(k => '<th class="offh' + (k === bankKey ? ' sel' : '') + '"><button type="button" data-k="' + k + '" title="Open in the calculator">' + BANKS[k].type + '</button></th>').join('') + '</tr></thead><tbody>';
+  h += '<tr><th class="rowh">Type</th>' + keys.map(k => '<th class="offh' + (k === bankKey ? ' sel' : '') + '"><button type="button" data-k="' + k + '" title="Select this offer">' + BANKS[k].type + '</button></th>').join('') + '</tr></thead><tbody>';
   for (const row of OFFER_ROWS){
     h += '<tr' + (row.strong ? ' class="strong"' : '') + '><th class="rowh">' + row.label + '</th>';
     for (const k of keys){
@@ -1372,4 +1668,425 @@ renderBanks();
 update('init');
 
 
+</script>
+<script>
+'use strict';
+// ---- app shell: views, scenario summary, persistence, shortcuts ----
+(() => {
+  const VIEWS = ['offers','breakdown','rvb','status','roadmap','banks','glossary'];
+  const SCENARIO_VIEWS = new Set(['offers','breakdown','rvb']);
+  const app = document.querySelector('.app'), insp = $('insp');
+  const INPUTS = ['income','price','down','rvbRent','rvbYears','rvbGH','rvbGI','rvbGR'];
+  const DEFAULTS = Object.fromEntries(INPUTS.map(id => [id, $(id).value]));
+  const DEFAULT_BANK = bankKey;
+  const store = {
+    get(){ try { return JSON.parse(localStorage.getItem('mr-scenario') || 'null'); } catch(e){ return null; } },
+    set(v){ try { localStorage.setItem('mr-scenario', JSON.stringify(v)); } catch(e){} }
+  };
+
+  // views
+  function show(v){
+    if (!VIEWS.includes(v)) v = 'offers';
+    document.querySelectorAll('.view').forEach(el => el.hidden = el.dataset.view !== v);
+    document.querySelectorAll('.snav a').forEach(a => a.dataset.view === v ? a.setAttribute('aria-current','page') : a.removeAttribute('aria-current'));
+    app.classList.toggle('noinsp', !SCENARIO_VIEWS.has(v));
+    if (typeof syncInert === 'function') syncInert();
+    hideTipNow();
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', () => show(location.hash.slice(1)));
+
+  // scenario: read / apply / save (URL query + localStorage)
+  function read(){ const o = {offer: bankKey}; for (const id of INPUTS) o[id] = $(id).value; return o; }
+  function apply(o){
+    if (!o) return;
+    if (o.offer && BANKS[o.offer]) bankKey = o.offer;
+    for (const id of INPUTS) if (o[id] != null && o[id] !== '') $(id).value = o[id];
+    incomeN.value = numFmt.format(+incomeEl.value);
+  }
+  function save(){
+    const o = read(); store.set(o);
+    const q = new URLSearchParams();
+    if (o.offer !== DEFAULT_BANK) q.set('offer', o.offer);
+    for (const id of INPUTS) if (o[id] !== DEFAULTS[id]) q.set(id, o[id]);
+    const qs = q.toString();
+    history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+  }
+  function reset(){
+    apply(Object.assign({offer: DEFAULT_BANK}, DEFAULTS));
+    renderBanks(); update('init');
+  }
+  $('resetBtn').addEventListener('click', reset);
+
+  // offer dropdown (the chip buttons stay as the source of truth for bankKey)
+  const CROWN_TXT = {taeg: ' · Lowest TAEG', pay: ' · Lowest payment'};
+  const sel = $('offerSel');
+  for (const [k, b] of Object.entries(BANKS)) sel.add(new Option(b.name + (CROWN_TXT[b.crown] || ''), k));
+  sel.addEventListener('change', () => { bankKey = sel.value; renderBanks(); update('bank'); });
+
+  // KPI strip with change deltas
+  const prev = {};
+  const kpiTimers = {};
+  function setKpi(key, value, text, deltaFmt){
+    $('k'+key).textContent = text;
+    const d = $('k'+key+'D'), box = d.parentElement;
+    if (prev[key] != null && Math.abs(value - prev[key]) >= 0.5){
+      const diff = value - prev[key];
+      d.textContent = (diff > 0 ? '+' : '−') + deltaFmt(Math.abs(diff));
+      d.className = 'kd show ' + (diff > 0 ? 'up' : 'dn');
+      box.classList.add('flash');
+      clearTimeout(kpiTimers[key]);
+      kpiTimers[key] = setTimeout(() => { d.classList.remove('show'); box.classList.remove('flash'); }, 1600);
+    }
+    prev[key] = value;
+  }
+  function refresh(){
+    if (!ctx) return;
+    const c = ctx, ap = c.b.estimated ? '≈ ' : '';
+    const totAnn = c.p1*c.fixm + c.p2*(c.b.months - c.fixm), total = c.cash + totAnn + c.ins*c.b.months;
+    setKpi('Loan', c.loan, eur0(c.loan), eur0);
+    $('kPayL').textContent = c.fixm >= c.b.months ? 'Monthly payment' : 'Monthly, first ' + c.fixm + ' months';
+    setKpi('Pay', c.p1 + c.ins, ap + eur2(c.p1 + c.ins), eur2);
+    setKpi('Cash', c.cash, '≈ ' + eur0(c.cash), eur0);
+    $('kTotL').textContent = 'Total over ' + yearsLabel(c.b.months);
+    setKpi('Tot', total, ap + '≈ ' + eur0(total), eur0);
+    sel.value = bankKey;
+    $('inspSum').textContent = ($('note').classList.contains('show') ? 'Check note · ' : '') + c.b.name + ' · ' + eur0(c.price) + ' · ' + eur0(c.loan) + ' loan';
+    save();
+  }
+  // run after every recalculation (sliders, offer buttons, table clicks, rent-vs-buy)
+  new MutationObserver(refresh).observe($('offersTable'), {childList: true});
+  for (const id of ['rvbRent','rvbYears','rvbGH','rvbGI','rvbGR']) $(id).addEventListener('input', save);
+
+  // collapsible side panels ([ and ]), remembered per browser
+  const prefs = (() => { try { return JSON.parse(localStorage.getItem('mr-panels') || '{}'); } catch(e){ return {}; } })();
+  function setPanel(cls, btn, collapsed){
+    app.classList.toggle(cls, collapsed);
+    document.querySelectorAll('[data-tog="' + (cls === 'scol' ? 'side' : 'insp') + '"]').forEach(b => b.setAttribute('aria-expanded', String(!collapsed)));
+    prefs[cls] = collapsed;
+    try { localStorage.setItem('mr-panels', JSON.stringify(prefs)); } catch(e){}
+    syncInert();
+  }
+  function syncInert(){
+    document.querySelector('.sglass').inert = app.classList.contains('scol') && !matchMedia('(max-width:1180px)').matches;
+    document.querySelector('.iglass').inert = (app.classList.contains('icol') || app.classList.contains('noinsp')) && !matchMedia('(max-width:820px)').matches;
+  }
+  const toggleSide = () => setPanel('scol', 'sideTog', !app.classList.contains('scol'));
+  const toggleInsp = () => setPanel('icol', 'inspTog', !app.classList.contains('icol'));
+  document.querySelectorAll('[data-tog="side"]').forEach(b => b.addEventListener('click', toggleSide));
+  document.querySelectorAll('[data-tog="insp"]').forEach(b => b.addEventListener('click', toggleInsp));
+  matchMedia('(max-width:1180px)').addEventListener('change', syncInert);
+  matchMedia('(max-width:820px)').addEventListener('change', syncInert);
+  app.style.transition = 'none';   // restore saved state without animating on load
+  app.classList.toggle('scol', !!prefs.scol); app.classList.toggle('icol', !!prefs.icol);
+  document.querySelectorAll('[data-tog="side"]').forEach(b => b.setAttribute('aria-expanded', String(!prefs.scol)));
+  document.querySelectorAll('[data-tog="insp"]').forEach(b => b.setAttribute('aria-expanded', String(!prefs.icol)));
+  requestAnimationFrame(() => requestAnimationFrame(() => app.style.transition = ''));
+
+  // theme: system / light / dark
+  const root = document.documentElement;
+  const themeNow = () => root.dataset.theme || 'system';
+  function setTheme(t, animate){
+    if (animate){ root.classList.add('theming'); setTimeout(() => root.classList.remove('theming'), 300); }
+    if (t === 'system') delete root.dataset.theme; else root.dataset.theme = t;
+    try { t === 'system' ? localStorage.removeItem('mr-theme') : localStorage.setItem('mr-theme', t); } catch(e){}
+    document.querySelectorAll('[data-theme-opt]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.themeOpt === t)));
+  }
+  document.querySelectorAll('[data-theme-opt]').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.themeOpt, true)));
+  setTheme(themeNow(), false);
+
+  // phone bottom sheet
+  $('inspToggle').addEventListener('click', () => {
+    const open = insp.classList.toggle('open');
+    $('inspToggle').setAttribute('aria-expanded', String(open));
+  });
+
+  // keyboard: 1–7 switch views, R resets
+  document.addEventListener('keydown', e => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const t = e.target;
+    if (t.matches && t.matches('input[type=text], input:not([type]), textarea, select')) return;
+    if (e.key >= '1' && e.key <= '7'){ location.hash = VIEWS[+e.key - 1]; e.preventDefault(); }
+    else if (e.key === 'r' || e.key === 'R'){ reset(); e.preventDefault(); }
+    else if (e.key === 't' || e.key === 'T'){ const o = ['system','light','dark']; setTheme(o[(o.indexOf(themeNow()) + 1) % 3], true); e.preventDefault(); }
+    else if (e.key === '['){ toggleSide(); e.preventDefault(); }
+    else if (e.key === ']'){ toggleInsp(); e.preventDefault(); }
+  });
+
+  // start: URL params win over the saved scenario
+  const q = new URLSearchParams(location.search);
+  const fromUrl = q.toString() ? Object.fromEntries(q) : null;
+  if (fromUrl && fromUrl.offer == null) fromUrl.offer = DEFAULT_BANK;
+  apply(fromUrl || store.get());
+  renderBanks(); update('init');
+  show(location.hash.slice(1));
+})();
+</script>
+<script>
+'use strict';
+// ---- charts: inline SVG, redrawn from the scenario ----
+(() => {
+  const NS = 'http://www.w3.org/2000/svg';
+  const mk = (tag, a = {}, parent) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (parent) parent.appendChild(e); return e; };
+  const txt = (parent, x, y, s, cls = 'ctick', anchor = 'start') => { const t = mk('text', {x, y, class: cls, 'text-anchor': anchor}, parent); t.textContent = s; return t; };
+  const kEur = v => { const a = Math.abs(v), sg = v < 0 ? '−' : ''; return sg + (a >= 1e6 ? (a/1e6).toFixed(2).replace(/\.?0+$/, '').replace('.', ',') + ' M €' : a >= 1000 ? Math.round(a/1000) + 'k €' : Math.round(a) + ' €'); };
+  const visible = fig => fig && !fig.closest('.view').hidden && !fig.classList.contains('off');
+
+  // nice domain + ticks
+  function scale(lo, hi, n){
+    if (hi - lo < 1e-9){ hi = lo + 1; }
+    const raw = (hi - lo)/n, p = Math.pow(10, Math.floor(Math.log10(raw)));
+    const step = [1, 2, 2.5, 5, 10].map(m => m*p).find(st => st >= raw);
+    const d0 = Math.floor(lo/step)*step, d1 = Math.ceil(hi/step)*step, ticks = [];
+    for (let v = d0; v <= d1 + step*1e-6; v += step) ticks.push(Math.round(v*1e6)/1e6);
+    return {d0, d1, ticks};
+  }
+  function frame(plot, h, pad){
+    const W = plot.clientWidth; if (!W) return null;
+    plot.textContent = '';
+    const svg = mk('svg', {width: W, height: h, viewBox: `0 0 ${W} ${h}`, 'aria-hidden': 'true'}, plot);
+    const P = Object.assign({l: 52, r: 16, t: 10, b: 26}, pad);
+    return {svg, W, h, P, iw: Math.max(W - P.l - P.r, 10), ih: h - P.t - P.b};
+  }
+  function yAxis(f, lo, hi, fmt, n){
+    const sc = scale(lo, hi, n || (f.ih < 140 ? 2 : 4));
+    const y = v => f.P.t + f.ih - (v - sc.d0)/(sc.d1 - sc.d0)*f.ih;
+    const g = mk('g', {}, f.svg);
+    for (const v of sc.ticks){ mk('line', {x1: f.P.l, x2: f.W - f.P.r, y1: y(v), y2: y(v), class: v === 0 ? 'cbase' : 'cgrid'}, g); txt(g, f.P.l - 8, y(v) + 4, fmt(v), 'ctick', 'end'); }
+    return y;
+  }
+  const line = (pts) => pts.map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join('');
+
+  // tooltip
+  const tip = document.createElement('div'); tip.className = 'ctip'; document.body.appendChild(tip);
+  function showTip(html, cx, cy){
+    tip.innerHTML = html; tip.style.display = 'block';
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    let x = cx + 14, y = cy - h - 12;
+    if (x + w > innerWidth - 8) x = cx - w - 14;
+    if (y < 8) y = cy + 16;
+    tip.style.left = Math.max(8, x) + 'px'; tip.style.top = y + 'px';
+  }
+  const hideTip = () => { tip.style.display = 'none'; };
+  const row = (sw, k, v) => '<div class="r"><span class="k">' + (sw ? '<i class="' + sw + '"></i>' : '') + k + '</span><span>' + v + '</span></div>';
+  window.addEventListener('scroll', hideTip, {passive: true});
+
+  // crosshair over a yearly series
+  function crosshair(f, n, xOf, onMove){
+    const g = mk('g', {style: 'display:none'}, f.svg);
+    const ln = mk('line', {class: 'chair', y1: f.P.t, y2: f.P.t + f.ih}, g);
+    const dots = [];
+    const ov = mk('rect', {class: 'ovl', x: f.P.l, y: f.P.t, width: f.iw, height: f.ih}, f.svg);
+    ov.addEventListener('pointermove', e => {
+      const r = f.svg.getBoundingClientRect();
+      const i = Math.max(0, Math.min(n, Math.round((e.clientX - r.left - f.P.l)/f.iw*n)));
+      g.style.display = ''; ln.setAttribute('x1', xOf(i)); ln.setAttribute('x2', xOf(i));
+      const pts = onMove(i, e);
+      pts.forEach((p, j) => { if (!dots[j]) dots[j] = mk('circle', {r: 4.5, class: 'cdot ' + p.cls}, g); dots[j].setAttribute('cx', xOf(i)); dots[j].setAttribute('cy', p.y); });
+    });
+    ov.addEventListener('pointerleave', () => { g.style.display = 'none'; hideTip(); });
+  }
+
+  // 1 · Offers: payment vs total cost
+  const offFig = $('chOffers');
+  const offOff = (() => { try { return localStorage.getItem('mr-offers-chart') === 'off'; } catch(e){ return false; } })();
+  function setOffers(off){
+    offFig.classList.toggle('off', off);
+    $('chOffersBtn').textContent = off ? 'Show chart' : 'Hide chart';
+    $('chOffersBtn').setAttribute('aria-pressed', String(off));
+    try { localStorage.setItem('mr-offers-chart', off ? 'off' : 'on'); } catch(e){}
+  }
+  setOffers(offOff);
+  $('chOffersBtn').addEventListener('click', () => { setOffers(!offFig.classList.contains('off')); draw(); });
+  function drawOffers(){
+    if (!visible(offFig)) return;
+    const price = +priceEl.value, down = +downEl.value;
+    const all = Object.keys(BANKS).map(k => ({k, o: BANKS[k], r: offerCalc(BANKS[k], price, down)}));
+    const pts = all.filter(p => !p.r.capped), capN = all.length - pts.length;
+    if (!pts.length){ offFig.querySelector('.plot').textContent = ''; $('chOffersSum').textContent = 'No offer can lend this much — lower the price or raise the down payment.'; return; }
+    const byPay = pts.slice().sort((a, b) => a.r.withIns - b.r.withIns), byCost = pts.slice().sort((a, b) => a.r.mtic - b.r.mtic);
+    pts.forEach(p => { p.a = byPay.indexOf(p); p.b = byCost.indexOf(p); p.drop = p.b - p.a; });
+    const ROW = 26, n = pts.length;
+    const f = frame(offFig.querySelector('.plot'), n*ROW + 34, {l: 0, r: 0, t: 30, b: 4}); if (!f) return;
+    const compact = f.W < 640;
+    const colW = compact ? Math.min(175, f.W*.4) : Math.min(270, f.W*.35);
+    const xL = colW, xR = f.W - colW, yOf = i => f.P.t + i*ROW + ROW/2;
+    txt(f.svg, xL, 14, 'Cheapest per month', 'cttl', 'end');
+    txt(f.svg, xR, 14, 'Cheapest overall (total cost)', 'cttl', 'start');
+    const cls = p => p.k === bankKey ? 'sel' : p.drop >= 4 ? 'trap' : 'oth';
+    const lineG = mk('g', {}, f.svg), labG = mk('g', {}, f.svg), GUT = 20;
+    // name + optional value; value sits on the outer side of the name, name is shortened with … to fit maxW
+    const label = (parent, x0, y0, name, val, anchor, maxW) => {
+      const t = mk('text', {x: x0, y: y0, class: 'sname', 'text-anchor': anchor}, parent);
+      const nm = mk('tspan', {}, t), vl = val ? mk('tspan', {class: 'sval'}) : null;
+      nm.textContent = name;
+      if (vl){ vl.textContent = val; if (anchor === 'end'){ vl.setAttribute('dx', 8); t.appendChild(vl); } else { nm.setAttribute('dx', 8); t.insertBefore(vl, nm); } }
+      let s2 = name;
+      while (t.getComputedTextLength() > maxW && s2.length > 4){ s2 = s2.slice(0, -1); nm.textContent = s2.trimEnd() + '…'; }
+      return t;
+    };
+    const items = [];
+    const nameOf = p => compact ? p.o.name.replace(' · ', ' ').replace('fixed whole term', 'fixed').replace('Crédito Agrícola', 'C. Agrícola') : p.o.name;
+    const order = pts.slice().sort((a, b) => ({oth: 0, trap: 1, sel: 2})[cls(a)] - ({oth: 0, trap: 1, sel: 2})[cls(b)]);
+    for (const p of order){
+      const c = cls(p), y1 = yOf(p.a), y2 = yOf(p.b), mx = (xL + xR)/2;
+      const g = mk('g', {class: 'slope ' + c}, lineG);
+      mk('path', {d: `M${xL} ${y1}C${mx} ${y1} ${mx} ${y2} ${xR} ${y2}`, class: 'sl'}, g);
+      mk('circle', {cx: xL, cy: y1, r: c === 'oth' ? 4 : 5, class: 'se'}, g);
+      mk('circle', {cx: xR, cy: y2, r: c === 'oth' ? 4 : 5, class: 'se'}, g);
+      const lg = mk('g', {class: 'slab ' + c}, labG);
+      const tl = label(lg, xL - 12, y1 + 4, nameOf(p), compact ? '' : fmt0.format(Math.round(p.r.withIns)) + ' €', 'end', xL - 12 - GUT);
+      txt(lg, 2, y1 + 4, String(p.a + 1), 'srank', 'start');
+      label(lg, xR + 12, y2 + 4, nameOf(p), compact ? '' : kEur(p.r.mtic), 'start', f.W - GUT - xR - 12);
+      txt(lg, f.W - 2, y2 + 4, String(p.b + 1), 'srank', 'end');
+      const hit = mk('path', {d: `M${xL} ${y1}C${mx} ${y1} ${mx} ${y2} ${xR} ${y2}`, class: 'shit'}, g);
+      const hl = mk('rect', {x: 0, y: y1 - ROW/2, width: xL, height: ROW, class: 'hit'}, lg);
+      const hr = mk('rect', {x: xR, y: y2 - ROW/2, width: f.W - xR, height: ROW, class: 'hit'}, lg);
+      items.push({g, lg});
+      const html = '<b>' + p.o.name + '</b>' + row('', 'Payment with insurance', eur2(p.r.withIns) + ' · #' + (p.a + 1)) + row('', 'Total cost (MTIC)', eur0(p.r.mtic) + ' · #' + (p.b + 1)) + row('', 'Term', Math.round(p.o.months/12) + ' yrs') +
+        '<div class="r"><span class="k">' + (p.drop > 0 ? 'Drops ' + p.drop + ' place' + (p.drop > 1 ? 's' : '') + ' on total cost' : p.drop < 0 ? 'Gains ' + (-p.drop) + ' place' + (p.drop < -1 ? 's' : '') + ' on total cost' : 'Same rank on both') + '</span></div>' +
+        '<div class="r"><span class="k">' + (p.k === bankKey ? 'Selected' : 'Click to select') + '</span></div>';
+      const on = e => { offFig.classList.add('focus'); g.classList.add('hot'); lg.classList.add('hot'); showTip(html, e.clientX, e.clientY); };
+      const off = () => { offFig.classList.remove('focus'); g.classList.remove('hot'); lg.classList.remove('hot'); hideTip(); };
+      for (const el of [hit, hl, hr]){
+        el.addEventListener('pointerenter', on); el.addEventListener('pointermove', e => showTip(html, e.clientX, e.clientY)); el.addEventListener('pointerleave', off);
+        el.addEventListener('click', () => { off(); bankKey = p.k; renderBanks(); update('bank'); });
+      }
+    }
+    const worst = pts.reduce((a, b) => b.drop > a.drop ? b : a, pts[0]);
+    const sel = pts.find(p => p.k === bankKey);
+    $('chOffersSum').textContent = (worst.drop >= 4 ? worst.o.name + ' is #' + (worst.a + 1) + ' per month but #' + (worst.b + 1) + ' on total cost. ' : '') +
+      (sel ? 'Your pick, ' + sel.o.name + ': #' + (sel.a + 1) + ' per month, #' + (sel.b + 1) + ' overall. ' : '') +
+      (capN ? capN + ' capped offer' + (capN > 1 ? 's' : '') + ' left out. ' : '') + 'Hover a line, click to select.';
+  }
+
+  // 2 · Breakdown: cash for the deal
+  const cashFig = $('chCash');
+  function drawCash(){
+    if (!visible(cashFig) || !ctx) return;
+    const c = ctx, tax = imt(c.price), duty = c.price*0.008 + c.loan*0.006;
+    const parts = [
+      {l: 'Down payment', v: c.down, f: 'f1', b: 'b1'},
+      {l: 'Transfer tax (IMT)', v: tax, f: 'f2', b: 'b2'},
+      {l: 'Stamp duties', v: duty, f: 'f3', b: 'b3'},
+      {l: 'Bank fees and services', v: c.cash - c.down - tax - duty, f: 'f0', b: 'b0'}
+    ];
+    const plot = cashFig.querySelector('.plot');
+    const f = frame(plot, 30, {l: 0, r: 0, t: 0, b: 0}); if (!f) return;
+    let x0 = 0; const GAP = 2, W = f.W - GAP*(parts.length - 1);
+    parts.forEach(p => {
+      const w = Math.max(p.v/c.cash*W, 2);
+      const r = mk('rect', {x: x0, y: 0, width: w, height: 30, rx: 4, class: p.f}, f.svg);
+      const html = '<b>' + p.l + '</b>' + row('', 'Amount', eur0(p.v)) + row('', 'Share of the cash', Math.round(p.v/c.cash*100) + ' %');
+      r.addEventListener('pointermove', e => showTip(html, e.clientX, e.clientY));
+      r.addEventListener('pointerleave', hideTip);
+      x0 += w + GAP;
+    });
+    let leg = plot.nextElementSibling;
+    if (!leg || !leg.classList.contains('cashleg')){ leg = document.createElement('div'); leg.className = 'cashleg'; plot.after(leg); }
+    leg.innerHTML = parts.map(p => '<span><i class="' + p.b + '"></i>' + p.l + '<b>' + eur0(p.v) + '</b></span>').join('');
+    $('chCashSum').textContent = '≈ ' + eur0(c.cash) + ' in total · ' + Math.round((c.cash - c.down)/c.cash*100) + ' % of it is taxes and fees, not your house';
+  }
+
+  // 3 · Breakdown: principal vs interest per year + remaining balance
+  const amFig = $('chAmort');
+  function drawAmort(){
+    if (!visible(amFig) || !ctx) return;
+    const c = ctx, b = c.b, years = Math.ceil(b.months/12), yrs = [];
+    let bal = c.loan;
+    for (let yI = 0; yI < years; yI++){
+      let int = 0, pr = 0;
+      for (let m = yI*12 + 1; m <= Math.min((yI + 1)*12, b.months); m++){
+        const rate = m <= c.fixm ? b.r1 : b.r2, pmt = m <= c.fixm ? c.p1 : c.p2;
+        const i = bal*rate/12, pp = Math.min(pmt - i, bal);
+        int += i; pr += pp; bal = Math.max(bal - pp, 0);
+      }
+      yrs.push({yr: yI + 1, int, pr, bal});
+    }
+    const plots = amFig.querySelectorAll('.plot');
+    const f = frame(plots[0], 210, {}); if (!f) return;
+    const y = yAxis(f, 0, Math.max(...yrs.map(d => d.int + d.pr)), kEur, 4);
+    const bw = f.iw/years, x = i => f.P.l + i*bw;
+    const groups = [];
+    yrs.forEach((d, i) => {
+      const g = mk('g', {class: 'barg'}, f.svg); groups.push(g);
+      const w = Math.max(bw - 2, 1.5), yp = y(d.pr), yt = y(d.pr + d.int);
+      mk('rect', {x: x(i) + 1, y: yp, width: w, height: Math.max(y(0) - yp, 0), rx: Math.min(2, w/2), class: 'f1'}, g);
+      mk('rect', {x: x(i) + 1, y: yt, width: w, height: Math.max(yp - yt - 2, 0), rx: Math.min(2, w/2), class: 'f2'}, g);
+      const hit = mk('rect', {x: x(i), y: f.P.t, width: bw, height: f.ih, class: 'hit'}, g);
+      const html = '<b>Year ' + d.yr + '</b>' + row('b1', 'Principal', eur0(d.pr)) + row('b2', 'Interest', eur0(d.int)) + row('', 'Balance at year end', eur0(d.bal));
+      hit.addEventListener('pointermove', e => { groups.forEach(o => o.classList.toggle('dim', o !== g)); showTip(html, e.clientX, e.clientY); });
+      hit.addEventListener('pointerleave', () => { groups.forEach(o => o.classList.remove('dim')); hideTip(); });
+    });
+    const step = years > 20 ? 5 : years > 10 ? 2 : 1;
+    for (let yr = step; yr <= years; yr += step) txt(f.svg, x(yr - .5), f.P.t + f.ih + 16, String(yr), 'ctick', 'middle');
+    txt(f.svg, f.P.l + f.iw, f.h - 1, 'year', 'ctick', 'end');
+    const allFixed = c.fixm >= b.months;
+    if (!allFixed){
+      const xm = x(c.fixm/12);
+      mk('line', {x1: xm, x2: xm, y1: f.P.t - 4, y2: f.P.t + f.ih, class: 'cmark'}, f.svg);
+      txt(f.svg, xm + 6, f.P.t + 8, 'Fixed rate ends · then Euribor + spread', 'clab', 'start');
+    }
+    // remaining balance (own scale, own chart)
+    const f2 = frame(plots[1], 110, {t: 14}); if (!f2) return;
+    const y2 = yAxis(f2, 0, c.loan, kEur, 2), x2 = i => f2.P.l + i/years*f2.iw;
+    const bpts = [[x2(0), y2(c.loan)], ...yrs.map((d, i) => [x2(i + 1), y2(d.bal)])];
+    mk('path', {d: line(bpts) + `L${x2(years)} ${y2(0)}L${x2(0)} ${y2(0)}Z`, class: 'carea'}, f2.svg);
+    mk('path', {d: line(bpts), class: 'cl s1'}, f2.svg);
+    txt(f2.svg, f2.P.l + 6, f2.P.t - 2, 'Remaining loan', 'cttl', 'start');
+    crosshair(f2, years, x2, (i, e) => {
+      const v = i ? yrs[i - 1].bal : c.loan;
+      showTip('<b>' + (i ? 'End of year ' + i : 'Start') + '</b>' + row('b1', 'Remaining loan', eur0(v)) + row('', 'Paid off', Math.round((1 - v/c.loan)*100) + ' %'), e.clientX, e.clientY);
+      return [{y: y2(v), cls: 'f1'}];
+    });
+    const totInt = yrs.reduce((a, d) => a + d.int, 0);
+    const half = yrs.findIndex(d => d.bal <= c.loan/2) + 1;
+    $('chAmortSum').textContent = 'Interest over the term ≈ ' + eur0(totInt) + ' (' + Math.round(totInt/(totInt + c.loan)*100) + ' % of what you repay) · half the loan is paid off after year ' + half + '. Hover for each year.';
+  }
+
+  // 4 · Rent vs buy: net worth over time
+  const rvbFig = $('chRvb');
+  function drawRvb(){
+    if (!visible(rvbFig) || !ctx) return;
+    const c = ctx, rent0 = +$('rvbRent').value, H = +$('rvbYears').value;
+    const gH = +$('rvbGH').value/100, gI = +$('rvbGI').value/100, gR = +$('rvbGR').value/100;
+    const snap = rvbSim(c, rent0, gH, gI, gR, 30);
+    const f = frame(rvbFig.querySelector('.plot'), 260, {r: 64, t: 20}); if (!f) return;
+    const vals = snap.flatMap(d => [d.buyNet, d.rentNW]);
+    const y = yAxis(f, Math.min(0, ...vals), Math.max(...vals), kEur, 4);
+    const x = i => f.P.l + i/30*f.iw;
+    for (let yr = 0; yr <= 30; yr += 5) txt(f.svg, x(yr), f.P.t + f.ih + 16, yr ? 'year ' + yr : 'now', 'ctick', 'middle');
+    const xh = x(H);
+    mk('line', {x1: xh, x2: xh, y1: f.P.t - 6, y2: f.P.t + f.ih, class: 'cmark'}, f.svg);
+    txt(f.svg, xh, f.P.t - 9, 'Your horizon · ' + H + (H === 1 ? ' yr' : ' yrs'), 'cttl', xh > f.W - 120 ? 'end' : 'middle');
+    mk('path', {d: line(snap.map((d, i) => [x(i), y(d.rentNW)])), class: 'cl s2'}, f.svg);
+    mk('path', {d: line(snap.map((d, i) => [x(i), y(d.buyNet)])), class: 'cl s1'}, f.svg);
+    let be = null;
+    for (let i = 1; i <= 30; i++) if (snap[i].buyNet >= snap[i].rentNW){ be = i; break; }
+    if (be !== null){
+      mk('circle', {cx: x(be), cy: y(snap[be].buyNet), r: 5, class: 'cdot f1'}, f.svg);
+      const ly = Math.min(y(snap[be].buyNet), y(snap[be].rentNW), y(snap[Math.min(be + 4, 30)].buyNet)) - 14;
+      txt(f.svg, x(be) + (be > 22 ? 6 : -6), Math.max(ly, f.P.t + 10), 'Buying pulls ahead · year ' + be, 'clab', be > 22 ? 'end' : 'start');
+    }
+    let yb = y(snap[30].buyNet) + 4, yr = y(snap[30].rentNW) + 4;
+    if (Math.abs(yb - yr) < 14){ const m = (yb + yr)/2, up = snap[30].buyNet >= snap[30].rentNW; yb = m + (up ? -7 : 7); yr = m + (up ? 7 : -7); }
+    txt(f.svg, x(30) + 8, yb, 'Buy', 'clab'); txt(f.svg, x(30) + 8, yr, 'Rent', 'clab');
+    crosshair(f, 30, x, (i, e) => {
+      const d = snap[i], gap = d.buyNet - d.rentNW;
+      showTip('<b>' + (i ? 'Year ' + i : 'Now') + '</b>' + row('b1', 'Buy, net if selling', eur0(d.buyNet)) + row('b2', 'Rent, savings', eur0(d.rentNW)) + row('', gap >= 0 ? 'Buyer ahead by' : 'Renter ahead by', eur0(Math.abs(gap))), e.clientX, e.clientY);
+      return [{y: y(d.buyNet), cls: 'f1'}, {y: y(d.rentNW), cls: 'f2'}];
+    });
+    $('chRvbSum').textContent = $('rvbWhoS1').textContent.replace(/^./, ch => ch.toUpperCase()) + '. Hover for any year.';
+  }
+
+  // redraw: after every recalculation, on rent-vs-buy inputs, view changes and resizes
+  let raf = 0;
+  function draw(){ cancelAnimationFrame(raf); raf = requestAnimationFrame(() => { hideTip(); drawOffers(); drawCash(); drawAmort(); drawRvb(); }); }
+  new MutationObserver(draw).observe($('offersTable'), {childList: true});
+  for (const id of ['rvbRent','rvbYears','rvbGH','rvbGI','rvbGR']) $(id).addEventListener('input', draw);
+  window.addEventListener('hashchange', draw);
+  let lastW = 0;
+  new ResizeObserver(es => { const w = Math.round(es[0].contentRect.width); if (w !== lastW){ lastW = w; draw(); } }).observe($('main'));
+  draw();
+})();
 </script>
