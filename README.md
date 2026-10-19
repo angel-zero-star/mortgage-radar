@@ -20,12 +20,16 @@ A broker sent a comparison of **7 banks and 15 offers** for one scenario: a 585 
 
 ## What it does
 
-- **Offers table** — the broker's sheet, rebuilt. Move the house price and down payment and every offer is re-run: payments from each bank's own rates, taxes recalculated, insurance scaled. Banks that won't lend that much are marked **capped**.
-- **Highlights** — green for the best value, yellow-green for close to the best, on the rows that matter: spread, fixed rate, total cost and monthly payment. Colour follows the *value range*, not the rank, so near-equal numbers never get different colours.
-- **Income limit** — enter your net yearly income and each bank's maximum loan is estimated with the Banco de Portugal rule.
-- **Calculator** — one offer in detail: cash needed upfront (down payment, IMT, stamp duties, fees), the monthly payment before and after the fixed period, and the total cost over the term.
-- **Rent vs buy** — a month-by-month simulation with adjustable horizon, house-price growth, return on savings and rent growth.
-- **Status tracker and deal roadmap** — where each application stands, and the steps from offer to keys.
+An app with seven views in a sidebar, one shared scenario, and every number recalculated live.
+
+- **Scenario panel** — house price, down payment, net income and the offer you're looking at, always one click away. The scenario lives in the link and in the browser, so a shared URL opens the same numbers.
+- **Summary bar** — loan, monthly payment, cash for the deal and total over the term; when a slider moves, each figure flashes its change (+/−) so you see the effect of every decision.
+- **Offers** — the broker's sheet, rebuilt and re-priced for your price and down payment: payments from each bank's own rates, taxes recalculated, insurance scaled, banks that won't lend that much marked **capped**. A slope chart puts *cheapest per month* next to *cheapest overall* — the offers that drop places are the ones the monthly payment flatters. Green marks the best value per row, yellow-green close behind; colour follows the value range, not the rank.
+- **Income limit** — enter your net yearly income and each bank's maximum loan is estimated with the Banco de Portugal rule; the sliders show the resulting **MAX** / **MIN** instead of error messages.
+- **Breakdown** — one offer in detail: where the deal cash goes (down payment, IMT, stamp duties, fees), the monthly payment before and after the fixed period, principal vs interest year by year, the remaining loan, and when each payment falls due.
+- **Rent vs buy** — a month-by-month simulation with adjustable rent, horizon, house-price growth, return on savings and rent growth, charted as who's ahead over time.
+- **Status by bank, Roadmap, Banks, Glossary** — where each application stands, the steps from offer to keys, each bank in detail, and the terms (TAEG, MTIC, IMT…) explained.
+- **Details** — keyboard shortcuts (1–7 views, `[` `]` panels, `T` theme, `R` reset), System / Light / Dark, hover tooltips on every chart, and a layout that becomes a bottom sheet on a phone.
 
 ## How it works
 
@@ -77,9 +81,10 @@ Checking the numbers also surfaced something the spreadsheet hid: two offers wit
 
 ## Built with
 
-- Plain HTML, CSS and JavaScript in a single file — no framework, no build step, no dependencies.
-- Light and dark mode.
-- Designed and directed by me; implementation written with Claude, then tested against the real bank documents.
+- Plain HTML, CSS and JavaScript in a single file — no framework, no build step, no dependencies; charts are hand-written SVG.
+- Designed and directed by me; built with **Claude Code**. I set the product direction and the design system (a Linear-style app shell, glass panels, one accent colour), and Claude Code wrote the implementation, iterating on screenshots I reviewed on localhost.
+- The numbers were checked, not assumed: the tool reproduces the broker's spreadsheet to the cent, and the chart palette was validated for colour-blind readers.
+- The demo videos on my portfolio are rendered with Remotion driving the real app frame by frame — no screen recording.
 
 ## Notes
 
